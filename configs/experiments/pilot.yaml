@@ -1,5 +1,5 @@
 profile: pilot
-num_envs: 64
+num_envs: 256
 horizon: 24
 iterations: 1000
 max_wall_time: 1200

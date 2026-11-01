@@ -1,5 +1,5 @@
 profile: research
-num_envs: 128
+num_envs: 256
 horizon: 24
 iterations: 10000
 max_wall_time: 14400
