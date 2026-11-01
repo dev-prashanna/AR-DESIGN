@@ -1,0 +1,23 @@
+name: microduck_provisional_v1
+urdf: assets/robot/source/microduck_minimal.urdf
+provenance:
+  geometry: supplied URDF; unverified estimates, not derived from redesigned CAD
+  mass_inertia: supplied URDF estimates; no material densities or measurements
+  torque_speed: supplied URDF limits; manufacturer and gearing unknown
+  gains: provisional simulation tuning, not calibrated servo gains
+  nominal_pose: conservative straight-leg pose, flat feet
+  dimensions_units: metres; radians; kilograms; seconds; newton-metres
+joint_names: [l_hip_roll, l_hip_pitch, l_knee, r_hip_roll, r_hip_pitch, r_knee]
+nominal: [0, 0, 0, 0, 0, 0]
+action_scale: [0.15, 0.35, 0.35, 0.15, 0.35, 0.35]
+kp: [2, 2, 1.5, 2, 2, 1.5]
+kd: [0.06, 0.06, 0.04, 0.06, 0.06, 0.04]
+base_height: 0.1365
+physics_dt: 0.002
+policy_dt: 0.02
+friction: 0.8
+fall_height: 0.075
+fall_angle: 0.9
+standing_gate_seconds: 5.0
+standing_gate_min_height: 0.11
+self_collision: false

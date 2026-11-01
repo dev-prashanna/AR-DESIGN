@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<robot name="microduck_minimal">
+
+  <!-- ==================== MATERIALS ==================== -->
+  <material name="sky_blue">
+    <color rgba="0.55 0.82 0.92 1.0"/>
+  </material>
+  <material name="dark_gray">
+    <color rgba="0.25 0.25 0.28 1.0"/>
+  </material>
+  <material name="medium_gray">
+    <color rgba="0.35 0.35 0.38 1.0"/>
+  </material>
+  <material name="black_servo">
+    <color rgba="0.15 0.15 0.15 1.0"/>
+  </material>
+  <material name="orange">
+    <color rgba="1.0 0.55 0.1 1.0"/>
+  </material>
+  <material name="yellow">
+    <color rgba="0.95 0.75 0.1 1.0"/>
+  </material>
+
+  <!-- ==================== BASE LINK: TORSO ==================== -->
+  <link name="torso">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <!-- 100g: battery + board + shell. Box inertia approx -->
+      <mass value="0.100"/>
+      <inertia ixx="0.000150" ixy="0" ixz="0" iyy="0.000250" iyz="0" izz="0.000200"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.070 0.045 0.045"/>
+      </geometry>
+      <material name="sky_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.070 0.045 0.045"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ==================== HEAD (fixed to torso) ==================== -->
+  <link name="head">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.030"/>
+      <inertia ixx="0.000030" ixy="0" ixz="0" iyy="0.000050" iyz="0" izz="0.000045"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.055 0.040 0.035"/>
+      </geometry>
+      <material name="sky_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.055 0.040 0.035"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="head_joint" type="fixed">
+    <parent link="torso"/>
+    <child link="head"/>
+    <origin xyz="0.010 0 0.040" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ==================== LEFT LEG ==================== -->
+
+  <!-- Left Hip Roll link (connects torso to hip pitch) -->
+  <link name="l_hip_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.055"/>
+      <inertia ixx="0.000010" ixy="0" ixz="0" iyy="0.000010" iyz="0" izz="0.000015"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.016 0.016 0.012"/>
+      </geometry>
+      <material name="black_servo"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.016 0.016 0.012"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- LEFT HIP ROLL JOINT: X-axis (lateral balance) -->
+  <joint name="l_hip_roll" type="revolute">
+    <parent link="torso"/>
+    <child link="l_hip_roll_link"/>
+    <origin xyz="0 0.038 -0.023" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-0.52" upper="0.52" effort="1.2" velocity="6.0"/>
+    <!-- ±30°, 1.2 Nm torque (metal servo) -->
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+
+  <!-- Left Hip Pitch link -->
+  <link name="l_hip_pitch_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.055"/>
+      <inertia ixx="0.000010" ixy="0" ixz="0" iyy="0.000012" iyz="0" izz="0.000015"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.018 0.014 0.014"/>
+      </geometry>
+      <material name="black_servo"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.018 0.014 0.014"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- LEFT HIP PITCH JOINT: Y-axis (forward/back swing) -->
+  <joint name="l_hip_pitch" type="revolute">
+    <parent link="l_hip_roll_link"/>
+    <child link="l_hip_pitch_link"/>
+    <origin xyz="0 0 -0.012" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.05" upper="1.05" effort="1.2" velocity="6.0"/>
+    <!-- ±60° -->
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+
+  <!-- Left Thigh link -->
+  <link name="l_thigh">
+    <inertial>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <mass value="0.015"/>
+      <inertia ixx="0.000005" ixy="0" ixz="0" iyy="0.000005" iyz="0" izz="0.000003"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.018 0.018 0.040"/>
+      </geometry>
+      <material name="dark_gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.018 0.018 0.040"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Thigh is rigidly attached to hip pitch servo output -->
+  <joint name="l_thigh_joint" type="fixed">
+    <parent link="l_hip_pitch_link"/>
+    <child link="l_thigh"/>
+    <origin xyz="0 0 -0.007" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Left Knee link -->
+  <link name="l_knee_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.025"/>
+      <inertia ixx="0.000004" ixy="0" ixz="0" iyy="0.000004" iyz="0" izz="0.000006"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.016 0.012 0.012"/>
+      </geometry>
+      <material name="black_servo"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.016 0.012 0.012"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- LEFT KNEE JOINT: Y-axis -->
+  <joint name="l_knee" type="revolute">
+    <parent link="l_thigh"/>
+    <child link="l_knee_link"/>
+    <origin xyz="0 0 -0.040" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="0.0" effort="0.8" velocity="8.0"/>
+    <!-- 0 to -90°, smaller servo -->
+    <dynamics damping="0.03" friction="0.01"/>
+  </joint>
+
+  <!-- Left Shin link -->
+  <link name="l_shin">
+    <inertial>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <mass value="0.015"/>
+      <inertia ixx="0.000004" ixy="0" ixz="0" iyy="0.000004" iyz="0" izz="0.000002"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.014 0.014 0.040"/>
+      </geometry>
+      <material name="medium_gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.014 0.014 0.040"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_shin_joint" type="fixed">
+    <parent link="l_knee_link"/>
+    <child link="l_shin"/>
+    <origin xyz="0 0 -0.006" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Left Foot link -->
+  <link name="l_foot">
+    <inertial>
+      <origin xyz="0 0 -0.004" rpy="0 0 0"/>
+      <mass value="0.020"/>
+      <inertia ixx="0.000008" ixy="0" ixz="0" iyy="0.000015" iyz="0" izz="0.000020"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.004" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.038 0.026 0.008"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.004" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.038 0.026 0.008"/>
+      </geometry>
+    </collision>
+    <contact_coefficients mu="0.8" kp="100000" kd="100"/>
+  </link>
+
+  <joint name="l_foot_joint" type="fixed">
+    <parent link="l_shin"/>
+    <child link="l_foot"/>
+    <origin xyz="0 0 -0.040" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ==================== RIGHT LEG ==================== -->
+
+  <!-- Right Hip Roll link -->
+  <link name="r_hip_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.055"/>
+      <inertia ixx="0.000010" ixy="0" ixz="0" iyy="0.000010" iyz="0" izz="0.000015"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.016 0.016 0.012"/>
+      </geometry>
+      <material name="black_servo"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.016 0.016 0.012"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- RIGHT HIP ROLL JOINT -->
+  <joint name="r_hip_roll" type="revolute">
+    <parent link="torso"/>
+    <child link="r_hip_roll_link"/>
+    <origin xyz="0 -0.038 -0.023" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-0.52" upper="0.52" effort="1.2" velocity="6.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+
+  <!-- Right Hip Pitch link -->
+  <link name="r_hip_pitch_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.055"/>
+      <inertia ixx="0.000010" ixy="0" ixz="0" iyy="0.000012" iyz="0" izz="0.000015"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.018 0.014 0.014"/>
+      </geometry>
+      <material name="black_servo"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.018 0.014 0.014"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- RIGHT HIP PITCH JOINT -->
+  <joint name="r_hip_pitch" type="revolute">
+    <parent link="r_hip_roll_link"/>
+    <child link="r_hip_pitch_link"/>
+    <origin xyz="0 0 -0.012" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.05" upper="1.05" effort="1.2" velocity="6.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+
+  <!-- Right Thigh link -->
+  <link name="r_thigh">
+    <inertial>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <mass value="0.015"/>
+      <inertia ixx="0.000005" ixy="0" ixz="0" iyy="0.000005" iyz="0" izz="0.000003"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.018 0.018 0.040"/>
+      </geometry>
+      <material name="dark_gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.018 0.018 0.040"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="r_thigh_joint" type="fixed">
+    <parent link="r_hip_pitch_link"/>
+    <child link="r_thigh"/>
+    <origin xyz="0 0 -0.007" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Right Knee link -->
+  <link name="r_knee_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.025"/>
+      <inertia ixx="0.000004" ixy="0" ixz="0" iyy="0.000004" iyz="0" izz="0.000006"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.016 0.012 0.012"/>
+      </geometry>
+      <material name="black_servo"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.016 0.012 0.012"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- RIGHT KNEE JOINT -->
+  <joint name="r_knee" type="revolute">
+    <parent link="r_thigh"/>
+    <child link="r_knee_link"/>
+    <origin xyz="0 0 -0.040" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="0.0" effort="0.8" velocity="8.0"/>
+    <dynamics damping="0.03" friction="0.01"/>
+  </joint>
+
+  <!-- Right Shin link -->
+  <link name="r_shin">
+    <inertial>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <mass value="0.015"/>
+      <inertia ixx="0.000004" ixy="0" ixz="0" iyy="0.000004" iyz="0" izz="0.000002"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.014 0.014 0.040"/>
+      </geometry>
+      <material name="medium_gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.020" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.014 0.014 0.040"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="r_shin_joint" type="fixed">
+    <parent link="r_knee_link"/>
+    <child link="r_shin"/>
+    <origin xyz="0 0 -0.006" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Right Foot link -->
+  <link name="r_foot">
+    <inertial>
+      <origin xyz="0 0 -0.004" rpy="0 0 0"/>
+      <mass value="0.020"/>
+      <inertia ixx="0.000008" ixy="0" ixz="0" iyy="0.000015" iyz="0" izz="0.000020"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.004" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.038 0.026 0.008"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.004" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.038 0.026 0.008"/>
+      </geometry>
+    </collision>
+    <contact_coefficients mu="0.8" kp="100000" kd="100"/>
+  </link>
+
+  <joint name="r_foot_joint" type="fixed">
+    <parent link="r_shin"/>
+    <child link="r_foot"/>
+    <origin xyz="0 0 -0.040" rpy="0 0 0"/>
+  </joint>
+
+</robot>

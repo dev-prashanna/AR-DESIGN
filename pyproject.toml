@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling==1.29.0"]
+build-backend = "hatchling.build"
+[project]
+name = "microduck-biped-ppo"
+version = "0.1.0"
+description = "Audited provisional Microduck locomotion with mjlab and RSL-RL"
+requires-python = ">=3.12,<3.13"
+dependencies = ["mjlab==1.6.0", "torch==2.10.0", "gymnasium==1.2.3", "pyyaml==6.0.3", "matplotlib==3.10.8", "pytest==9.0.2", "ruff==0.15.0", "onnxruntime==1.24.1", "psutil==7.2.2"]
+[project.scripts]
+biped = "biped_ppo.cli:main"
+[tool.hatch.build.targets.wheel]
+packages = ["src/biped_ppo"]
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["gpu: requires NVIDIA CUDA device"]
+[tool.ruff]
+line-length = 100
