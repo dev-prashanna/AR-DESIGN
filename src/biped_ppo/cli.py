@@ -37,6 +37,7 @@ def main():
     p = sub.add_parser("sweep")
     p.add_argument("--config", default="configs/experiments/ablation-matrix.yaml")
     p.add_argument("--max-wall-time", type=float, required=True)
+    p.add_argument("--skip-completed", action="store_true")
     for name in ["analyze", "paper"]:
         p = sub.add_parser(name)
         p.add_argument("--runs" if name == "analyze" else "--results", required=True)
@@ -131,6 +132,20 @@ def main():
         from .training import train
 
         spec = read(args.config)
+        from .tracking import sha
+
+        index = []
+        match_fields = (
+            "profile",
+            "num_envs",
+            "horizon",
+            "iterations",
+            "max_transitions",
+            "episode_seconds",
+            "curriculum",
+            "randomization",
+            "seed",
+        )
         start = time.monotonic()
         for condition, values in spec["conditions"].items():
             for seed in spec["seeds"]:
@@ -142,7 +157,34 @@ def main():
                     setattr(cfg, key, value)
                 cfg.seed = seed
                 cfg.max_wall_time = min(cfg.max_wall_time, remaining)
-                print(condition, train(cfg), flush=True)
+                existing = None
+                if args.skip_completed:
+                    import dataclasses
+
+                    expected = dataclasses.asdict(cfg)
+                    for manifest in sorted((ROOT / "runs").glob("*/manifest.json")):
+                        old = json.loads(manifest.read_text())
+                        status = manifest.parent / "status.json"
+                        if (
+                            not status.exists()
+                            or json.loads(status.read_text())["status"] != "budget_completed"
+                        ):
+                            continue
+                        if all(
+                            old["config"].get(k) == expected[k] for k in match_fields
+                        ) and old.get("config_files", {}).get("configs/task/flat.yaml") == sha(
+                            ROOT / "configs/task/flat.yaml"
+                        ):
+                            existing = manifest.parent
+                            break
+                path = existing if existing else train(cfg)
+                index.append(
+                    dict(
+                        condition=condition, seed=seed, path=str(path), reused=existing is not None
+                    )
+                )
+                write_json(ROOT / "results/initial_study_runs.json", index)
+                print(condition, path, "reused" if existing else "trained", flush=True)
     else:
         from .reporting import analyze, build_paper
 

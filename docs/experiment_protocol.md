@@ -47,3 +47,16 @@ U(-.01,.01) rad; positive spawn lift U(0,.0005) m. Velocity starts zero. These
 provisional initial disturbances provide distinct seeded evaluation episodes;
 they are not a claimed broad robustness domain. They are separate from the
 optional randomization factor in the study.
+
+## Initial bounded study, frozen before held-out results
+
+Use the pilot transition budget of 1,536,000 per independent policy at 256 worlds,
+24-step horizons, 250 updates, and three training seeds per condition. This is a
+short-budget initial study, not the 30,720,000-transition research profile.
+Only the final checkpoint is eligible for the initial study's validation/test
+comparison; periodic checkpoints remain diagnostics. Validation selection over
+that eligible set retains best_validation.pt. No test result may tune or select
+checkpoints. Reuse a completed pilot only if its task, seed, batch, episode length,
+condition and transition budget exactly match; record reuse explicitly. Resume
+smoke tests are excluded from the research matrix. Cap the sequential study sweep
+at 1,200 seconds, saving any missing cells for a later explicit continuation.

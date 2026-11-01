@@ -14,3 +14,5 @@ paper/*.bbl
 paper/*.blg
 paper/*.synctex.gz
 .env
+
+MUJOCO_LOG.TXT

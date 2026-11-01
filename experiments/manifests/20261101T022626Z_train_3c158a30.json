@@ -1,0 +1,259 @@
+{
+  "run_id": "20261101T022626Z_train_3c158a30",
+  "created_utc": "20261101T022626Z",
+  "kind": "train",
+  "config": {
+    "profile": "smoke",
+    "num_envs": 32,
+    "horizon": 24,
+    "iterations": 6,
+    "max_wall_time": 60.0,
+    "max_transitions": 4608,
+    "checkpoint_interval": 1,
+    "episode_seconds": 6.0,
+    "curriculum": false,
+    "randomization": false,
+    "seed": 0
+  },
+  "hardware": {
+    "timestamp": "2026-11-01T02:26:26Z",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "cpu": "x86_64",
+    "cpu_details": {
+      "lscpu": [
+        {
+          "field": "Architecture:",
+          "data": "x86_64"
+        },
+        {
+          "field": "CPU op-mode(s):",
+          "data": "32-bit, 64-bit"
+        },
+        {
+          "field": "Address sizes:",
+          "data": "48 bits physical, 48 bits virtual"
+        },
+        {
+          "field": "Byte Order:",
+          "data": "Little Endian"
+        },
+        {
+          "field": "CPU(s):",
+          "data": "16"
+        },
+        {
+          "field": "On-line CPU(s) list:",
+          "data": "0-15"
+        },
+        {
+          "field": "Vendor ID:",
+          "data": "AuthenticAMD"
+        },
+        {
+          "field": "Model name:",
+          "data": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics"
+        },
+        {
+          "field": "CPU family:",
+          "data": "25"
+        },
+        {
+          "field": "Model:",
+          "data": "117"
+        },
+        {
+          "field": "Thread(s) per core:",
+          "data": "2"
+        },
+        {
+          "field": "Core(s) per socket:",
+          "data": "8"
+        },
+        {
+          "field": "Socket(s):",
+          "data": "1"
+        },
+        {
+          "field": "Stepping:",
+          "data": "2"
+        },
+        {
+          "field": "Frequency boost:",
+          "data": "enabled"
+        },
+        {
+          "field": "CPU(s) scaling MHz:",
+          "data": "74%"
+        },
+        {
+          "field": "CPU max MHz:",
+          "data": "5102.7129"
+        },
+        {
+          "field": "CPU min MHz:",
+          "data": "416.5480"
+        },
+        {
+          "field": "BogoMIPS:",
+          "data": "7585.97"
+        },
+        {
+          "field": "Flags:",
+          "data": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpuid_fault cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze"
+        },
+        {
+          "field": "Virtualization:",
+          "data": "AMD-V"
+        },
+        {
+          "field": "L1d cache:",
+          "data": "256 KiB (8 instances)"
+        },
+        {
+          "field": "L1i cache:",
+          "data": "256 KiB (8 instances)"
+        },
+        {
+          "field": "L2 cache:",
+          "data": "8 MiB (8 instances)"
+        },
+        {
+          "field": "L3 cache:",
+          "data": "16 MiB (1 instance)"
+        },
+        {
+          "field": "NUMA node(s):",
+          "data": "1"
+        },
+        {
+          "field": "NUMA node0 CPU(s):",
+          "data": "0-15"
+        },
+        {
+          "field": "Vulnerability Gather data sampling:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Ghostwrite:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Indirect target selection:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Itlb multihit:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability L1tf:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Mds:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Meltdown:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Mmio stale data:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Old microcode:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Reg file data sampling:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Retbleed:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Spec rstack overflow:",
+          "data": "Mitigation; Safe RET"
+        },
+        {
+          "field": "Vulnerability Spec store bypass:",
+          "data": "Mitigation; Speculative Store Bypass disabled via prctl"
+        },
+        {
+          "field": "Vulnerability Spectre v1:",
+          "data": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+        },
+        {
+          "field": "Vulnerability Spectre v2:",
+          "data": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP always-on; PBRSB-eIBRS Not affected; BHI Not affected"
+        },
+        {
+          "field": "Vulnerability Srbds:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Tsa:",
+          "data": "Mitigation; Clear CPU buffers"
+        },
+        {
+          "field": "Vulnerability Tsx async abort:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Vmscape:",
+          "data": "Mitigation; IBPB before exit to userspace"
+        }
+      ]
+    },
+    "ram_bytes": 16024739840,
+    "available_ram_bytes": 8136790016,
+    "cuda_available": true,
+    "torch_cuda": "12.8",
+    "packages": {
+      "mjlab": "1.6.0",
+      "mujoco": "3.11.0",
+      "mujoco-warp": "3.11.0",
+      "warp-lang": "1.18.0",
+      "rsl-rl-lib": "5.4.2",
+      "torch": "2.10.0+cu128"
+    },
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "vram_bytes": 8184725504,
+    "nvidia_smi": "Sun Nov  1 08:11:26 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    Off |   00000000:01:00.0  On |                  N/A |\n| N/A   42C    P8              2W /   55W |      40MiB /   8188MiB |     19%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            4606      G   /usr/lib/xorg/Xorg                       27MiB |\n+-----------------------------------------------------------------------------------------+\n"
+  },
+  "code_sha": "9fa4b411ffe5f6b515da479db1da0e8aec51a725",
+  "working_tree": "M results/figures/imported_robot.png\n?? MUJOCO_LOG.TXT\n?? docs/resume_train.log\n?? docs/smoke_train.log\n?? experiments/\n?? paper/",
+  "diff": "diff --git a/results/figures/imported_robot.png b/results/figures/imported_robot.png\nindex f0c5b4c..b7f03ed 100644\nBinary files a/results/figures/imported_robot.png and b/results/figures/imported_robot.png differ",
+  "command": [
+    "/home/prashanna/Documents/AR_DESIGN/biped-ppo/.venv/bin/biped",
+    "train",
+    "--resume",
+    "runs/20261101T022550Z_train_61bf8501/last.pt",
+    "--max-wall-time",
+    "60",
+    "--max-transitions",
+    "4608",
+    "--iterations",
+    "6"
+  ],
+  "parent_checkpoint": "runs/20261101T022550Z_train_61bf8501/last.pt",
+  "assets": {
+    "assets/robot/models/microduck.xml": "a48c77e6faf0c52784a6aae7e2e61f5b05c8ec005887ca859b299bc3e7bdf8aa",
+    "assets/robot/source/microduck_minimal.urdf": "e12418e047380443cb269fe41bd37cdeee1401d6b2fd4020f6ede34233c83da5"
+  },
+  "config_hash": "1c0e4d58d2f6ab44c2a6b15ff38e74b0ec014d3c4fa463c6cc92867890e67670",
+  "config_files": {
+    "configs/evaluation/validation.yaml": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+    "configs/evaluation/test.yaml": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+    "configs/task/flat.yaml": "8da081b57794f403e957f9a79678d2ec2695f9033830a40f676e94eea39f0f8c",
+    "configs/robot/custom.yaml": "51eb6980ca35cd2b571a9dba242c3f6e893a278057c0152b9fd7c5fa3483532a",
+    "configs/experiments/smoke.yaml": "b642914329c2984064ecf86fd110bb51a9729bf8c2429a74a749838448aaea0f",
+    "configs/experiments/pilot.yaml": "fa89b6629c5696656fded2e5f88043e3dc796091f00c383144bb1b38b702c11c",
+    "configs/experiments/full.yaml": "d4122773e3a6a772cef55d1e0251e2af128c163b39cf2a1718974f09a4069121",
+    "configs/experiments/ablation-matrix.yaml": "c10671e551a2a6d2368beb8920400d145f6666ce710422267ca625d88217b37c"
+  },
+  "lock_hash": "88847f5961277ef9f05aa480c47df2ca56046d94fcf70a59c9f21d7b61b3c250",
+  "simulation_state_resume": "reset at resume; not bitwise restoration"
+}

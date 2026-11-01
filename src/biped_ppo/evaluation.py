@@ -19,9 +19,16 @@ def evaluate(checkpoint, suite_path):
             checkpoint
         ):
             raise ValueError("Test requires the checkpoint selected by validation")
+    cases = [
+        dict(evaluation_seed=seed, command=command, friction=friction, replica=replica)
+        for seed in suite["seeds"]
+        for command in suite["commands"]
+        for friction in suite["friction"]
+        for replica in range(4)
+    ]
     cfg = replace(
         RunConfig(**state["config"]),
-        num_envs=4,
+        num_envs=len(cases),
         randomization=False,
         curriculum=False,
         episode_seconds=suite["episode_seconds"],
@@ -34,93 +41,108 @@ def evaluate(checkpoint, suite_path):
     result_dir.mkdir()
     rows = []
     try:
-        for seed in suite["seeds"]:
-            for command in suite["commands"]:
-                for friction in suite["friction"]:
-                    seed_all(seed)
-                    # Fixed commands, including stopping and turning, never resampled away.
-                    term = env.env.command_manager.get_term("twist")
-                    term.cfg.ranges.lin_vel_x = (command[0], command[0])
-                    term.cfg.ranges.lin_vel_y = (command[1], command[1])
-                    term.cfg.ranges.ang_vel_z = (command[2], command[2])
-                    term.cfg.rel_standing_envs = 0.0
-                    from mjlab.envs.mdp import dr
-                    from mjlab.managers import SceneEntityCfg
+        from mjlab.envs.mdp import dr
+        from mjlab.managers import SceneEntityCfg
 
-                    dr.geom_friction(
-                        env.env,
-                        None,
-                        ranges=(friction, friction),
-                        asset_cfg=SceneEntityCfg("robot", geom_names=(".*collision.*",)),
-                    )
-                    env.reset()
-                    env.acc.zero_()
-                    env.last_x[:] = env.env.scene["robot"].data.root_link_pos_w[:, :2]
-                    env.completed = []
-                    obs = env.get_observations()
-                    active = torch.ones(cfg.num_envs, device=env.device, dtype=torch.bool)
-                    trajectory = []
-                    with torch.inference_mode():
-                        for step in range(round(suite["episode_seconds"] / env.env.step_dt)):
-                            raw = runner.alg.actor(obs)
-                            obs, _, done, extras = env.step(raw)
-                            if seed == suite["seeds"][0] and step % 5 == 0:
-                                d = env.env.scene["robot"].data
-                                trajectory.append(
-                                    dict(
-                                        t_s=(step + 1) * env.env.step_dt,
-                                        base_xyz=d.root_link_pos_w[0].tolist(),
-                                        velocity=d.root_link_lin_vel_b[0].tolist(),
-                                        joint_pos=d.joint_pos[0].tolist(),
-                                        active=bool(active[0]),
-                                    )
-                                )
-                            ids = extras["terminal_env_ids"].tolist()
-                            # completed[] is in the same ascending-ID order as terminal IDs.
-                            finished = env.completed
-                            env.completed = []
-                            for i, e in zip(ids, finished):
-                                if active[i]:
-                                    mass = json.loads((ROOT / "docs/model_audit.json").read_text())[
-                                        "mass_kg"
-                                    ]
-                                    distance = e["path_length_m"]
-                                    cot = (
-                                        e["mechanical_work_J"] / (mass * 9.81 * distance)
-                                        if distance > 0.02
-                                        else None
-                                    )
-                                    success = (
-                                        not e["fall"]
-                                        and e["duration_s"]
-                                        >= suite["success_survival_fraction"]
-                                        * suite["episode_seconds"]
-                                        and e["velocity_rmse"] <= suite["success_velocity_rmse"]
-                                        and e["yaw_rmse"] <= suite["success_yaw_rmse"]
-                                    )
-                                    row = dict(
-                                        checkpoint_sha=sha(checkpoint),
-                                        training_seed=cfg.seed,
-                                        evaluation_seed=seed,
-                                        environment=i,
-                                        command=command,
-                                        friction=friction,
-                                        split=suite["split"],
-                                        success=success,
-                                        mechanical_cot=cot,
-                                        **e,
-                                    )
-                                    rows.append(row)
-                                    append_json(result_dir / "episodes.jsonl", row)
-                                    active[i] = False
-                            if not active.any():
-                                break
-                    if trajectory:
-                        write_json(
-                            result_dir
-                            / f"trajectory_{seed}_{command[0]}_{command[2]}_{friction}.json",
-                            trajectory,
+        term = env.env.command_manager.get_term("twist")
+        term.cfg.rel_standing_envs = 0.0
+        term.cfg.resampling_time_range = (100.0, 100.0)
+        # Identical seeded initial-condition groups across every method/policy.
+        for seed in suite["seeds"]:
+            ids = torch.tensor(
+                [i for i, c in enumerate(cases) if c["evaluation_seed"] == seed], device=env.device
+            )
+            seed_all(seed)
+            env.env.reset(seed=seed, env_ids=ids)
+        for friction in suite["friction"]:
+            ids = torch.tensor(
+                [i for i, c in enumerate(cases) if c["friction"] == friction], device=env.device
+            )
+            dr.geom_friction(
+                env.env,
+                ids,
+                ranges=(friction, friction),
+                asset_cfg=SceneEntityCfg("robot", geom_names=(".*collision.*",)),
+            )
+        term.vel_command_b[:] = torch.tensor(
+            [c["command"] for c in cases], device=env.device, dtype=torch.float32
+        )
+        term.is_standing_env[:] = False
+        env.acc.zero_()
+        env.last_x[:] = env.env.scene["robot"].data.root_link_pos_w[:, :2]
+        env.completed = []
+        obs = env.get_observations()
+        active = torch.ones(len(cases), device=env.device, dtype=torch.bool)
+        trajectory = []
+        mass = json.loads((ROOT / "docs/model_audit.json").read_text())["mass_kg"]
+        with torch.inference_mode():
+            for step in range(round(suite["episode_seconds"] / env.env.step_dt) + 1):
+                obs, _, done, extras = env.step(runner.alg.actor(obs))
+                ids = extras["terminal_env_ids"].tolist()
+                if active[0] and (step % 5 == 0 or done[0]):
+                    d = env.env.scene["robot"].data
+                    if 0 in ids:
+                        j = ids.index(0)
+                        physics = extras["terminal_physics"]
+                        xyz = physics["root_pose"][j, :3].tolist()
+                        q = physics["joint_position"][j].tolist()
+                        velocity = physics["linear_velocity"][j].tolist()
+                    else:
+                        xyz = d.root_link_pos_w[0].tolist()
+                        q = d.joint_pos[0].tolist()
+                        velocity = d.root_link_lin_vel_b[0].tolist()
+                    trajectory.append(
+                        dict(
+                            t_s=(step + 1) * env.env.step_dt,
+                            base_xyz=xyz,
+                            velocity=velocity,
+                            joint_pos=q,
+                            terminal=bool(done[0]),
                         )
+                    )
+                finished = env.completed
+                env.completed = []
+                for i, episode in zip(ids, finished):
+                    if not active[i]:
+                        continue
+                    distance = episode["path_length_m"]
+                    cot = (
+                        episode["mechanical_work_J"] / (mass * 9.81 * distance)
+                        if distance > 0.02
+                        else None
+                    )
+                    success = (
+                        not episode["fall"]
+                        and episode["duration_s"]
+                        >= suite["success_survival_fraction"] * suite["episode_seconds"]
+                        and episode["velocity_rmse"] <= suite["success_velocity_rmse"]
+                        and episode["yaw_rmse"] <= suite["success_yaw_rmse"]
+                    )
+                    row = dict(
+                        checkpoint_sha=sha(checkpoint),
+                        training_seed=cfg.seed,
+                        environment=i,
+                        split=suite["split"],
+                        success=success,
+                        mechanical_cot=cot,
+                        **cases[i],
+                        **episode,
+                    )
+                    rows.append(row)
+                    append_json(result_dir / "episodes.jsonl", row)
+                    active[i] = False
+                if not active.any():
+                    break
+        if active.any():
+            raise RuntimeError("Evaluation ended with unfinished episodes")
+        write_json(
+            result_dir / "trajectory_first_episode.json",
+            dict(
+                selection_rule="environment 0, first configured seed/command/friction/replica; retain even on failure",
+                case=cases[0],
+                trajectory=trajectory,
+            ),
+        )
         summary = dict(
             episodes=len(rows),
             success_rate=float(np.mean([r["success"] for r in rows])),
@@ -128,9 +150,12 @@ def evaluate(checkpoint, suite_path):
             mean_duration_s=float(np.mean([r["duration_s"] for r in rows])),
             mean_velocity_rmse=float(np.mean([r["velocity_rmse"] for r in rows])),
             independent_training_seeds=1,
+            training_seed=cfg.seed,
             checkpoint_sha=sha(checkpoint),
             suite_sha=sha(ROOT / suite_path),
             split=suite["split"],
+            config=state["config"],
+            evaluation_parallel_worlds=len(cases),
         )
         write_json(result_dir / "summary.json", summary)
         if suite["split"] == "validation":
