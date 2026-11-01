@@ -1,8 +1,12 @@
-# Microduck biped PPO
+# AR-DESIGN — Microduck biped PPO
+
+![Microduck futuristic robot concept open in FreeCAD](docs/images/microduck-freecad.png)
+
+*FreeCAD appearance concept. CAD files and the rebuild script are in [assets/robot/source/cad](assets/robot/source/cad). Training uses the audited provisional URDF.*
 
 Provisional six-joint robot locomotion using **mjlab / MuJoCo Warp / RSL-RL**.
-This is a simulation research project. The original CAD, appearance redesign,
-URDF and learner draft remain intact in the parent directory. The training
+This is a simulation research project. The original workspace files remain intact; CAD sources and the appearance redesign
+are included under `assets/robot/source/cad/`. The training
 robot uses the supplied URDF, not an invented mechanism extracted from CAD.
 All physical parameters remain estimates until hardware specifications arrive.
 
@@ -12,7 +16,8 @@ Ubuntu 24.04, Python 3.12, recent NVIDIA driver. The project creates its own
 `.venv`; it does not alter existing CUDA/PyTorch/ROS installations.
 
 ```sh
-cd /home/prashanna/Documents/AR_DESIGN/biped-ppo
+git clone https://github.com/dev-prashanna/AR-DESIGN.git
+cd AR-DESIGN
 uv sync --locked
 uv run biped doctor
 uv run biped validate-model --robot configs/robot/custom.yaml
@@ -76,8 +81,7 @@ calibrated servo dynamics, or fabrication-ready CAD.
 
 See `docs/model_audit.json`, `docs/experiment_protocol.md`,
 `docs/design_decisions.md`, `docs/ROADMAP.md`, and `docs/execution_evidence.md`
-for current measured status and remaining work. Source CAD/URDF distribution
-rights need confirmation before public release; see `THIRD_PARTY.md`.
+for current measured status and remaining work. CAD and URDF assets retain separate ownership and licensing; see `THIRD_PARTY.md`.
 
 ## Measured milestone
 

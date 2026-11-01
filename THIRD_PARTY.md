@@ -1,9 +1,9 @@
 # Ownership and dependencies
 
-The supplied URDF is copied from the user's workspace. Its provenance and
-redistribution permission are not established. Do not publish these assets or
-CAD by applying the software license to them. The original CAD and draft PPO
-script remain outside this repository, unchanged.
+The supplied URDF and CAD assets are published at the user's explicit request.
+The MIT software license does not grant a separate license for these supplied
+assets; no asset-specific redistribution license was provided. Their respective
+owners retain their rights. The original workspace files remain unchanged.
 
 mjlab 1.6.0: Apache-2.0; selected inherited utilities BSD-3-Clause.
 RSL-RL 5.4.2: BSD-3-Clause. MuJoCo and MuJoCo Warp: Apache-2.0.
