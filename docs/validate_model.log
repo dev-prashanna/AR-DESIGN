@@ -1,0 +1,12 @@
+{
+  "mass_kg": 0.5,
+  "standing": {
+    "seconds": 5.0,
+    "min_height_m": 0.13576356564956704,
+    "final_height_m": 0.135955480508987,
+    "finite": true,
+    "saturation_fraction": 0.0,
+    "passed": true
+  },
+  "gates_passed": true
+}

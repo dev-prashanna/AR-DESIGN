@@ -1,3 +1,4 @@
+import json
 import os
 import platform
 import subprocess
@@ -14,6 +15,9 @@ def doctor():
         timestamp=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         platform=platform.platform(),
         cpu=platform.processor(),
+        cpu_details=json.loads(
+            subprocess.run(["lscpu", "-J"], capture_output=True, text=True, check=True).stdout
+        ),
         ram_bytes=psutil.virtual_memory().total,
         available_ram_bytes=psutil.virtual_memory().available,
         cuda_available=torch.cuda.is_available(),
@@ -65,6 +69,19 @@ def physics_checks(model, cfg):
         ],
         root_free=bool(model.jnt_type[0] == mujoco.mjtJoint.mjJNT_FREE),
     )
+    collision_ids = [i for i in range(model.ngeom) if "collision" in model.geom(i).name]
+    bounds = []
+    for index in collision_ids:
+        extent = np.abs(d.geom_xmat[index].reshape(3, 3)) @ model.geom_size[index]
+        bounds.append((d.geom_xpos[index] - extent, d.geom_xpos[index] + extent))
+    report["height_m"] = float(max(b[1][2] for b in bounds) - min(b[0][2] for b in bounds))
+    report["foot_contact_sites"] = ["l_foot_contact", "r_foot_contact"]
+    report["nominal_support_xy_m"] = [
+        [-0.019, -0.051],
+        [0.019, -0.051],
+        [0.019, 0.051],
+        [-0.019, 0.051],
+    ]
     report["joint_command_checks"] = []
     # Floating robot in the air avoids floor friction masking sign checks.
     for n, qi, vi, ai in zip(cfg["joint_names"], qids, vids, aid):
@@ -111,6 +128,12 @@ def physics_checks(model, cfg):
         saturation_fraction=saturation / (steps * 6),
         passed=finite and min_height >= cfg["standing_gate_min_height"],
     )
+    report["standing_contacts"] = [
+        dict(
+            geom1=model.geom(c.geom1).name, geom2=model.geom(c.geom2).name, distance_m=float(c.dist)
+        )
+        for c in d.contact
+    ]
     drop = initialize(model, cfg, 0.3)
     min_z = 0.3
     for _ in range(500):

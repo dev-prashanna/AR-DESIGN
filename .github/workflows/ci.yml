@@ -1,0 +1,13 @@
+name: CPU validation
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  cpu:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run ruff check src tests
+      - run: uv run pytest -m 'not gpu'
+        env:
+          MUJOCO_GL: egl

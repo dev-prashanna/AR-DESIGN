@@ -1,0 +1,44 @@
+Installed 13 packages in 39ms
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4060 Laptop GPU" (8 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /home/prashanna/.cache/warp/1.18.0
+CUDA devices: ['cuda:0']
+Module mujoco_warp._src.smooth b9cc505 load on device 'cuda:0' took 4083.49 ms  (compiled)
+Module _nxn_broadphase__locals__kernel_5ea22428 5ea2242 load on device 'cuda:0' took 333.04 ms  (compiled)
+Module _primitive_narrowphase__locals__primitive_narrowphase_84c518b0 84c518b load on device 'cuda:0' took 653.91 ms  (compiled)
+Module mujoco_warp._src.constraint 9435a53 load on device 'cuda:0' took 73.52 ms  (compiled)
+Module _friction_dof__locals__kernel_eadd710f eadd710 load on device 'cuda:0' took 158.09 ms  (compiled)
+Module _limit_slide_hinge__locals__kernel_cbfc119c cbfc119 load on device 'cuda:0' took 169.27 ms  (compiled)
+Module _efc_contact_init__locals__kernel_574ccaaf 574ccaa load on device 'cuda:0' took 104.10 ms  (compiled)
+Module _efc_contact_jac_dense__locals__kernel_cf20828f 2cba4be load on device 'cuda:0' took 485.49 ms  (compiled)
+Module _efc_contact_update__locals__kernel_7d5c4160 7d5c416 load on device 'cuda:0' took 155.93 ms  (compiled)
+Module mujoco_warp._src.forward f44d3e1 load on device 'cuda:0' took 964.32 ms  (compiled)
+Module mujoco_warp._src.passive 80f3681 load on device 'cuda:0' took 1766.70 ms  (compiled)
+Module mujoco_warp._src.forward 0a75030 load on device 'cuda:0' took 958.74 ms  (compiled)
+Module _qfrc_smooth__locals__kernel_8b823980 8b82398 load on device 'cuda:0' took 85.17 ms  (compiled)
+Module mujoco_warp._src.support f39c2de load on device 'cuda:0' took 183.53 ms  (compiled)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_0216736a b3ff4d2 load on device 'cuda:0' took 4501.19 ms  (compiled)
+Module _solve_init_dof__locals__kernel_1d7ecfa4 1d7ecfa load on device 'cuda:0' took 73.96 ms  (compiled)
+Module mujoco_warp._src.solver c97221b load on device 'cuda:0' took 1250.74 ms  (compiled)
+Module _solve_init_jaref_kernel__locals__kernel_1edb0aaf 1edb0aa load on device 'cuda:0' took 92.74 ms  (compiled)
+Module mul_m_kernel__locals___mul_m_d74bd8d9 d74bd8d load on device 'cuda:0' took 155.34 ms  (compiled)
+Module _update_constraint_efc__locals__kernel_4b172e8b 4b172e8 load on device 'cuda:0' took 140.90 ms  (compiled)
+Module _update_constraint_init_qfrc_constraint_dense__locals__kernel_c29c2cfc c29c2cf load on device 'cuda:0' took 118.87 ms  (compiled)
+Module _update_gradient_zero_grad_dot__locals__kernel_93442399 9344239 load on device 'cuda:0' took 71.93 ms  (compiled)
+Module _update_gradient_grad__locals__kernel_378e7517 378e751 load on device 'cuda:0' took 84.92 ms  (compiled)
+Module _update_gradient_JTDAJ_dense_tiled__locals__kernel_d2e7836e 839ea52 load on device 'cuda:0' took 592.36 ms  (compiled)
+Module _update_gradient_cholesky__locals__kernel_25f112bf 303f2ec load on device 'cuda:0' took 4136.62 ms  (compiled)
+Module _linesearch_iterative_kernel__locals__kernel_07b6d583 17c364d load on device 'cuda:0' took 570.01 ms  (compiled)
+Module _update_constraint_efc__locals__kernel_523090d1 523090d load on device 'cuda:0' took 140.39 ms  (compiled)
+Module _update_constraint_init_qfrc_constraint_dense__locals__kernel_f3231cfe f3231cf load on device 'cuda:0' took 107.41 ms  (compiled)
+Module _update_gradient_zero_grad_dot__locals__kernel_721e3cea 721e3ce load on device 'cuda:0' took 86.49 ms  (compiled)
+Module _update_gradient_grad__locals__kernel_5363029b 5363029 load on device 'cuda:0' took 78.86 ms  (compiled)
+Module _update_gradient_cholesky__locals__kernel_c2847232 38c6636 load on device 'cuda:0' took 1377.53 ms  (compiled)
+Module mujoco_warp._src.sensor 764597f load on device 'cuda:0' took 3784.07 ms  (compiled)
+Module mujoco_warp._src.derivative 1d93a53 load on device 'cuda:0' took 1164.13 ms  (compiled)
+Module _next_time_builder__locals___next_time_f604e0b3 f604e0b load on device 'cuda:0' took 96.30 ms  (compiled)
+{"worlds": 32, "steps": 5, "finite": true, "min_root_z_m": 0.13591140508651733, "wall_s": 29.265571524999814}

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Cite the release and actual experiment artifacts used."
+title: "Microduck PPO: provisional biped locomotion pipeline"
+version: 0.1.0
+type: software
+authors:
+  - name: "Microduck project contributors"
+license: MIT

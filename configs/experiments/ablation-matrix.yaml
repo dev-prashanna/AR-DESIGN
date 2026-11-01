@@ -1,0 +1,7 @@
+base: configs/experiments/full.yaml
+seeds: [0, 1, 2]
+conditions:
+  baseline: {curriculum: false, randomization: false}
+  curriculum: {curriculum: true, randomization: false}
+  randomization: {curriculum: false, randomization: true}
+  both: {curriculum: true, randomization: true}

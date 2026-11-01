@@ -1,0 +1,11 @@
+profile: pilot
+num_envs: 64
+horizon: 24
+iterations: 1000
+max_wall_time: 1200
+max_transitions: 1536000
+checkpoint_interval: 25
+episode_seconds: 10.0
+curriculum: true
+randomization: false
+seed: 0

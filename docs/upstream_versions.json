@@ -1,0 +1,41 @@
+{
+  "mjlab": {
+    "version": "1.6.0",
+    "release_tag_sha": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+    "source": "https://github.com/mujocolab/mjlab/tree/v1.6.0"
+  },
+  "rsl-rl-lib": {
+    "version": "5.4.2",
+    "release_tag_sha": "aabd3eb5f6ff5b54614225d2dc1027ee5f8b90ad",
+    "source": "https://github.com/leggedrobotics/rsl_rl/tree/v5.4.2"
+  },
+  "inspected_main": {
+    "mjlab_sha": "88677c71016d0edcdcea623217f9d791f6b8b04a",
+    "used_for_installation": false
+  },
+  "artifacts": "PyPI release wheel hashes in uv.lock are installation authority; tag SHAs resolve upstream tags, not a proof of wheel-source equivalence.",
+  "mujoco": {
+    "version": "3.11.0",
+    "url": "https://github.com/google-deepmind/mujoco.git",
+    "tag_resolution": "b85fdca54f0e0038b804af146a0b4e94199e00d0 refs/tags/3.11.0",
+    "error": null
+  },
+  "mujoco-warp": {
+    "version": "3.11.0",
+    "url": "https://github.com/google-deepmind/mujoco_warp.git",
+    "tag_resolution": "dbc52e3ea69a63e14026e969cb055e0c3c2f0c83\trefs/tags/v3.11.0",
+    "error": null
+  },
+  "warp-lang": {
+    "version": "1.18.0",
+    "url": "https://github.com/NVIDIA/warp.git",
+    "tag_resolution": "8366687f755fc9e163f60cc70d84331c9d0036da\trefs/tags/v1.18.0\nf2eaed82d8d03b37bf1014cc975954067fefcf16\trefs/tags/v1.18.0^{}",
+    "error": null
+  },
+  "torch": {
+    "version": "2.10.0",
+    "url": "https://github.com/pytorch/pytorch.git",
+    "tag_resolution": "449b1768410104d3ed79d3bcfe4ba1d65c7f22c0\trefs/tags/v2.10.0",
+    "error": null
+  }
+}

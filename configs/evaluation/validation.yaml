@@ -1,0 +1,8 @@
+split: validation
+seeds: [1001, 1002, 1003]
+commands: [[0, 0, 0], [0.03, 0, 0], [0.06, 0, 0], [0, 0, 0.15]]
+episode_seconds: 10.0
+friction: [0.8]
+success_survival_fraction: 0.95
+success_velocity_rmse: 0.025
+success_yaw_rmse: 0.1

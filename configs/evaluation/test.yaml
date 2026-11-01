@@ -1,0 +1,8 @@
+split: test
+seeds: [9001, 9002, 9003]
+commands: [[0, 0, 0], [0.045, 0, 0], [0.075, 0, 0], [0.03, 0, 0.2], [0.03, 0, -0.2]]
+episode_seconds: 10.0
+friction: [0.65, 0.95]
+success_survival_fraction: 0.95
+success_velocity_rmse: 0.025
+success_yaw_rmse: 0.1

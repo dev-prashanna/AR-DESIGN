@@ -1,0 +1,16 @@
+name: Explicit local GPU training
+on:
+  workflow_dispatch:
+    inputs:
+      seconds:
+        description: Maximum wall seconds
+        default: '1200'
+        required: true
+jobs:
+  train:
+    runs-on: [self-hosted, linux, gpu]
+    steps:
+      - uses: actions/checkout@v4
+      - run: uv sync --locked
+      - run: uv run biped validate-model
+      - run: uv run biped train --config configs/experiments/pilot.yaml --max-wall-time '${{ inputs.seconds }}'

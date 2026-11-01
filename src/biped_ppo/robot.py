@@ -27,14 +27,10 @@ def generate(robot_path="configs/robot/custom.yaml", output=None, ground=False, 
     tree = ET.parse(ROOT / cfg["urdf"]).getroot()
     mj = ET.Element("mujoco", model=cfg["name"])
     ET.SubElement(mj, "compiler", angle="radian", eulerseq="xyz", fusestatic="false")
-    ET.SubElement(
-        mj,
-        "option",
-        timestep=str(cfg["physics_dt"]),
-        gravity="0 0 -9.81",
-        integrator="implicitfast",
-        iterations="30",
-    )
+    options = dict(timestep=str(cfg["physics_dt"]), gravity="0 0 -9.81")
+    if ground or motors:
+        options.update(integrator="implicitfast", iterations="30")
+    ET.SubElement(mj, "option", **options)
     default = ET.SubElement(mj, "default")
     ET.SubElement(
         default, "geom", friction=f"{cfg['friction']} 0.005 0.0001", condim="3", solref="0.008 1"
@@ -68,7 +64,10 @@ def generate(robot_path="configs/robot/custom.yaml", output=None, ground=False, 
         visited.add(name)
         link = links[name]
         body = ET.SubElement(
-            parent, "body", name=name, **(origin(joint) if joint is not None else {"pos": "0 0 0"})
+            parent,
+            "body",
+            name=name,
+            **(origin(joint) if joint is not None else {"pos": f"0 0 {cfg['base_height']}"}),
         )
         if joint is None:
             ET.SubElement(body, "freejoint", name="floating_base")
@@ -216,6 +215,13 @@ def validate(robot_path="configs/robot/custom.yaml"):
     xml, report = generate(
         robot_path, ROOT / "assets/robot/models/microduck.xml", ground=True, motors=True
     )
+    import hashlib
+
+    def sha(path):
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+
+    report["urdf_sha"] = sha(ROOT / report["robot"]["urdf"])
+    report["robot_spec_sha"] = sha(ROOT / robot_path)
     model = mujoco.MjModel.from_xml_string(xml)
     report.update(physics_checks(model, report["robot"]))
     (ROOT / "docs/model_audit.json").write_text(json.dumps(report, indent=2))

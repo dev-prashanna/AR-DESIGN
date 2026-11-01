@@ -18,3 +18,8 @@
   continuation is not bitwise reproduction; GPU kernels can be nondeterministic.
 - The repository is local until a destination and asset publication permissions
   are resolved. No fabricated history, external logging or automatic upload.
+
+- Release tags resolve to exact SHAs in docs/upstream_versions.json. A direct
+  diagnostic probe without an explicit MuJoCo pin resolved an incompatible
+  newer MuJoCo and failed on nflexevpair; the project lock already pins both
+  MuJoCo and MuJoCo Warp to 3.11.0. Repeat probes use the same version pair.

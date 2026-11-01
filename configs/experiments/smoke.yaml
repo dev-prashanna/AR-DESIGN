@@ -1,0 +1,11 @@
+profile: smoke
+num_envs: 32
+horizon: 24
+iterations: 3
+max_wall_time: 180
+max_transitions: 2304
+checkpoint_interval: 1
+episode_seconds: 6.0
+curriculum: false
+randomization: false
+seed: 0
