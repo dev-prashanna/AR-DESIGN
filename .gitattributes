@@ -1,0 +1,3 @@
+# Preserve generated CAD exports byte-for-byte and keep review diffs compact.
+*.FCStd binary
+*.step binary

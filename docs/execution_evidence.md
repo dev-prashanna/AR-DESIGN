@@ -1,5 +1,9 @@
 # Execution evidence and handoff — 2026-11-01
 
+GitHub publication was requested after the initial local handoff. See
+[publication.json](publication.json) for the server-recorded repository details;
+the initial handoff status below predates that publication.
+
 The local pipeline and short-budget experiment completed. **Reliable commanded
 walking did not meet the declared acceptance criteria.** Forward motion occurs,
 but heading control is poor. All results are simulation-only on a provisional

@@ -101,3 +101,5 @@ The compact evidence release is `releases/microduck-initial-study-evidence.tar.g
 checkpoints, raw logs/episodes, evaluations, report and policy artifacts. Per-run
 manifests preserve original absolute paths; if extracting elsewhere, point the
 study index paths at the extracted run folders before analyzing existing runs.
+
+Download the measured-study archive and PDF from the [v0.1.0 release](https://github.com/dev-prashanna/AR-DESIGN/releases/tag/v0.1.0).
