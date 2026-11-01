@@ -1,0 +1,8 @@
+{
+  "staged_files": 69,
+  "secret_pattern_hits": [],
+  "files_over_10_mib": [],
+  "published": false,
+  "remote": null,
+  "scope": "heuristic staged-text scan; not a security guarantee"
+}

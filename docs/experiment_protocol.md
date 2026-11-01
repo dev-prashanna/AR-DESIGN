@@ -17,8 +17,8 @@ velocity RMSE then earlier update; report all evaluated checkpoints.
 
 Success: no fall, >=95% episode duration, velocity RMSE <=.025 m/s, yaw RMSE <=.1
 rad/s. Fall: torso below .075 m or tilt >.9 rad. Numerical invalidity is an error.
-Cost of transport: integral(sum(abs(tau*qdot)))/(mass*9.81*path_length), excluding
-path length <=.02 m. This is absolute mechanical work, not battery consumption.
+Cost of transport: integral(sum(abs(tau*qdot)))/(mass*9.81*forward_distance), excluding
+non-forward commands and integrated body-frame forward distance <=.02 m. This is absolute mechanical work, not battery consumption.
 
 Use independent trained seeds for mean/spread and bootstrap 95% intervals
 (over run means, 10,000 bootstrap samples with seed 0) only when >=3 matched
@@ -60,3 +60,9 @@ checkpoints. Reuse a completed pilot only if its task, seed, batch, episode leng
 condition and transition budget exactly match; record reuse explicitly. Resume
 smoke tests are excluded from the research matrix. Cap the sequential study sweep
 at 1,200 seconds, saving any missing cells for a later explicit continuation.
+
+Supplementary stopping diagnostic (defined before observing stopping outcomes):
+seeds 1101--1103, 0.045 m/s forward for 5 s followed by zero command for 5 s,
+friction .8. Report whether the stop phase was reached and post-stop planar-speed
+RMS separately. This diagnostic is distinct from the frozen main test comparison
+and cannot select/tune a checkpoint. Main test cases are unchanged.

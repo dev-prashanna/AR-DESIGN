@@ -73,31 +73,60 @@ def evaluate(checkpoint, suite_path):
         env.completed = []
         obs = env.get_observations()
         active = torch.ones(len(cases), device=env.device, dtype=torch.bool)
-        trajectory = []
+        selected = [
+            i
+            for i, c in enumerate(cases)
+            if c["evaluation_seed"] == suite["seeds"][0]
+            and c["friction"] == suite["friction"][0]
+            and c["replica"] == 0
+        ]
+        trajectories = {i: [] for i in selected}
+        forward_distance = torch.zeros(len(cases), device=env.device)
+        stop_at = suite.get("stop_at_s")
+        stopped = False
+        stop_time = torch.zeros(len(cases), device=env.device)
+        stop_speed_sq = torch.zeros(len(cases), device=env.device)
         mass = json.loads((ROOT / "docs/model_audit.json").read_text())["mass_kg"]
         with torch.inference_mode():
             for step in range(round(suite["episode_seconds"] / env.env.step_dt) + 1):
+                if stop_at is not None and not stopped and step * env.env.step_dt >= stop_at:
+                    term.vel_command_b[:] = 0.0
+                    obs = env.get_observations()
+                    stopped = True
                 obs, _, done, extras = env.step(runner.alg.actor(obs))
                 ids = extras["terminal_env_ids"].tolist()
-                if active[0] and (step % 5 == 0 or done[0]):
-                    d = env.env.scene["robot"].data
-                    if 0 in ids:
-                        j = ids.index(0)
+                velocity = env.env.scene["robot"].data.root_link_lin_vel_b.clone()
+                if ids:
+                    velocity[extras["terminal_env_ids"]] = extras["terminal_physics"][
+                        "linear_velocity"
+                    ]
+                forward_distance += velocity[:, 0] * env.env.step_dt * active.float()
+                if stopped:
+                    stop_time += env.env.step_dt * active.float()
+                    stop_speed_sq += (
+                        velocity[:, :2].square().sum(-1) * env.env.step_dt * active.float()
+                    )
+                for selected_id in selected:
+                    if not active[selected_id] or not (step % 5 == 0 or done[selected_id]):
+                        continue
+                    data = env.env.scene["robot"].data
+                    if selected_id in ids:
+                        j = ids.index(selected_id)
                         physics = extras["terminal_physics"]
-                        xyz = physics["root_pose"][j, :3].tolist()
+                        pose = physics["root_pose"][j].tolist()
                         q = physics["joint_position"][j].tolist()
-                        velocity = physics["linear_velocity"][j].tolist()
+                        vel = physics["linear_velocity"][j].tolist()
                     else:
-                        xyz = d.root_link_pos_w[0].tolist()
-                        q = d.joint_pos[0].tolist()
-                        velocity = d.root_link_lin_vel_b[0].tolist()
-                    trajectory.append(
+                        pose = data.root_link_pose_w[selected_id].tolist()
+                        q = data.joint_pos[selected_id].tolist()
+                        vel = data.root_link_lin_vel_b[selected_id].tolist()
+                    trajectories[selected_id].append(
                         dict(
                             t_s=(step + 1) * env.env.step_dt,
-                            base_xyz=xyz,
-                            velocity=velocity,
+                            root_pose=pose,
                             joint_pos=q,
-                            terminal=bool(done[0]),
+                            velocity=vel,
+                            terminal=bool(done[selected_id]),
                         )
                     )
                 finished = env.completed
@@ -105,10 +134,10 @@ def evaluate(checkpoint, suite_path):
                 for i, episode in zip(ids, finished):
                     if not active[i]:
                         continue
-                    distance = episode["path_length_m"]
+                    distance = float(forward_distance[i])
                     cot = (
                         episode["mechanical_work_J"] / (mass * 9.81 * distance)
-                        if distance > 0.02
+                        if distance > 0.02 and cases[i]["command"][0] > 0.001
                         else None
                     )
                     success = (
@@ -125,9 +154,18 @@ def evaluate(checkpoint, suite_path):
                         split=suite["split"],
                         success=success,
                         mechanical_cot=cot,
+                        forward_distance_m=distance,
                         **cases[i],
                         **episode,
                     )
+                    if stop_at is not None:
+                        row["stop_at_s"] = stop_at
+                        row["stop_reached"] = episode["duration_s"] >= stop_at
+                        row["post_stop_velocity_rms_m_s"] = (
+                            float((stop_speed_sq[i] / stop_time[i]).sqrt())
+                            if stop_time[i] > 0
+                            else None
+                        )
                     rows.append(row)
                     append_json(result_dir / "episodes.jsonl", row)
                     active[i] = False
@@ -136,11 +174,12 @@ def evaluate(checkpoint, suite_path):
         if active.any():
             raise RuntimeError("Evaluation ended with unfinished episodes")
         write_json(
-            result_dir / "trajectory_first_episode.json",
+            result_dir / "trajectories.json",
             dict(
-                selection_rule="environment 0, first configured seed/command/friction/replica; retain even on failure",
-                case=cases[0],
-                trajectory=trajectory,
+                selection_rule="First configured evaluation seed, first friction, replica 0, every command; retain successes and failures",
+                cases=[
+                    dict(environment=i, case=cases[i], trajectory=trajectories[i]) for i in selected
+                ],
             ),
         )
         summary = dict(

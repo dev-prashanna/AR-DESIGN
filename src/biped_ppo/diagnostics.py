@@ -1,6 +1,7 @@
 import json
 import os
 import platform
+import shutil
 import subprocess
 import time
 from importlib.metadata import version
@@ -30,7 +31,11 @@ def doctor():
     if torch.cuda.is_available():
         result["gpu"] = torch.cuda.get_device_name(0)
         result["vram_bytes"] = torch.cuda.get_device_properties(0).total_memory
-    result["nvidia_smi"] = subprocess.run(["nvidia-smi"], capture_output=True, text=True).stdout
+    result["nvidia_smi"] = (
+        subprocess.run(["nvidia-smi"], capture_output=True, text=True).stdout
+        if shutil.which("nvidia-smi")
+        else None
+    )
     return result
 
 

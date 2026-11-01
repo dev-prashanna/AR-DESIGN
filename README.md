@@ -38,7 +38,7 @@ on the inspected laptop; rendering is optional infrastructure, not a training in
 ```sh
 uv run biped view --robot configs/robot/custom.yaml
 uv run biped train --config configs/experiments/pilot.yaml --seed 0 --max-wall-time 1200
-uv run biped train --resume runs/<run-id>/last.pt --max-wall-time 120
+uv run biped train --resume runs/<run-id>/last.pt --max-wall-time 120 --max-transitions 3072000 --iterations 500
 uv run biped evaluate --checkpoint runs/<run-id>/final.pt --suite configs/evaluation/validation.yaml
 uv run biped export --checkpoint runs/<run-id>/final.pt --format onnx
 uv run biped analyze --runs runs
@@ -78,3 +78,22 @@ See `docs/model_audit.json`, `docs/experiment_protocol.md`,
 `docs/design_decisions.md`, `docs/ROADMAP.md`, and `docs/execution_evidence.md`
 for current measured status and remaining work. Source CAD/URDF distribution
 rights need confirmation before public release; see `THIRD_PARTY.md`.
+
+## Measured milestone
+
+The initial matched study completed 12 policies (four conditions x seeds 0,1,2),
+1,536,000 transitions each. Full moving-command acceptance was not reached;
+forward displacement occurs but heading control is a key failure. This is an
+exploratory short-budget result, not reliable walking. See the generated report
+and results/aggregates/results.json. The longer full.yaml profile and broader
+held-out mass/delay/terrain tests remain separate, unrun work.
+
+To reproduce a study cell, use its generated experiments/resolved/<run-id>.yaml.
+Continuing a completed run requires increasing both lifetime transition and
+update caps as needed; --max-wall-time alone does not extend those caps.
+
+The compact evidence release is `releases/microduck-initial-study-evidence.tar.gz`
+(ignored by Git); verify it against `releases/SHA256SUMS`. It contains final
+checkpoints, raw logs/episodes, evaluations, report and policy artifacts. Per-run
+manifests preserve original absolute paths; if extracting elsewhere, point the
+study index paths at the extracted run folders before analyzing existing runs.

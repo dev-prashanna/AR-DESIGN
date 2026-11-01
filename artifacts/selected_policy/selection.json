@@ -1,0 +1,9 @@
+{
+  "condition": "baseline",
+  "seed": 0,
+  "checkpoint": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023310Z_train_fc523e6c/best_validation.pt",
+  "checkpoint_sha": "928b9780809d87a758fb98ca5bbb016b5d314ec4a5b372ed57975951da71e3fb",
+  "rule": "highest validation success, then lowest validation planar RMSE; finals only eligible",
+  "validation": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023310Z_train_fc523e6c/evaluation_validation_1793501382417089166",
+  "test_used_for_selection": false
+}

@@ -16,3 +16,5 @@ paper/*.synctex.gz
 .env
 
 MUJOCO_LOG.TXT
+
+releases/*.tar.gz

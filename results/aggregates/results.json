@@ -1,0 +1,2166 @@
+{
+  "runs": [
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T022550Z_train_61bf8501",
+      "metrics_sha": "0d609799c19f0c27dd87cd9ec0bf720b1503a5415d7ff6e09b5e4e52c25236d0",
+      "updates": 3,
+      "final_transitions": 2304,
+      "last_reward": 0.009643772384151816
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T022626Z_train_3c158a30",
+      "metrics_sha": "ed412b81eb94586ae9db002db9d23961b9be8b211cc1c28c5cad8566e87a12e0",
+      "updates": 3,
+      "final_transitions": 4608,
+      "last_reward": 0.011262115634356936
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T022655Z_train_a424f977",
+      "metrics_sha": "2e4696972c55cbb5e07de72d42a54f32e53ec1daf6f5ad7df1caa4fce9dca4aa",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.0437322238770624
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023200Z_train_0a6adf11",
+      "metrics_sha": "5e71cb7340354e81e2ad6b7b34aaa5433c0cbb7242f74ee42e49a3fbe896fcda",
+      "updates": 3,
+      "final_transitions": 2304,
+      "last_reward": 0.01182556195029368
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023310Z_train_fc523e6c",
+      "metrics_sha": "ff6a20bc7476adef3616ec14e3210a44583b7d9653e11f075b711f1e648ca1a8",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.046156036046644054
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023433Z_train_d690c49e",
+      "metrics_sha": "b35a94bb94e67e53822f49d8dcc5d8ed38fe4896f15981e4933619a26a917714",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.048030813690274954
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023554Z_train_5a11c811",
+      "metrics_sha": "2c3c1a21a547c94f4603f6e6694dea9312ee628c77abfbcf5eb64d644e32f748",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.04547192994505167
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023716Z_train_bc2cbf0d",
+      "metrics_sha": "45bb36bbe8352497e1bdb8ed2ec71b2596f6fb03b087982332b1158c6bb1d216",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.042393591875831284
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023835Z_train_adba2a09",
+      "metrics_sha": "379b7f1146d4cf26a5387d6ea7d1d438099d7173aba0c473f927519ca51ab695",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.041095310977349676
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023957Z_train_aecdb681",
+      "metrics_sha": "9b67b96503e2e4cf14261c10d7621ac334a24037d2a8ea05ed767e00b23fff6c",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.04441393384089073
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024126Z_train_4f4a86a7",
+      "metrics_sha": "7fcceba0b180dd91830d1c2158b775069ebc91c456b568da7b5660692a0cc86d",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.041029568606366716
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024255Z_train_c8f04518",
+      "metrics_sha": "5d8cf68abfaf31106fd46c1739169edfd7e0979538e4b1995cef88b93d4ac4df",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.043313523288816214
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024424Z_train_11c8aa5d",
+      "metrics_sha": "a0991aa0e3205d2b00eb3ff70663538a6749f28545e7ed531909256bbb05a477",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.036321262984226145
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024555Z_train_1172c025",
+      "metrics_sha": "548b4078a42007fe003b35a6f26f2acba03cc9e055fa3c29d5ce535608e436a7",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.03856626354778806
+    },
+    {
+      "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024730Z_train_f391b26e",
+      "metrics_sha": "8ef6c1d0b976789a1d02ce1f3b5786fa452c72124f1891dde47d51f59a88d3ee",
+      "updates": 250,
+      "final_transitions": 1536000,
+      "last_reward": 0.03933629176268975
+    }
+  ],
+  "study_policies": [
+    {
+      "condition": "baseline",
+      "training_seed": 0,
+      "run_id": "20261101T023310Z_train_fc523e6c",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023310Z_train_fc523e6c",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 83.48763546100008,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 1199.999998797,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": false,
+        "randomization": false,
+        "seed": 0
+      },
+      "config_sha": "446a8ae290ca27171566a0e94d93e55899193c6cfda2780c3d29539be39cb1f8",
+      "metrics_sha": "ff6a20bc7476adef3616ec14e3210a44583b7d9653e11f075b711f1e648ca1a8",
+      "checkpoint_sha": "928b9780809d87a758fb98ca5bbb016b5d314ec4a5b372ed57975951da71e3fb",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.012258836800098412,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "928b9780809d87a758fb98ca5bbb016b5d314ec4a5b372ed57975951da71e3fb",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1199.999998797,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "f079967ecdaad65ff78ead641086206bbad4814534e24ae2360e5efd41879edb",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023310Z_train_fc523e6c/evaluation_validation_1793501382417089166",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.4786244050304386,
+        "mean_foot_slip_rms_m_s": 0.01930314562593667
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.021704938743828603,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "928b9780809d87a758fb98ca5bbb016b5d314ec4a5b372ed57975951da71e3fb",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1199.999998797,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "e0c22f07ca7fd3a41d0108ceae16b286cac344326aecadbdaeed9c6473a88c0d",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023310Z_train_fc523e6c/evaluation_test_1793501431843643034",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.2821327863171479,
+        "mean_foot_slip_rms_m_s": 0.025078325440108365
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.015916175119756716,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "928b9780809d87a758fb98ca5bbb016b5d314ec4a5b372ed57975951da71e3fb",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1199.999998797,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "d1b73e0da0abf548c2c552799b74d18e19422c04f51b6bc8170155a9cea874b8",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023310Z_train_fc523e6c/evaluation_stopping_1793501487745003083",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.4391646260500271,
+        "mean_foot_slip_rms_m_s": 0.02842729631751839
+      }
+    },
+    {
+      "condition": "baseline",
+      "training_seed": 1,
+      "run_id": "20261101T023433Z_train_d690c49e",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023433Z_train_d690c49e",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 80.66980899600003,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 1116.294648736,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": false,
+        "randomization": false,
+        "seed": 1
+      },
+      "config_sha": "24ad786d65d0be87a8d7ebb03d2a621103035335ad70521708aeed5a85367310",
+      "metrics_sha": "b35a94bb94e67e53822f49d8dcc5d8ed38fe4896f15981e4933619a26a917714",
+      "checkpoint_sha": "8b13805cd29f85a336c02dcb8e29537fef3eed9cee6ceeda004ec2aad8d13720",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.020713819039400172,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "8b13805cd29f85a336c02dcb8e29537fef3eed9cee6ceeda004ec2aad8d13720",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1116.294648736,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "2d51c37cbed5712557b3574e64ccf3a18a2ee4cd34650d2dfc31bcd5e824e45b",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023433Z_train_d690c49e/evaluation_validation_1793501387242684302",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.4933323155408164,
+        "mean_foot_slip_rms_m_s": 0.007419236964131927
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.08333333333333333,
+        "mean_duration_s": 9.487202264865239,
+        "mean_velocity_rmse": 0.034952653310666645,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "8b13805cd29f85a336c02dcb8e29537fef3eed9cee6ceeda004ec2aad8d13720",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1116.294648736,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "e1449ec1466b40f32a6a71cd13ded2c5f1583ce2ce5ca28acceaf1f94f3223ca",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023433Z_train_d690c49e/evaluation_test_1793501436657687226",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.44442901694612025,
+        "mean_foot_slip_rms_m_s": 0.01486707716032503
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.025994041127752013,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "8b13805cd29f85a336c02dcb8e29537fef3eed9cee6ceeda004ec2aad8d13720",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1116.294648736,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "9086f468f3a7ca1990d497b39e335445cbce2b54bc02b6447355d8f5b32bf9e4",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023433Z_train_d690c49e/evaluation_stopping_1793501491514553216",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.8456647986802981,
+        "mean_foot_slip_rms_m_s": 0.016052919750771697
+      }
+    },
+    {
+      "condition": "baseline",
+      "training_seed": 2,
+      "run_id": "20261101T023554Z_train_5a11c811",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023554Z_train_5a11c811",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 81.7716619339999,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 1035.5740201580002,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": false,
+        "randomization": false,
+        "seed": 2
+      },
+      "config_sha": "fa12b2389bfae60e8408034a8a495044ccdf6018a39ea544c120afdb7cca848c",
+      "metrics_sha": "2c3c1a21a547c94f4603f6e6694dea9312ee628c77abfbcf5eb64d644e32f748",
+      "checkpoint_sha": "11fea0ef33e34fe6fe6b81983ba284ab7eae9894e31b56dcc967f9c1f618c149",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.016432658649836524,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "11fea0ef33e34fe6fe6b81983ba284ab7eae9894e31b56dcc967f9c1f618c149",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1035.5740201580002,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "7f11019a3373704fe7bd702ea3bc7e1fbe4368bcbd80bfda4b187bcb6d804d3d",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023554Z_train_5a11c811/evaluation_validation_1793501391270244183",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.1483326729760559,
+        "mean_foot_slip_rms_m_s": 0.01611450492116352
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.02844600242378205,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "11fea0ef33e34fe6fe6b81983ba284ab7eae9894e31b56dcc967f9c1f618c149",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1035.5740201580002,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "0359f3502e9c27d18766687350ffef53487b60aed4d2ac15ed851de1249fe7a2",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023554Z_train_5a11c811/evaluation_test_1793501441394744787",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.09814957258182995,
+        "mean_foot_slip_rms_m_s": 0.02285751123158839
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.01643971557667147,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "11fea0ef33e34fe6fe6b81983ba284ab7eae9894e31b56dcc967f9c1f618c149",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 1035.5740201580002,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": false,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "d9dbf9add877d1d04d6f24227f60ccfd85d74814f481cca18dc64c65b15cffb5",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023554Z_train_5a11c811/evaluation_stopping_1793501495082246536",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.0874996285651743,
+        "mean_foot_slip_rms_m_s": 0.02643815181545334
+      }
+    },
+    {
+      "condition": "curriculum",
+      "training_seed": 0,
+      "run_id": "20261101T022655Z_train_a424f977",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T022655Z_train_a424f977",
+      "reused": true,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 92.2892104169996,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 120.0,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": true,
+        "randomization": false,
+        "seed": 0
+      },
+      "config_sha": "138fc7e69a6a4523917eb303575d46989ce71981724353eb0113a29ae9b9c1bc",
+      "metrics_sha": "2e4696972c55cbb5e07de72d42a54f32e53ec1daf6f5ad7df1caa4fce9dca4aa",
+      "checkpoint_sha": "9e662dea6ca4967d31138e1abd3f4e45a1fe1231a2773b2e1e34f670df9c3c62",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.25,
+        "mean_duration_s": 8.725445337593555,
+        "mean_velocity_rmse": 0.04140533205675815,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "9e662dea6ca4967d31138e1abd3f4e45a1fe1231a2773b2e1e34f670df9c3c62",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 120.0,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "fbd7853a80b60405bb3351bb5588fe5b1e901abc861e33091e472871b5284886",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T022655Z_train_a424f977/evaluation_validation_1793501395356439766",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.27860319699402,
+        "mean_foot_slip_rms_m_s": 0.012134277633131171
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.5166666666666667,
+        "mean_duration_s": 6.501184473435084,
+        "mean_velocity_rmse": 0.08173565537975232,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "9e662dea6ca4967d31138e1abd3f4e45a1fe1231a2773b2e1e34f670df9c3c62",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 120.0,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "1328b91cd07516b2ddd4922dae8726c879ce72d6a889d7f88f416abe54a66971",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T022655Z_train_a424f977/evaluation_test_1793501446048126169",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.17708773059630378,
+        "mean_foot_slip_rms_m_s": 0.019664541215573744
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.5,
+        "mean_duration_s": 7.0983513196309405,
+        "mean_velocity_rmse": 0.07420983612380617,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "9e662dea6ca4967d31138e1abd3f4e45a1fe1231a2773b2e1e34f670df9c3c62",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 120.0,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "f82ca1b356fe0e974505b1257081b4477b4b5e0dcc30f4a3c57f9feeb6efeaba",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T022655Z_train_a424f977/evaluation_stopping_1793501498673628635",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.15205665884482786,
+        "mean_foot_slip_rms_m_s": 0.02849760827147021
+      }
+    },
+    {
+      "condition": "curriculum",
+      "training_seed": 1,
+      "run_id": "20261101T023716Z_train_bc2cbf0d",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023716Z_train_bc2cbf0d",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 78.95550792599988,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 953.748264757,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": true,
+        "randomization": false,
+        "seed": 1
+      },
+      "config_sha": "42adfd1d1a6d62297c2be1fb3644ae92789fa579cfa06072cb5c96a55dfb89ac",
+      "metrics_sha": "45bb36bbe8352497e1bdb8ed2ec71b2596f6fb03b087982332b1158c6bb1d216",
+      "checkpoint_sha": "a45a01a50a35290b5d5acdbbac0980c175620e7cc52843505efe59598ab22f19",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.03302133118414018,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "a45a01a50a35290b5d5acdbbac0980c175620e7cc52843505efe59598ab22f19",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 953.748264757,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "58ddb53cda6f18904faf09cbceccabb6b8395a52740de628163e45aa1f80ef94",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023716Z_train_bc2cbf0d/evaluation_validation_1793501399755895685",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.5957067363443829,
+        "mean_foot_slip_rms_m_s": 0.005831147910060813
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.03895332350700301,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "a45a01a50a35290b5d5acdbbac0980c175620e7cc52843505efe59598ab22f19",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 953.748264757,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "5d80b487b6d122a9cac59bae8bfbd08312dffde8ddf9282df75985f502affbee",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023716Z_train_bc2cbf0d/evaluation_test_1793501450922277212",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.679982152621197,
+        "mean_foot_slip_rms_m_s": 0.003188632278203235
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.037429535117824105,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "a45a01a50a35290b5d5acdbbac0980c175620e7cc52843505efe59598ab22f19",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 953.748264757,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "ae4c2dec480ee1d66843b8257010324d4ecdf5f8a3c9d2d1c2e60984bd12e129",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023716Z_train_bc2cbf0d/evaluation_stopping_1793501502614039117",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.9669993737245252,
+        "mean_foot_slip_rms_m_s": 0.004655500258475398
+      }
+    },
+    {
+      "condition": "curriculum",
+      "training_seed": 2,
+      "run_id": "20261101T023835Z_train_adba2a09",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023835Z_train_adba2a09",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 82.51347309599987,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 874.7412356650002,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": true,
+        "randomization": false,
+        "seed": 2
+      },
+      "config_sha": "b386edd5f8898f09db35d545344d59b41121fb657db554295ca70c3e3600dfc2",
+      "metrics_sha": "379b7f1146d4cf26a5387d6ea7d1d438099d7173aba0c473f927519ca51ab695",
+      "checkpoint_sha": "2ed5658ddd712ae39331d2bb0be13f4b9096fb154dafd8abc62ce0b0284e05b8",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.024162879339796117,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "2ed5658ddd712ae39331d2bb0be13f4b9096fb154dafd8abc62ce0b0284e05b8",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 874.7412356650002,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "94e65808ae6267e2aa4bae2e0fe1aac6a57cc8efa9a35671e724c35f36989618",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023835Z_train_adba2a09/evaluation_validation_1793501403491831458",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.6423326480177018,
+        "mean_foot_slip_rms_m_s": 0.006158982319872255
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.016666666666666666,
+        "mean_duration_s": 9.853205106655757,
+        "mean_velocity_rmse": 0.03869403962538758,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "2ed5658ddd712ae39331d2bb0be13f4b9096fb154dafd8abc62ce0b0284e05b8",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 874.7412356650002,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "cc261fe6304dea300dac3aabbcf72a1cec6b46c69143a744d88a24f293d05f19",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023835Z_train_adba2a09/evaluation_test_1793501454886912704",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.4389651571441617,
+        "mean_foot_slip_rms_m_s": 0.00819835553718627
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.031613131428539984,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "2ed5658ddd712ae39331d2bb0be13f4b9096fb154dafd8abc62ce0b0284e05b8",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 874.7412356650002,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": false,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "f6fc374ea6fc361d89ae30a3ce70d8ff96ef6e73ad34bbe267078efa3797642a",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023835Z_train_adba2a09/evaluation_stopping_1793501506067836463",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.22583230448171454,
+        "mean_foot_slip_rms_m_s": 0.008827140405428577
+      }
+    },
+    {
+      "condition": "randomization",
+      "training_seed": 0,
+      "run_id": "20261101T023957Z_train_aecdb681",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023957Z_train_aecdb681",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 88.68074134800008,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 792.1742356459999,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": false,
+        "randomization": true,
+        "seed": 0
+      },
+      "config_sha": "007a5ddb5de4f22dc835eef08de7ee664937c984e86514e80f4896692fff6740",
+      "metrics_sha": "9b67b96503e2e4cf14261c10d7621ac334a24037d2a8ea05ed767e00b23fff6c",
+      "checkpoint_sha": "ef522f1e0106f7c2aa68e519752e39a00081b50dda0b3c291e86804f1cc45288",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.020487667166574897,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "ef522f1e0106f7c2aa68e519752e39a00081b50dda0b3c291e86804f1cc45288",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 792.1742356459999,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "8c97413aed852854a6261c4339864231034cf5e4884718bdcef8119c73493ef3",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023957Z_train_aecdb681/evaluation_validation_1793501407576553526",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.3888326611912703,
+        "mean_foot_slip_rms_m_s": 0.010123979139298151
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.10833333333333334,
+        "mean_duration_s": 9.135534727573395,
+        "mean_velocity_rmse": 0.04692306385335599,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "ef522f1e0106f7c2aa68e519752e39a00081b50dda0b3c291e86804f1cc45288",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 792.1742356459999,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "65874b7ef8e44ca9847b9da4a5f73e2013cab656ae3aeabf8e24c032331675b9",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023957Z_train_aecdb681/evaluation_test_1793501459539101571",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.4068699909872173,
+        "mean_foot_slip_rms_m_s": 0.015588079202475387
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.018141040854052427,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "ef522f1e0106f7c2aa68e519752e39a00081b50dda0b3c291e86804f1cc45288",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 792.1742356459999,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "e3cba7c3fce9eac5f1f451af0b109bb9781e3e58511f560d46f7a3eede406dfc",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023957Z_train_aecdb681/evaluation_stopping_1793501509690534938",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.19166579505148598,
+        "mean_foot_slip_rms_m_s": 0.015475886135698247
+      }
+    },
+    {
+      "condition": "randomization",
+      "training_seed": 1,
+      "run_id": "20261101T024126Z_train_4f4a86a7",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024126Z_train_4f4a86a7",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 88.92922664499974,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 703.4380883630001,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": false,
+        "randomization": true,
+        "seed": 1
+      },
+      "config_sha": "c25d7c944ee7e159816cac2465d5a5762f4ac6abcfa5278d09ed6b2372eafd30",
+      "metrics_sha": "7fcceba0b180dd91830d1c2158b775069ebc91c456b568da7b5660692a0cc86d",
+      "checkpoint_sha": "fa407da42d4a15efc8c0b742cd9e9e8822097528bf61c6ed5971bef86d89bdc7",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.015206772221930426,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "fa407da42d4a15efc8c0b742cd9e9e8822097528bf61c6ed5971bef86d89bdc7",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 703.4380883630001,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "e7eb78376ab6a58cbc55481d800f928d003aab54c8cc896c4228fdc095ee2d2c",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024126Z_train_4f4a86a7/evaluation_validation_1793501411736846289",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.5065416006937098,
+        "mean_foot_slip_rms_m_s": 0.01590804682334282
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.08333333333333333,
+        "mean_duration_s": 9.525035568078358,
+        "mean_velocity_rmse": 0.03210753788599245,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "fa407da42d4a15efc8c0b742cd9e9e8822097528bf61c6ed5971bef86d89bdc7",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 703.4380883630001,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "427e5ad132b5aff13e1217297c96af03f4021b9d784cbfa4c91328243d134d85",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024126Z_train_4f4a86a7/evaluation_test_1793501464381067703",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.22368141888667673,
+        "mean_foot_slip_rms_m_s": 0.02071351809645635
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.02243069904943226,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "fa407da42d4a15efc8c0b742cd9e9e8822097528bf61c6ed5971bef86d89bdc7",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 703.4380883630001,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "e1b42f04efc6d17c7f0db2ae4d7392d6bfa1118d4d8546e7d6696bfb858f5dbd",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024126Z_train_4f4a86a7/evaluation_stopping_1793501513325693628",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.4866643950233272,
+        "mean_foot_slip_rms_m_s": 0.024146422861917472
+      }
+    },
+    {
+      "condition": "randomization",
+      "training_seed": 2,
+      "run_id": "20261101T024255Z_train_c8f04518",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024255Z_train_c8f04518",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 89.23402543300017,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 614.4557214629999,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": false,
+        "randomization": true,
+        "seed": 2
+      },
+      "config_sha": "f0c6bf3cb0bbc83f8217472dfcee334166e6109c674b79f18e4d571d77195162",
+      "metrics_sha": "5d8cf68abfaf31106fd46c1739169edfd7e0979538e4b1995cef88b93d4ac4df",
+      "checkpoint_sha": "46434aa486bdff3d15c815a0ec3171c71f1c71f61951418e161b92e86c84ee57",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.020833333333333332,
+        "mean_duration_s": 9.83170492698749,
+        "mean_velocity_rmse": 0.020603147145140954,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "46434aa486bdff3d15c815a0ec3171c71f1c71f61951418e161b92e86c84ee57",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 614.4557214629999,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "20d947b187199eaae261ddd276cbe31e45672424bd6364f7d6617f3ba0b3e995",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024255Z_train_c8f04518/evaluation_validation_1793501416030157605",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.39140793395925905,
+        "mean_foot_slip_rms_m_s": 0.014666511727561282
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.15833333333333333,
+        "mean_duration_s": 8.978699314097563,
+        "mean_velocity_rmse": 0.049633780511590134,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "46434aa486bdff3d15c815a0ec3171c71f1c71f61951418e161b92e86c84ee57",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 614.4557214629999,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "fed7e6d2546bdbb928ef8fd2f09e82cf623089682d5b784e2d37eaafa8ff5872",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024255Z_train_c8f04518/evaluation_test_1793501469633958621",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.23356342666535948,
+        "mean_foot_slip_rms_m_s": 0.018080587081665354
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.25,
+        "mean_duration_s": 9.690032005310059,
+        "mean_velocity_rmse": 0.03653959104355232,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "46434aa486bdff3d15c815a0ec3171c71f1c71f61951418e161b92e86c84ee57",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 614.4557214629999,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": false,
+          "randomization": true,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "0d77b5a0c9da64255ccd9775a7584ee7940be410e9402ff85380c4a3c6c2e752",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024255Z_train_c8f04518/evaluation_stopping_1793501516945030079",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.22395057438498492,
+        "mean_foot_slip_rms_m_s": 0.020008761593541844
+      }
+    },
+    {
+      "condition": "both",
+      "training_seed": 0,
+      "run_id": "20261101T024424Z_train_11c8aa5d",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024424Z_train_11c8aa5d",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 90.68892325800016,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 525.171353366,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": true,
+        "randomization": true,
+        "seed": 0
+      },
+      "config_sha": "8f8476a4f8b47e31ed7a3a136af51200f1421b4638c06aab4a8c28e33f726e7d",
+      "metrics_sha": "a0991aa0e3205d2b00eb3ff70663538a6749f28545e7ed531909256bbb05a477",
+      "checkpoint_sha": "c2040f38b399c56fb19cb9e7fa0fb3079568276dd6e208ab1437e6c4364d4eb1",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.02304835358953414,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "c2040f38b399c56fb19cb9e7fa0fb3079568276dd6e208ab1437e6c4364d4eb1",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 525.171353366,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "7771ba00fa43bd79d7f08ee7dff92c5f61564bca04f1e5e6cc845920d5d91fa8",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024424Z_train_11c8aa5d/evaluation_validation_1793501420100490894",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.5544581695423968,
+        "mean_foot_slip_rms_m_s": 0.0013068360973467676
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.20833333333333334,
+        "mean_duration_s": 8.72086369295915,
+        "mean_velocity_rmse": 0.056963409551152984,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "c2040f38b399c56fb19cb9e7fa0fb3079568276dd6e208ab1437e6c4364d4eb1",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 525.171353366,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "e0bc6e41ecc024cd3d6971af40c186dcea92d884891d435b0de02b3ac01ee63e",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024424Z_train_11c8aa5d/evaluation_test_1793501474376605000",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.47317567696868823,
+        "mean_foot_slip_rms_m_s": 0.005348558691422753
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.03130112954172962,
+        "independent_training_seeds": 1,
+        "training_seed": 0,
+        "checkpoint_sha": "c2040f38b399c56fb19cb9e7fa0fb3079568276dd6e208ab1437e6c4364d4eb1",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 525.171353366,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 0
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "fd585a80d1e88e9ce533dcc8d6885636189053f3130582205034c7102d0df299",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024424Z_train_11c8aa5d/evaluation_stopping_1793501520481074913",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.14099973293647286,
+        "mean_foot_slip_rms_m_s": 0.0027372695558942933
+      }
+    },
+    {
+      "condition": "both",
+      "training_seed": 1,
+      "run_id": "20261101T024555Z_train_1172c025",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024555Z_train_1172c025",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 94.3779247489997,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 434.43039396899985,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": true,
+        "randomization": true,
+        "seed": 1
+      },
+      "config_sha": "aac0c1936fc43532333029d5d0736860cb6cfb1a95b8da2e5be1d23c96f0f9f6",
+      "metrics_sha": "548b4078a42007fe003b35a6f26f2acba03cc9e055fa3c29d5ce535608e436a7",
+      "checkpoint_sha": "22573bfb972827bf3d993445e165de93673969a1b3e7601940d8669d6d353404",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0625,
+        "mean_duration_s": 9.451286621391773,
+        "mean_velocity_rmse": 0.03274326095718858,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "22573bfb972827bf3d993445e165de93673969a1b3e7601940d8669d6d353404",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 434.43039396899985,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "5f602b98d0001ccfb86c701586a88a311b85cf0d60391908b69e3a91ab0c1502",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024555Z_train_1172c025/evaluation_validation_1793501423646931585",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.7088496953608221,
+        "mean_foot_slip_rms_m_s": 0.005731740695567642
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.1,
+        "mean_duration_s": 9.235368366042772,
+        "mean_velocity_rmse": 0.047610928219202174,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "22573bfb972827bf3d993445e165de93673969a1b3e7601940d8669d6d353404",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 434.43039396899985,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "ed6c05fe01b75a09c024a822b66a3bb62e5f11da2df27539f7863e04ea520345",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024555Z_train_1172c025/evaluation_test_1793501478425487026",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.33058741551995624,
+        "mean_foot_slip_rms_m_s": 0.009076388773582512
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.031474329846534366,
+        "independent_training_seeds": 1,
+        "training_seed": 1,
+        "checkpoint_sha": "22573bfb972827bf3d993445e165de93673969a1b3e7601940d8669d6d353404",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 434.43039396899985,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 1
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "d93a46712355bb35b03dc445cc4ed4a1e880262eccaf5c2e0e36ce9ee6d8cd45",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024555Z_train_1172c025/evaluation_stopping_1793501524421778379",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.20616573048798723,
+        "mean_foot_slip_rms_m_s": 0.011161203713879611
+      }
+    },
+    {
+      "condition": "both",
+      "training_seed": 2,
+      "run_id": "20261101T024730Z_train_f391b26e",
+      "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024730Z_train_f391b26e",
+      "reused": false,
+      "status": {
+        "status": "budget_completed",
+        "updates": 250,
+        "transitions": 1536000,
+        "policy_steps_per_world": 6000,
+        "aggregate_physics_substeps": 15360000,
+        "gradient_steps": 5000,
+        "ppo_epochs_per_update": 5,
+        "learning_rate": 0.0003,
+        "wall_s": 88.54295568400039,
+        "policy_claim": "unvalidated; no reliable walking claim"
+      },
+      "config": {
+        "profile": "pilot",
+        "num_envs": 256,
+        "horizon": 24,
+        "iterations": 1000,
+        "max_wall_time": 339.9950845620001,
+        "max_transitions": 1536000,
+        "checkpoint_interval": 25,
+        "episode_seconds": 10.0,
+        "curriculum": true,
+        "randomization": true,
+        "seed": 2
+      },
+      "config_sha": "31b3d2eaf090711645096a605662855b01e2048fc501b26787c7e5a1438ab202",
+      "metrics_sha": "8ef6c1d0b976789a1d02ce1f3b5786fa452c72124f1891dde47d51f59a88d3ee",
+      "checkpoint_sha": "558d97536458e878527d425043f673ac24cea676b6155c32ef0d1d465b400ec7",
+      "validation": {
+        "episodes": 48,
+        "success_rate": 0.25,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.019474241101546608,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "558d97536458e878527d425043f673ac24cea676b6155c32ef0d1d465b400ec7",
+        "suite_sha": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+        "split": "validation",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 339.9950845620001,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 48,
+        "summary_sha": "fc5552618642f2a94f4ee46663c8cb1bdbdd1f0c8b75150f624e36ee45d318f5",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024730Z_train_f391b26e/evaluation_validation_1793501427719789045",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.2548332706944362,
+        "mean_foot_slip_rms_m_s": 0.00371021780670576
+      },
+      "test": {
+        "episodes": 120,
+        "success_rate": 0.2,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.03241922213643043,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "558d97536458e878527d425043f673ac24cea676b6155c32ef0d1d465b400ec7",
+        "suite_sha": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+        "split": "test",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 339.9950845620001,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 120,
+        "summary_sha": "df37db5eb359adf58fab6fa4e092f61ae648228add6d5f485e420aa22ce07a01",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024730Z_train_f391b26e/evaluation_test_1793501483117858828",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.23809922142037696,
+        "mean_foot_slip_rms_m_s": 0.00378999861990815
+      },
+      "stopping": {
+        "episodes": 12,
+        "success_rate": 0.0,
+        "fall_rate": 0.0,
+        "mean_duration_s": 10.000039100646973,
+        "mean_velocity_rmse": 0.031211692738512566,
+        "independent_training_seeds": 1,
+        "training_seed": 2,
+        "checkpoint_sha": "558d97536458e878527d425043f673ac24cea676b6155c32ef0d1d465b400ec7",
+        "suite_sha": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+        "split": "stopping",
+        "config": {
+          "profile": "pilot",
+          "num_envs": 256,
+          "horizon": 24,
+          "iterations": 1000,
+          "max_wall_time": 339.9950845620001,
+          "max_transitions": 1536000,
+          "checkpoint_interval": 25,
+          "episode_seconds": 10.0,
+          "curriculum": true,
+          "randomization": true,
+          "seed": 2
+        },
+        "evaluation_parallel_worlds": 12,
+        "summary_sha": "f613acd04fa1898d35f2b8c678b496babdf39c11809d771d077679c048848454",
+        "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024730Z_train_f391b26e/evaluation_stopping_1793501528609173701",
+        "moving_success_rate": 0.0,
+        "mean_saturation_fraction": 0.0,
+        "mean_joint_limit_fraction": 0.03199987552910042,
+        "mean_foot_slip_rms_m_s": 0.0004404928457523315
+      }
+    }
+  ],
+  "condition_aggregates": [
+    {
+      "condition": "baseline",
+      "n_independent_training_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "run_ids": [
+        "20261101T023310Z_train_fc523e6c",
+        "20261101T023433Z_train_d690c49e",
+        "20261101T023554Z_train_5a11c811"
+      ],
+      "success_rate": {
+        "seed_values": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "mean": 0.20000000000000004,
+        "sample_std": 3.3993498887762956e-17,
+        "bootstrap_95_ci": [
+          0.20000000000000004,
+          0.20000000000000004
+        ]
+      },
+      "moving_success_rate": {
+        "seed_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "fall_rate": {
+        "seed_values": [
+          0.0,
+          0.08333333333333333,
+          0.0
+        ],
+        "mean": 0.027777777777777776,
+        "sample_std": 0.048112522432468816,
+        "bootstrap_95_ci": [
+          0.0,
+          0.08333333333333333
+        ]
+      },
+      "mean_duration_s": {
+        "seed_values": [
+          10.000039100646973,
+          9.487202264865239,
+          10.000039100646973
+        ],
+        "mean": 9.829093488719728,
+        "sample_std": 0.2960864851889398,
+        "bootstrap_95_ci": [
+          9.487202264865239,
+          10.000039100646973
+        ]
+      },
+      "mean_velocity_rmse": {
+        "seed_values": [
+          0.021704938743828603,
+          0.034952653310666645,
+          0.02844600242378205
+        ],
+        "mean": 0.028367864826092434,
+        "sample_std": 0.006624202927464764,
+        "bootstrap_95_ci": [
+          0.021704938743828603,
+          0.034952653310666645
+        ]
+      },
+      "mean_saturation_fraction": {
+        "seed_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_joint_limit_fraction": {
+        "seed_values": [
+          0.2821327863171479,
+          0.44442901694612025,
+          0.09814957258182995
+        ],
+        "mean": 0.27490379194836606,
+        "sample_std": 0.1732528705880463,
+        "bootstrap_95_ci": [
+          0.09814957258182995,
+          0.44442901694612025
+        ]
+      },
+      "mean_foot_slip_rms_m_s": {
+        "seed_values": [
+          0.025078325440108365,
+          0.01486707716032503,
+          0.02285751123158839
+        ],
+        "mean": 0.02093430461067393,
+        "sample_std": 0.0053704227615609034,
+        "bootstrap_95_ci": [
+          0.01486707716032503,
+          0.025078325440108365
+        ]
+      }
+    },
+    {
+      "condition": "curriculum",
+      "n_independent_training_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "run_ids": [
+        "20261101T022655Z_train_a424f977",
+        "20261101T023716Z_train_bc2cbf0d",
+        "20261101T023835Z_train_adba2a09"
+      ],
+      "success_rate": {
+        "seed_values": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "mean": 0.20000000000000004,
+        "sample_std": 3.3993498887762956e-17,
+        "bootstrap_95_ci": [
+          0.20000000000000004,
+          0.20000000000000004
+        ]
+      },
+      "moving_success_rate": {
+        "seed_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "fall_rate": {
+        "seed_values": [
+          0.5166666666666667,
+          0.0,
+          0.016666666666666666
+        ],
+        "mean": 0.1777777777777778,
+        "sample_std": 0.2936046724827514,
+        "bootstrap_95_ci": [
+          0.0,
+          0.5166666666666667
+        ]
+      },
+      "mean_duration_s": {
+        "seed_values": [
+          6.501184473435084,
+          10.000039100646973,
+          9.853205106655757
+        ],
+        "mean": 8.784809560245938,
+        "sample_std": 1.9790395923987378,
+        "bootstrap_95_ci": [
+          6.501184473435084,
+          10.000039100646973
+        ]
+      },
+      "mean_velocity_rmse": {
+        "seed_values": [
+          0.08173565537975232,
+          0.03895332350700301,
+          0.03869403962538758
+        ],
+        "mean": 0.053127672837380964,
+        "sample_std": 0.024775578820509608,
+        "bootstrap_95_ci": [
+          0.03869403962538758,
+          0.08173565537975232
+        ]
+      },
+      "mean_saturation_fraction": {
+        "seed_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_joint_limit_fraction": {
+        "seed_values": [
+          0.17708773059630378,
+          0.679982152621197,
+          0.4389651571441617
+        ],
+        "mean": 0.4320116801205542,
+        "sample_std": 0.2515193095131589,
+        "bootstrap_95_ci": [
+          0.17708773059630378,
+          0.679982152621197
+        ]
+      },
+      "mean_foot_slip_rms_m_s": {
+        "seed_values": [
+          0.019664541215573744,
+          0.003188632278203235,
+          0.00819835553718627
+        ],
+        "mean": 0.01035050967698775,
+        "sample_std": 0.008446165959133757,
+        "bootstrap_95_ci": [
+          0.003188632278203235,
+          0.019664541215573744
+        ]
+      }
+    },
+    {
+      "condition": "randomization",
+      "n_independent_training_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "run_ids": [
+        "20261101T023957Z_train_aecdb681",
+        "20261101T024126Z_train_4f4a86a7",
+        "20261101T024255Z_train_c8f04518"
+      ],
+      "success_rate": {
+        "seed_values": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "mean": 0.20000000000000004,
+        "sample_std": 3.3993498887762956e-17,
+        "bootstrap_95_ci": [
+          0.20000000000000004,
+          0.20000000000000004
+        ]
+      },
+      "moving_success_rate": {
+        "seed_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "fall_rate": {
+        "seed_values": [
+          0.10833333333333334,
+          0.08333333333333333,
+          0.15833333333333333
+        ],
+        "mean": 0.11666666666666665,
+        "sample_std": 0.038188130791298666,
+        "bootstrap_95_ci": [
+          0.08333333333333333,
+          0.15833333333333333
+        ]
+      },
+      "mean_duration_s": {
+        "seed_values": [
+          9.135534727573395,
+          9.525035568078358,
+          8.978699314097563
+        ],
+        "mean": 9.213089869916438,
+        "sample_std": 0.2813039738100574,
+        "bootstrap_95_ci": [
+          8.978699314097563,
+          9.525035568078358
+        ]
+      },
+      "mean_velocity_rmse": {
+        "seed_values": [
+          0.04692306385335599,
+          0.03210753788599245,
+          0.049633780511590134
+        ],
+        "mean": 0.042888127416979525,
+        "sample_std": 0.009434131076947579,
+        "bootstrap_95_ci": [
+          0.03210753788599245,
+          0.04963378051159014
+        ]
+      },
+      "mean_saturation_fraction": {
+        "seed_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_joint_limit_fraction": {
+        "seed_values": [
+          0.4068699909872173,
+          0.22368141888667673,
+          0.23356342666535948
+        ],
+        "mean": 0.2880382788464178,
+        "sample_std": 0.10302982760914364,
+        "bootstrap_95_ci": [
+          0.22368141888667673,
+          0.4068699909872173
+        ]
+      },
+      "mean_foot_slip_rms_m_s": {
+        "seed_values": [
+          0.015588079202475387,
+          0.02071351809645635,
+          0.018080587081665354
+        ],
+        "mean": 0.018127394793532366,
+        "sample_std": 0.0025630400280527944,
+        "bootstrap_95_ci": [
+          0.015588079202475387,
+          0.02071351809645635
+        ]
+      }
+    },
+    {
+      "condition": "both",
+      "n_independent_training_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "run_ids": [
+        "20261101T024424Z_train_11c8aa5d",
+        "20261101T024555Z_train_1172c025",
+        "20261101T024730Z_train_f391b26e"
+      ],
+      "success_rate": {
+        "seed_values": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "mean": 0.20000000000000004,
+        "sample_std": 3.3993498887762956e-17,
+        "bootstrap_95_ci": [
+          0.20000000000000004,
+          0.20000000000000004
+        ]
+      },
+      "moving_success_rate": {
+        "seed_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "fall_rate": {
+        "seed_values": [
+          0.20833333333333334,
+          0.1,
+          0.0
+        ],
+        "mean": 0.10277777777777779,
+        "sample_std": 0.10419444074172807,
+        "bootstrap_95_ci": [
+          0.0,
+          0.20833333333333334
+        ]
+      },
+      "mean_duration_s": {
+        "seed_values": [
+          8.72086369295915,
+          9.235368366042772,
+          10.000039100646973
+        ],
+        "mean": 9.318757053216297,
+        "sample_std": 0.6436518358318575,
+        "bootstrap_95_ci": [
+          8.72086369295915,
+          10.000039100646973
+        ]
+      },
+      "mean_velocity_rmse": {
+        "seed_values": [
+          0.056963409551152984,
+          0.047610928219202174,
+          0.03241922213643043
+        ],
+        "mean": 0.04566451996892853,
+        "sample_std": 0.01238731862712049,
+        "bootstrap_95_ci": [
+          0.03241922213643043,
+          0.056963409551152984
+        ]
+      },
+      "mean_saturation_fraction": {
+        "seed_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "sample_std": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_joint_limit_fraction": {
+        "seed_values": [
+          0.47317567696868823,
+          0.33058741551995624,
+          0.23809922142037696
+        ],
+        "mean": 0.3472874379696738,
+        "sample_std": 0.11842467247434166,
+        "bootstrap_95_ci": [
+          0.23809922142037696,
+          0.4731756769686883
+        ]
+      },
+      "mean_foot_slip_rms_m_s": {
+        "seed_values": [
+          0.005348558691422753,
+          0.009076388773582512,
+          0.00378999861990815
+        ],
+        "mean": 0.006071648694971138,
+        "sample_std": 0.002716362379937554,
+        "bootstrap_95_ci": [
+          0.00378999861990815,
+          0.009076388773582512
+        ]
+      }
+    }
+  ],
+  "figures": {
+    "learning.png": "ac03dfac3b7f9f4845256d7218456a8f9e46ef963398ccf219a31c383bc77cfe",
+    "test_success.png": "ea123e740b30482b620c31713f081eebedf1dca929e28d22eb795dbc503349d6"
+  },
+  "study_complete": true,
+  "independent_policies": 12,
+  "uncertainty": "Percentile bootstrap of independent training-run means; 10000 draws; RNG seed 0; no episode-level pseudoreplication",
+  "smoothing": "Raw per-update rewards and trailing 20-update arithmetic mean; no interpolation across seeds",
+  "results_status": "completed short-budget exploratory study"
+}

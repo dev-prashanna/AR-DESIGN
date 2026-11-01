@@ -83,3 +83,13 @@ def test_tracking_reward_sign_and_units():
     assert reward_terms(env, "tracking").item() < 0.01
     data.joint_vel = torch.tensor([[1.0, 2.0, 0.0, 0.0, 0.0, 0.0]])
     assert reward_terms(env, "speed").item() == pytest.approx(5.0)
+
+
+def test_doctor_without_nvidia_driver_tools(monkeypatch):
+    from biped_ppo import diagnostics
+
+    monkeypatch.setattr(diagnostics.shutil, "which", lambda _: None)
+    monkeypatch.setattr(torch.cuda, "is_available", lambda: False)
+    result = diagnostics.doctor()
+    assert not result["cuda_available"]
+    assert result["nvidia_smi"] is None

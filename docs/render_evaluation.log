@@ -1,0 +1,28 @@
+[
+  {
+    "video": "runs/20261101T023310Z_train_fc523e6c/evaluation_test_1793501431843643034/standing_recorded.mp4",
+    "frames": 101,
+    "fps": 10,
+    "command": [
+      0,
+      0,
+      0
+    ],
+    "final_t_s": 10.0,
+    "terminal": true,
+    "selection": "first seed/friction/replica, first zero or forward command; all outcomes retained"
+  },
+  {
+    "video": "runs/20261101T023310Z_train_fc523e6c/evaluation_test_1793501431843643034/forward_recorded.mp4",
+    "frames": 101,
+    "fps": 10,
+    "command": [
+      0.045,
+      0,
+      0
+    ],
+    "final_t_s": 10.0,
+    "terminal": true,
+    "selection": "first seed/friction/replica, first zero or forward command; all outcomes retained"
+  }
+]

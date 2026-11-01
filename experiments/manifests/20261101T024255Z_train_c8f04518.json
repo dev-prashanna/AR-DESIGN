@@ -1,0 +1,258 @@
+{
+  "run_id": "20261101T024255Z_train_c8f04518",
+  "created_utc": "20261101T024255Z",
+  "kind": "train",
+  "config": {
+    "profile": "pilot",
+    "num_envs": 256,
+    "horizon": 24,
+    "iterations": 1000,
+    "max_wall_time": 614.4557214629999,
+    "max_transitions": 1536000,
+    "checkpoint_interval": 25,
+    "episode_seconds": 10.0,
+    "curriculum": false,
+    "randomization": true,
+    "seed": 2
+  },
+  "hardware": {
+    "timestamp": "2026-11-01T02:42:55Z",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "cpu": "x86_64",
+    "cpu_details": {
+      "lscpu": [
+        {
+          "field": "Architecture:",
+          "data": "x86_64"
+        },
+        {
+          "field": "CPU op-mode(s):",
+          "data": "32-bit, 64-bit"
+        },
+        {
+          "field": "Address sizes:",
+          "data": "48 bits physical, 48 bits virtual"
+        },
+        {
+          "field": "Byte Order:",
+          "data": "Little Endian"
+        },
+        {
+          "field": "CPU(s):",
+          "data": "16"
+        },
+        {
+          "field": "On-line CPU(s) list:",
+          "data": "0-15"
+        },
+        {
+          "field": "Vendor ID:",
+          "data": "AuthenticAMD"
+        },
+        {
+          "field": "Model name:",
+          "data": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics"
+        },
+        {
+          "field": "CPU family:",
+          "data": "25"
+        },
+        {
+          "field": "Model:",
+          "data": "117"
+        },
+        {
+          "field": "Thread(s) per core:",
+          "data": "2"
+        },
+        {
+          "field": "Core(s) per socket:",
+          "data": "8"
+        },
+        {
+          "field": "Socket(s):",
+          "data": "1"
+        },
+        {
+          "field": "Stepping:",
+          "data": "2"
+        },
+        {
+          "field": "Frequency boost:",
+          "data": "enabled"
+        },
+        {
+          "field": "CPU(s) scaling MHz:",
+          "data": "40%"
+        },
+        {
+          "field": "CPU max MHz:",
+          "data": "5102.7129"
+        },
+        {
+          "field": "CPU min MHz:",
+          "data": "416.5480"
+        },
+        {
+          "field": "BogoMIPS:",
+          "data": "7585.97"
+        },
+        {
+          "field": "Flags:",
+          "data": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpuid_fault cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze"
+        },
+        {
+          "field": "Virtualization:",
+          "data": "AMD-V"
+        },
+        {
+          "field": "L1d cache:",
+          "data": "256 KiB (8 instances)"
+        },
+        {
+          "field": "L1i cache:",
+          "data": "256 KiB (8 instances)"
+        },
+        {
+          "field": "L2 cache:",
+          "data": "8 MiB (8 instances)"
+        },
+        {
+          "field": "L3 cache:",
+          "data": "16 MiB (1 instance)"
+        },
+        {
+          "field": "NUMA node(s):",
+          "data": "1"
+        },
+        {
+          "field": "NUMA node0 CPU(s):",
+          "data": "0-15"
+        },
+        {
+          "field": "Vulnerability Gather data sampling:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Ghostwrite:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Indirect target selection:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Itlb multihit:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability L1tf:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Mds:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Meltdown:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Mmio stale data:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Old microcode:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Reg file data sampling:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Retbleed:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Spec rstack overflow:",
+          "data": "Mitigation; Safe RET"
+        },
+        {
+          "field": "Vulnerability Spec store bypass:",
+          "data": "Mitigation; Speculative Store Bypass disabled via prctl"
+        },
+        {
+          "field": "Vulnerability Spectre v1:",
+          "data": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+        },
+        {
+          "field": "Vulnerability Spectre v2:",
+          "data": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP always-on; PBRSB-eIBRS Not affected; BHI Not affected"
+        },
+        {
+          "field": "Vulnerability Srbds:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Tsa:",
+          "data": "Mitigation; Clear CPU buffers"
+        },
+        {
+          "field": "Vulnerability Tsx async abort:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Vmscape:",
+          "data": "Mitigation; IBPB before exit to userspace"
+        }
+      ]
+    },
+    "ram_bytes": 16024739840,
+    "available_ram_bytes": 7244177408,
+    "cuda_available": true,
+    "torch_cuda": "12.8",
+    "packages": {
+      "mjlab": "1.6.0",
+      "mujoco": "3.11.0",
+      "mujoco-warp": "3.11.0",
+      "warp-lang": "1.18.0",
+      "rsl-rl-lib": "5.4.2",
+      "torch": "2.10.0+cu128"
+    },
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "vram_bytes": 8184725504,
+    "nvidia_smi": "Sun Nov  1 08:27:55 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    Off |   00000000:01:00.0  On |                  N/A |\n| N/A   56C    P0             27W /   55W |     414MiB /   8188MiB |     68%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            4606      G   /usr/lib/xorg/Xorg                       27MiB |\n|    0   N/A  N/A           63939      C   ...GN/biped-ppo/.venv/bin/python        368MiB |\n+-----------------------------------------------------------------------------------------+\n"
+  },
+  "code_sha": "6e0354a5b0245ce2e629c678959c673a36cdba54",
+  "working_tree": "M src/biped_ppo/evaluation.py\n M src/biped_ppo/reporting.py\n?? docs/analysis.log\n?? docs/paper_command.log\n?? experiments/manifests/20261101T023310Z_train_fc523e6c.json\n?? experiments/manifests/20261101T023433Z_train_d690c49e.json\n?? experiments/manifests/20261101T023554Z_train_5a11c811.json\n?? experiments/manifests/20261101T023716Z_train_bc2cbf0d.json\n?? experiments/manifests/20261101T023835Z_train_adba2a09.json\n?? experiments/manifests/20261101T023957Z_train_aecdb681.json\n?? experiments/manifests/20261101T024126Z_train_4f4a86a7.json\n?? paper/\n?? results/aggregates/\n?? results/figures/control_loop.pdf\n?? results/figures/control_loop.png\n?? results/figures/learning.png\n?? results/initial_study_runs.json\n?? scripts/control_diagram.py\n?? scripts/render_evaluation.py",
+  "diff": "diff --git a/src/biped_ppo/evaluation.py b/src/biped_ppo/evaluation.py\nindex ff3faed..704198a 100644\n--- a/src/biped_ppo/evaluation.py\n+++ b/src/biped_ppo/evaluation.py\n@@ -73,31 +73,47 @@ def evaluate(checkpoint, suite_path):\n         env.completed = []\n         obs = env.get_observations()\n         active = torch.ones(len(cases), device=env.device, dtype=torch.bool)\n-        trajectory = []\n+        selected = [\n+            i\n+            for i, c in enumerate(cases)\n+            if c[\"evaluation_seed\"] == suite[\"seeds\"][0]\n+            and c[\"friction\"] == suite[\"friction\"][0]\n+            and c[\"replica\"] == 0\n+        ]\n+        trajectories = {i: [] for i in selected}\n+        forward_distance = torch.zeros(len(cases), device=env.device)\n         mass = json.loads((ROOT / \"docs/model_audit.json\").read_text())[\"mass_kg\"]\n         with torch.inference_mode():\n             for step in range(round(suite[\"episode_seconds\"] / env.env.step_dt) + 1):\n                 obs, _, done, extras = env.step(runner.alg.actor(obs))\n                 ids = extras[\"terminal_env_ids\"].tolist()\n-                if active[0] and (step % 5 == 0 or done[0]):\n-                    d = env.env.scene[\"robot\"].data\n-                    if 0 in ids:\n-                        j = ids.index(0)\n+                velocity = env.env.scene[\"robot\"].data.root_link_lin_vel_b.clone()\n+                if ids:\n+                    velocity[extras[\"terminal_env_ids\"]] = extras[\"terminal_physics\"][\n+                        \"linear_velocity\"\n+                    ]\n+                forward_distance += velocity[:, 0] * env.env.step_dt * active.float()\n+                for selected_id in selected:\n+                    if not active[selected_id] or not (step % 5 == 0 or done[selected_id]):\n+                        continue\n+                    data = env.env.scene[\"robot\"].data\n+                    if selected_id in ids:\n+                        j = ids.index(selected_id)\n                         physics = extras[\"terminal_physics\"]\n-                        xyz = physics[\"root_pose\"][j, :3].tolist()\n+                        pose = physics[\"root_pose\"][j].tolist()\n                         q = physics[\"joint_position\"][j].tolist()\n-                        velocity = physics[\"linear_velocity\"][j].tolist()\n+                        vel = physics[\"linear_velocity\"][j].tolist()\n                     else:\n-                        xyz = d.root_link_pos_w[0].tolist()\n-                        q = d.joint_pos[0].tolist()\n-                        velocity = d.root_link_lin_vel_b[0].tolist()\n-                    trajectory.append(\n+                        pose = data.root_link_pose_w[selected_id].tolist()\n+                        q = data.joint_pos[selected_id].tolist()\n+                        vel = data.root_link_lin_vel_b[selected_id].tolist()\n+                    trajectories[selected_id].append(\n                         dict(\n                             t_s=(step + 1) * env.env.step_dt,\n-                            base_xyz=xyz,\n-                            velocity=velocity,\n+                            root_pose=pose,\n                             joint_pos=q,\n-                            terminal=bool(done[0]),\n+                            velocity=vel,\n+                            terminal=bool(done[selected_id]),\n                         )\n                     )\n                 finished = env.completed\n@@ -105,10 +121,10 @@ def evaluate(checkpoint, suite_path):\n                 for i, episode in zip(ids, finished):\n                     if not active[i]:\n                         continue\n-                    distance = episode[\"path_length_m\"]\n+                    distance = float(forward_distance[i])\n                     cot = (\n                         episode[\"mechanical_work_J\"] / (mass * 9.81 * distance)\n-                        if distance > 0.02\n+                        if distance > 0.02 and cases[i][\"command\"][0] > 0.001\n                         else None\n                     )\n                     success = (\n@@ -125,6 +141,7 @@ def evaluate(checkpoint, suite_path):\n                         split=suite[\"split\"],\n                         success=success,\n                         mechanical_cot=cot,\n+                        forward_distance_m=distance,\n                         **cases[i],\n                         **episode,\n                     )\n@@ -136,11 +153,12 @@ def evaluate(checkpoint, suite_path):\n         if active.any():\n             raise RuntimeError(\"Evaluation ended with unfinished episodes\")\n         write_json(\n-            result_dir / \"trajectory_first_episode.json\",\n+            result_dir / \"trajectories.json\",\n             dict(\n-                selection_rule=\"environment 0, first configured seed/command/friction/replica; retain even on failure\",\n-                case=cases[0],\n-                trajectory=trajectory,\n+                selection_rule=\"First configured evaluation seed, first friction, replica 0, every command; retain successes and failures\",\n+                cases=[\n+                    dict(environment=i, case=cases[i], trajectory=trajectories[i]) for i in selected\n+                ],\n             ),\n         )\n         summary = dict(\ndiff --git a/src/biped_ppo/reporting.py b/src/biped_ppo/reporting.py\nindex fadf02c..cf82ed8 100644\n--- a/src/biped_ppo/reporting.py\n+++ b/src/biped_ppo/reporting.py\n@@ -1,11 +1,22 @@\n-\"\"\"Figures/tables only from actual run artifacts; missing data stay missing.\"\"\"\n+\"\"\"Artifact-linked plots and run-level analysis; absent experiments stay absent.\"\"\"\n \n import json\n from pathlib import Path\n import subprocess\n+import numpy as np\n from .config import ROOT\n from .tracking import write_json, sha\n \n+CONDITIONS = (\"baseline\", \"curriculum\", \"randomization\", \"both\")\n+\n+\n+def interval(values):\n+    values = np.asarray(values, dtype=float)\n+    if len(values) < 3:\n+        return None\n+    draws = np.random.default_rng(0).choice(values, (10000, len(values)), replace=True).mean(1)\n+    return np.quantile(draws, [0.025, 0.975]).tolist()\n+\n \n def analyze(directory):\n     import matplotlib\n@@ -16,45 +27,177 @@ def analyze(directory):\n     directory = Path(directory).resolve()\n     out = ROOT / \"results/aggregates\"\n     out.mkdir(exist_ok=True)\n-    manifests = []\n-    summaries = []\n-    fig, ax = plt.subplots(figsize=(7, 4))\n-    found = False\n-    for path in sorted(directory.rglob(\"metrics.jsonl\")):\n+    index_path = ROOT / \"results/initial_study_runs.json\"\n+    study = json.loads(index_path.read_text()) if index_path.exists() else []\n+    diagnostics = []\n+    for path in sorted(directory.glob(\"*/metrics.jsonl\")):\n         records = [json.loads(x) for x in path.read_text().splitlines() if x.strip()]\n         if not records:\n             continue\n-        x = [r[\"transitions\"] for r in records]\n-        y = [r[\"mean_step_reward\"] for r in records]\n-        ax.plot(x, y, alpha=0.6, label=path.parent.name[-8:])\n-        manifests.append(\n+        diagnostics.append(\n             dict(\n                 run=str(path.parent),\n                 metrics_sha=sha(path),\n                 updates=len(records),\n-                final_transitions=x[-1],\n-                last_reward=y[-1],\n+                final_transitions=records[-1][\"transitions\"],\n+                last_reward=records[-1][\"mean_step_reward\"],\n             )\n         )\n-        found = True\n-    if found:\n-        ax.set(\n-            xlabel=\"Aggregate environment transitions\",\n-            ylabel=\"Mean task reward per policy step\",\n-            title=\"Observed runs; raw curves, no smoothing\",\n+    policies = []\n+    fig, axes = plt.subplots(2, 2, figsize=(10, 6), sharex=True)\n+    for cell in study:\n+        path = Path(cell[\"path\"])\n+        manifest = json.loads((path / \"manifest.json\").read_text())\n+        status = json.loads((path / \"status.json\").read_text())\n+        metrics = [json.loads(x) for x in (path / \"metrics.jsonl\").read_text().splitlines()]\n+        condition = cell[\"condition\"]\n+        ax = axes.flat[CONDITIONS.index(condition)]\n+        x = np.asarray([r[\"transitions\"] for r in metrics])\n+        y = np.asarray([r[\"mean_step_reward\"] for r in metrics])\n+        color = f\"C{cell['seed']}\"\n+        ax.plot(x, y, color=color, alpha=0.18, linewidth=0.7)\n+        window = min(20, len(y))\n+        if window:\n+            ax.plot(\n+                x[window - 1 :],\n+                np.convolve(y, np.ones(window) / window, mode=\"valid\"),\n+                color=color,\n+                label=f\"seed {cell['seed']}\",\n+                linewidth=1.2,\n+            )\n+        ax.set(title=condition, ylabel=\"Task reward / policy step\")\n+        ax.grid(alpha=0.15)\n+        row = dict(\n+            condition=condition,\n+            training_seed=cell[\"seed\"],\n+            run_id=path.name,\n+            path=str(path),\n+            reused=cell.get(\"reused\", False),\n+            status=status,\n+            config=manifest[\"config\"],\n+            config_sha=manifest[\"config_hash\"],\n+            metrics_sha=sha(path / \"metrics.jsonl\"),\n+            checkpoint_sha=sha(path / \"final.pt\") if (path / \"final.pt\").exists() else None,\n+            validation=None,\n+            test=None,\n         )\n-        ax.legend(fontsize=6)\n-        fig.tight_layout()\n+        for split in [\"validation\", \"test\"]:\n+            candidates = sorted(path.glob(f\"evaluation_{split}_*/summary.json\"))\n+            eligible = [\n+                p\n+                for p in candidates\n+                if json.loads(p.read_text())[\"checkpoint_sha\"] == row[\"checkpoint_sha\"]\n+            ]\n+            if eligible:\n+                p = eligible[-1]\n+                summary = json.loads(p.read_text())\n+                episodes = [\n+                    json.loads(x) for x in (p.parent / \"episodes.jsonl\").read_text().splitlines()\n+                ]\n+                moving = [e for e in episodes if e[\"command\"][0] > 0.001]\n+                summary.update(\n+                    summary_sha=sha(p),\n+                    path=str(p.parent),\n+                    moving_success_rate=float(np.mean([e[\"success\"] for e in moving])),\n+                    mean_saturation_fraction=float(\n+                        np.mean([e[\"saturation_fraction\"] for e in episodes])\n+                    ),\n+                    mean_joint_limit_fraction=float(\n+                        np.mean([e[\"joint_limit_fraction\"] for e in episodes])\n+                    ),\n+                    mean_foot_slip_rms_m_s=float(\n+                        np.mean([e[\"foot_slip_rms_m_s\"] for e in episodes])\n+                    ),\n+                )\n+                row[split] = summary\n+        policies.append(row)\n+    for ax in axes.flat:\n+        ax.set_xlabel(\"Aggregate environment transitions\")\n+        if ax.lines:\n+            ax.legend(fontsize=8)\n+    fig.suptitle(\"Within-condition learning curves: raw (faint), trailing 20-update mean (solid)\")\n+    fig.tight_layout()\n+    if policies:\n         fig.savefig(ROOT / \"results/figures/learning.png\", dpi=160)\n     plt.close(fig)\n-    for p in directory.rglob(\"summary.json\"):\n-        if \"evaluation_\" in p.parent.name:\n-            summaries.append(dict(path=str(p), sha=sha(p), **json.loads(p.read_text())))\n+    aggregates = []\n+    for condition in CONDITIONS:\n+        selected = [p for p in policies if p[\"condition\"] == condition and p[\"test\"] is not None]\n+        if not selected:\n+            continue\n+        result = dict(\n+            condition=condition,\n+            n_independent_training_seeds=len(selected),\n+            seeds=[p[\"training_seed\"] for p in selected],\n+            run_ids=[p[\"run_id\"] for p in selected],\n+        )\n+        for metric in [\n+            \"success_rate\",\n+            \"moving_success_rate\",\n+            \"fall_rate\",\n+            \"mean_duration_s\",\n+            \"mean_velocity_rmse\",\n+            \"mean_saturation_fraction\",\n+            \"mean_joint_limit_fraction\",\n+            \"mean_foot_slip_rms_m_s\",\n+        ]:\n+            vals = [p[\"test\"][metric] for p in selected]\n+            result[metric] = dict(\n+                seed_values=vals,\n+                mean=float(np.mean(vals)),\n+                sample_std=float(np.std(vals, ddof=1)) if len(vals) > 1 else None,\n+                bootstrap_95_ci=interval(vals),\n+            )\n+        aggregates.append(result)\n+    if aggregates:\n+        fig, axes = plt.subplots(1, 2, figsize=(9, 3.4))\n+        for index, a in enumerate(aggregates):\n+            for ax, metric in zip(axes, [\"success_rate\", \"moving_success_rate\"]):\n+                vals = a[metric][\"seed_values\"]\n+                ax.scatter(\n+                    np.full(len(vals), index), np.array(vals) * 100, color=\"C0\", alpha=0.6, zorder=3\n+                )\n+                mean = a[metric][\"mean\"] * 100\n+                ci = a[metric][\"bootstrap_95_ci\"]\n+                if ci:\n+                    ax.errorbar(\n+                        index,\n+                        mean,\n+                        yerr=[[mean - ci[0] * 100], [ci[1] * 100 - mean]],\n+                        color=\"black\",\n+                        fmt=\"s\",\n+                        capsize=4,\n+                        zorder=4,\n+                    )\n+                ax.set(\n+                    xticks=range(len(aggregates)),\n+                    xticklabels=[a[\"condition\"] for a in aggregates],\n+                    ylim=(-3, 103),\n+                    ylabel=\"Success (%)\",\n+                    title=metric.replace(\"_\", \" \"),\n+                )\n+                ax.tick_params(axis=\"x\", rotation=20)\n+                ax.grid(axis=\"y\", alpha=0.15)\n+        fig.suptitle(\n+            \"Held-out test: dots are independent training seeds; bars are run-level bootstrap 95% CI\"\n+        )\n+        fig.tight_layout()\n+        fig.savefig(ROOT / \"results/figures/test_success.png\", dpi=160)\n+        plt.close(fig)\n+    complete = len(policies) == 12 and all(\n+        p[\"test\"] is not None and p[\"status\"][\"status\"] == \"budget_completed\" for p in policies\n+    )\n     result = dict(\n-        runs=manifests,\n-        evaluations=summaries,\n-        uncertainty=\"No across-seed interval until matched independent runs exist\",\n-        results_status=\"preliminary methods/pipeline verification; not a completed ablation study\",\n+        runs=diagnostics,\n+        study_policies=policies,\n+        condition_aggregates=aggregates,\n+        study_complete=complete,\n+        independent_policies=len(policies),\n+        uncertainty=\"Percentile bootstrap of independent training-run means; 10000 draws; RNG seed 0; no episode-level pseudoreplication\",\n+        smoothing=\"Raw per-update rewards and trailing 20-update arithmetic mean; no interpolation across seeds\",\n+        results_status=\"completed short-budget exploratory study\"\n+        if complete\n+        else \"preliminary methods; study incomplete\",\n     )\n     write_json(out / \"results.json\", result)\n     return out\n@@ -64,28 +207,42 @@ def build_paper(results):\n     results = Path(results).resolve()\n     source = results / \"results.json\"\n     if not source.exists():\n-        raise ValueError(\"Run biped analyze first; no validated results.json found\")\n+        raise ValueError(\"Run biped analyze first; results.json is absent\")\n     data = json.loads(source.read_text())\n     audit = json.loads((ROOT / \"docs/model_audit.json\").read_text())\n     numbers = (\n         f\"\\\\newcommand{{\\\\RobotMass}}{{{audit['mass_kg']:.3f}}}\\n\"\n         f\"\\\\newcommand{{\\\\CompletedRuns}}{{{len(data['runs'])}}}\\n\"\n         f\"\\\\newcommand{{\\\\StandingHeight}}{{{audit['standing']['min_height_m']:.4f}}}\\n\"\n+        f\"\\\\newcommand{{\\\\StudyRuns}}{{{len(data['study_policies'])}}}\\n\"\n+        f\"\\\\newcommand{{\\\\StudyStatus}}{{{data['results_status']}}}\\n\"\n     )\n     (ROOT / \"paper/generated.tex\").write_text(numbers)\n-    claims = {\n-        \"robot_mass\": {\n-            \"source\": \"docs/model_audit.json\",\n-            \"sha\": sha(ROOT / \"docs/model_audit.json\"),\n-        },\n-        \"standing_height\": {\n+    lines = [\n+        \"\\\\begin{tabular}{lrrr}\\\\toprule\",\n+        \"Condition & Seeds & Success (\\\\%) & Planar RMSE (m/s)\\\\\\\\\\\\midrule\",\n+    ]\n+    for a in data[\"condition_aggregates\"]:\n+        lines.append(\n+            f\"{a['condition']} & {a['n_independent_training_seeds']} & {100 * a['success_rate']['mean']:.1f} & {a['mean_velocity_rmse']['mean']:.4f}\\\\\\\\\"\n+        )\n+    if not data[\"condition_aggregates\"]:\n+        lines.append(\"\\\\multicolumn{4}{c}{NOT MEASURED: no held-out test artifacts}\\\\\\\\\")\n+    lines += [\"\\\\bottomrule\\\\end{tabular}\"]\n+    (ROOT / \"paper/study_results.tex\").write_text(\"\\n\".join(lines) + \"\\n\")\n+    claims = dict(\n+        robot_mass={\"source\": \"docs/model_audit.json\", \"sha\": sha(ROOT / \"docs/model_audit.json\")},\n+        standing_height={\n             \"source\": \"docs/model_audit.json\",\n             \"sha\": sha(ROOT / \"docs/model_audit.json\"),\n         },\n-        \"completed_runs\": data[\"runs\"],\n-        \"evaluations\": data[\"evaluations\"],\n-        \"ablation_comparison\": \"NOT MEASURED: full matched seed matrix absent\",\n-    }\n+        diagnostic_runs=data[\"runs\"],\n+        study_policies=data[\"study_policies\"],\n+        condition_aggregates=data[\"condition_aggregates\"],\n+        study_complete=data[\"study_complete\"],\n+        analysis_source_sha=sha(Path(__file__)),\n+        results_sha=sha(source),\n+    )\n     write_json(ROOT / \"paper/result_manifest.json\", claims)\n     proc = subprocess.run(\n         [\"tectonic\", \"main.tex\"], cwd=ROOT / \"paper\", text=True, capture_output=True",
+  "command": [
+    "/home/prashanna/Documents/AR_DESIGN/biped-ppo/.venv/bin/biped",
+    "sweep",
+    "--config",
+    "configs/experiments/initial-study.yaml",
+    "--skip-completed",
+    "--max-wall-time",
+    "1200"
+  ],
+  "parent_checkpoint": null,
+  "assets": {
+    "assets/robot/models/microduck.xml": "a48c77e6faf0c52784a6aae7e2e61f5b05c8ec005887ca859b299bc3e7bdf8aa",
+    "assets/robot/source/microduck_minimal.urdf": "e12418e047380443cb269fe41bd37cdeee1401d6b2fd4020f6ede34233c83da5"
+  },
+  "config_hash": "f0c6bf3cb0bbc83f8217472dfcee334166e6109c674b79f18e4d571d77195162",
+  "config_files": {
+    "configs/evaluation/validation.yaml": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+    "configs/evaluation/test.yaml": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+    "configs/task/flat.yaml": "8da081b57794f403e957f9a79678d2ec2695f9033830a40f676e94eea39f0f8c",
+    "configs/robot/custom.yaml": "51eb6980ca35cd2b571a9dba242c3f6e893a278057c0152b9fd7c5fa3483532a",
+    "configs/experiments/smoke.yaml": "b642914329c2984064ecf86fd110bb51a9729bf8c2429a74a749838448aaea0f",
+    "configs/experiments/pilot.yaml": "fa89b6629c5696656fded2e5f88043e3dc796091f00c383144bb1b38b702c11c",
+    "configs/experiments/full.yaml": "d4122773e3a6a772cef55d1e0251e2af128c163b39cf2a1718974f09a4069121",
+    "configs/experiments/randomized-smoke.yaml": "4ad42cc944864a3bfd22d1bd93059986ac08a0803e8c7c8d3202bb8c7c0579f3",
+    "configs/experiments/ablation-matrix.yaml": "c10671e551a2a6d2368beb8920400d145f6666ce710422267ca625d88217b37c",
+    "configs/experiments/initial-study.yaml": "5d2a1be67b1d5ec24df586eae4fa750a8556cca908c442cc114fa2b5af9bcc00"
+  },
+  "lock_hash": "88847f5961277ef9f05aa480c47df2ca56046d94fcf70a59c9f21d7b61b3c250",
+  "simulation_state_resume": "reset at resume; not bitwise restoration"
+}

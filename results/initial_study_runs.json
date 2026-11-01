@@ -1,0 +1,74 @@
+[
+  {
+    "condition": "baseline",
+    "seed": 0,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023310Z_train_fc523e6c",
+    "reused": false
+  },
+  {
+    "condition": "baseline",
+    "seed": 1,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023433Z_train_d690c49e",
+    "reused": false
+  },
+  {
+    "condition": "baseline",
+    "seed": 2,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023554Z_train_5a11c811",
+    "reused": false
+  },
+  {
+    "condition": "curriculum",
+    "seed": 0,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T022655Z_train_a424f977",
+    "reused": true
+  },
+  {
+    "condition": "curriculum",
+    "seed": 1,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023716Z_train_bc2cbf0d",
+    "reused": false
+  },
+  {
+    "condition": "curriculum",
+    "seed": 2,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023835Z_train_adba2a09",
+    "reused": false
+  },
+  {
+    "condition": "randomization",
+    "seed": 0,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T023957Z_train_aecdb681",
+    "reused": false
+  },
+  {
+    "condition": "randomization",
+    "seed": 1,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024126Z_train_4f4a86a7",
+    "reused": false
+  },
+  {
+    "condition": "randomization",
+    "seed": 2,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024255Z_train_c8f04518",
+    "reused": false
+  },
+  {
+    "condition": "both",
+    "seed": 0,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024424Z_train_11c8aa5d",
+    "reused": false
+  },
+  {
+    "condition": "both",
+    "seed": 1,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024555Z_train_1172c025",
+    "reused": false
+  },
+  {
+    "condition": "both",
+    "seed": 2,
+    "path": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261101T024730Z_train_f391b26e",
+    "reused": false
+  }
+]

@@ -23,3 +23,11 @@
   diagnostic probe without an explicit MuJoCo pin resolved an incompatible
   newer MuJoCo and failed on nflexevpair; the project lock already pins both
   MuJoCo and MuJoCo Warp to 3.11.0. Repeat probes use the same version pair.
+
+- Common reset distribution is immediate: there is no separate settling hold
+  before the first policy action. Physics is free and dynamic on the first step.
+- Source URDF speed ratings are audited and exported, but an uncalibrated ideal
+  PD actuator does not enforce a measured servo torque-speed curve. Overspeed
+  during back-driving/impacts is possible; no hardware-equivalence claim is made.
+- The pilot's standing-only validation success is retained as a failure to reach
+  reliable commanded locomotion. No terrain curriculum is added to hide that gap.

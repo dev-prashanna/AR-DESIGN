@@ -1,0 +1,13 @@
+{
+  "profile": "pilot",
+  "num_envs": 256,
+  "horizon": 24,
+  "iterations": 1000,
+  "max_wall_time": 434.43039396899985,
+  "max_transitions": 1536000,
+  "checkpoint_interval": 25,
+  "episode_seconds": 10.0,
+  "curriculum": true,
+  "randomization": true,
+  "seed": 1
+}

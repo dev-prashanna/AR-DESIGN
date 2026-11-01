@@ -1,0 +1,9 @@
+split: stopping
+seeds: [1101, 1102, 1103]
+commands: [[0.045, 0, 0]]
+stop_at_s: 5.0
+episode_seconds: 10.0
+friction: [0.8]
+success_survival_fraction: 0.95
+success_velocity_rmse: 0.025
+success_yaw_rmse: 0.1

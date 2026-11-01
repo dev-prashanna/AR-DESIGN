@@ -1,0 +1,134 @@
+[
+  {
+    "condition": "baseline",
+    "seed": 0,
+    "run_id": "20261101T023310Z_train_fc523e6c",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "baseline",
+    "seed": 1,
+    "run_id": "20261101T023433Z_train_d690c49e",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "baseline",
+    "seed": 2,
+    "run_id": "20261101T023554Z_train_5a11c811",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "curriculum",
+    "seed": 0,
+    "run_id": "20261101T022655Z_train_a424f977",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "curriculum",
+    "seed": 1,
+    "run_id": "20261101T023716Z_train_bc2cbf0d",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "curriculum",
+    "seed": 2,
+    "run_id": "20261101T023835Z_train_adba2a09",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "randomization",
+    "seed": 0,
+    "run_id": "20261101T023957Z_train_aecdb681",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "randomization",
+    "seed": 1,
+    "run_id": "20261101T024126Z_train_4f4a86a7",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "randomization",
+    "seed": 2,
+    "run_id": "20261101T024255Z_train_c8f04518",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "both",
+    "seed": 0,
+    "run_id": "20261101T024424Z_train_11c8aa5d",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "both",
+    "seed": 1,
+    "run_id": "20261101T024555Z_train_1172c025",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  },
+  {
+    "condition": "both",
+    "seed": 2,
+    "run_id": "20261101T024730Z_train_f391b26e",
+    "training_source_matches": {
+      "src/biped_ppo/training.py": true,
+      "src/biped_ppo/task.py": true,
+      "src/biped_ppo/robot.py": true,
+      "src/biped_ppo/config.py": true
+    }
+  }
+]

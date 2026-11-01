@@ -1,0 +1,143 @@
+{
+  "robot": {
+    "name": "microduck_provisional_v1",
+    "urdf": "assets/robot/source/microduck_minimal.urdf",
+    "provenance": {
+      "geometry": "supplied URDF; unverified estimates, not derived from redesigned CAD",
+      "mass_inertia": "supplied URDF estimates; no material densities or measurements",
+      "torque_speed": "supplied URDF limits; manufacturer and gearing unknown",
+      "gains": "provisional simulation tuning, not calibrated servo gains",
+      "nominal_pose": "conservative straight-leg pose, flat feet",
+      "dimensions_units": "metres; radians; kilograms; seconds; newton-metres"
+    },
+    "joint_names": [
+      "l_hip_roll",
+      "l_hip_pitch",
+      "l_knee",
+      "r_hip_roll",
+      "r_hip_pitch",
+      "r_knee"
+    ],
+    "nominal": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "action_scale": [
+      0.15,
+      0.35,
+      0.35,
+      0.15,
+      0.35,
+      0.35
+    ],
+    "kp": [
+      2,
+      2,
+      1.5,
+      2,
+      2,
+      1.5
+    ],
+    "kd": [
+      0.06,
+      0.06,
+      0.04,
+      0.06,
+      0.06,
+      0.04
+    ],
+    "base_height": 0.1365,
+    "physics_dt": 0.002,
+    "policy_dt": 0.02,
+    "friction": 0.8,
+    "fall_height": 0.075,
+    "fall_angle": 0.9,
+    "standing_gate_seconds": 5.0,
+    "standing_gate_min_height": 0.11,
+    "self_collision": false
+  },
+  "actuator_limits": {
+    "l_hip_roll": {
+      "lower": "-0.52",
+      "upper": "0.52",
+      "effort": "1.2",
+      "velocity": "6.0"
+    },
+    "l_hip_pitch": {
+      "lower": "-1.05",
+      "upper": "1.05",
+      "effort": "1.2",
+      "velocity": "6.0"
+    },
+    "l_knee": {
+      "lower": "-1.57",
+      "upper": "0.0",
+      "effort": "0.8",
+      "velocity": "8.0"
+    },
+    "r_hip_roll": {
+      "lower": "-0.52",
+      "upper": "0.52",
+      "effort": "1.2",
+      "velocity": "6.0"
+    },
+    "r_hip_pitch": {
+      "lower": "-1.05",
+      "upper": "1.05",
+      "effort": "1.2",
+      "velocity": "6.0"
+    },
+    "r_knee": {
+      "lower": "-1.57",
+      "upper": "0.0",
+      "effort": "0.8",
+      "velocity": "8.0"
+    }
+  },
+  "checkpoint_sha": "928b9780809d87a758fb98ca5bbb016b5d314ec4a5b372ed57975951da71e3fb",
+  "output": "latent mean; q_target=clip(q_nominal+scale*tanh(output),joint_lower,joint_upper)",
+  "observation_fields": [
+    [
+      "body_angular_velocity",
+      3,
+      0.25
+    ],
+    [
+      "projected_gravity",
+      3,
+      1
+    ],
+    [
+      "relative_joint_position",
+      6,
+      1
+    ],
+    [
+      "joint_velocity",
+      6,
+      0.05
+    ],
+    [
+      "previous_tanh_action",
+      6,
+      1
+    ],
+    [
+      "command_vx_vy_wz",
+      3,
+      1
+    ]
+  ],
+  "frames": "body frame; x forward y left z up; radians, seconds, SI",
+  "history": 1,
+  "frequency_hz": 50,
+  "normalization": "embedded",
+  "format": "onnx",
+  "max_absolute_error": 3.5762786865234375e-07,
+  "tolerance": 1e-05,
+  "hardware_deployment_authorized": false
+}
