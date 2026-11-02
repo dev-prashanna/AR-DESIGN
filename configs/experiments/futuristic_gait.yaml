@@ -1,0 +1,14 @@
+robot_path: configs/robot/futuristic_stable.yaml
+task_path: configs/task/futuristic_gait.yaml
+profile: futuristic_gait
+num_envs: 256
+horizon: 24
+iterations: 10000
+max_wall_time: 14400
+max_transitions: 61440000
+checkpoint_interval: 250
+episode_seconds: 10
+curriculum: false
+randomization: false
+seed: 42
+init_std: 0.15

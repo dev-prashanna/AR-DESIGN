@@ -1,0 +1,1207 @@
+<robot name="microduck_futuristic">
+  <link name="torso">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.12" />
+      <inertia ixx="6.5e-05" iyy="4.1e-05" izz="7.400000000000001e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.05 0.07 0.03" />
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Torso_lower_chassis.stl" />
+      </geometry>
+      <material name="Torso_lower_chassis">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Torso_graphite_shell.stl" />
+      </geometry>
+      <material name="Torso_graphite_shell">
+        <color rgba="0.2196078431372549 0.25098039215686274 0.2784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Torso_top_inset.stl" />
+      </geometry>
+      <material name="Torso_top_inset">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Torso_front_trim.stl" />
+      </geometry>
+      <material name="Torso_front_trim">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Torso_status_bar.stl" />
+      </geometry>
+      <material name="Torso_status_bar">
+        <color rgba="0.12941176470588237 0.8117647058823529 0.9019607843137255 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_lower_servo.stl" />
+      </geometry>
+      <material name="Neck_lower_servo">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_upper_servo.stl" />
+      </geometry>
+      <material name="Neck_upper_servo">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_linkage.stl" />
+      </geometry>
+      <material name="Neck_linkage">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_horn.stl" />
+      </geometry>
+      <material name="Neck_horn">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_fastener.stl" />
+      </geometry>
+      <material name="Neck_fastener">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_horn001.stl" />
+      </geometry>
+      <material name="Neck_horn001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_fastener001.stl" />
+      </geometry>
+      <material name="Neck_fastener001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_linkage001.stl" />
+      </geometry>
+      <material name="Neck_linkage001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_horn002.stl" />
+      </geometry>
+      <material name="Neck_horn002">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_fastener002.stl" />
+      </geometry>
+      <material name="Neck_fastener002">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_horn003.stl" />
+      </geometry>
+      <material name="Neck_horn003">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_fastener003.stl" />
+      </geometry>
+      <material name="Neck_fastener003">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_wiring.stl" />
+      </geometry>
+      <material name="Neck_wiring">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_wiring001.stl" />
+      </geometry>
+      <material name="Neck_wiring001">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Neck_wiring002.stl" />
+      </geometry>
+      <material name="Neck_wiring002">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0.002 0 0.004" />
+      <mass value="0.12" />
+      <inertia ixx="0.00010768999999999998" iyy="7.25e-05" izz="0.00011969" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin xyz="0.004 0 0.005" />
+      <geometry>
+        <box size="0.06 0.086 0.052" />
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_arched_housing.stl" />
+      </geometry>
+      <material name="Head_arched_housing">
+        <color rgba="0.2196078431372549 0.25098039215686274 0.2784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Recessed_sensor_visor.stl" />
+      </geometry>
+      <material name="Recessed_sensor_visor">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Visor_faceplate.stl" />
+      </geometry>
+      <material name="Visor_faceplate">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Lower_head_gasket.stl" />
+      </geometry>
+      <material name="Lower_head_gasket">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Yellow_beak_upper.stl" />
+      </geometry>
+      <material name="Yellow_beak_upper">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Beak_mouth_recess.stl" />
+      </geometry>
+      <material name="Beak_mouth_recess">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Lower_beak_violet_insert.stl" />
+      </geometry>
+      <material name="Lower_beak_violet_insert">
+        <color rgba="0.3607843137254902 0.25882352941176473 0.47843137254901963 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Camera_machined_bezel.stl" />
+      </geometry>
+      <material name="Camera_machined_bezel">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Camera_yellow_ring.stl" />
+      </geometry>
+      <material name="Camera_yellow_ring">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Camera_black_barrel.stl" />
+      </geometry>
+      <material name="Camera_black_barrel">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Camera_optical_glass.stl" />
+      </geometry>
+      <material name="Camera_optical_glass">
+        <color rgba="0.054901960784313725 0.16862745098039217 0.23137254901960785 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Camera_inner_aperture.stl" />
+      </geometry>
+      <material name="Camera_inner_aperture">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Lens_reflection.stl" />
+      </geometry>
+      <material name="Lens_reflection">
+        <color rgba="0.6509803921568628 0.8784313725490196 0.9411764705882353 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Status_light.stl" />
+      </geometry>
+      <material name="Status_light">
+        <color rgba="0.12941176470588237 0.8117647058823529 0.9019607843137255 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Status_light001.stl" />
+      </geometry>
+      <material name="Status_light001">
+        <color rgba="0.12941176470588237 0.8117647058823529 0.9019607843137255 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_side_yoke.stl" />
+      </geometry>
+      <material name="Head_side_yoke">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_pivot.stl" />
+      </geometry>
+      <material name="Head_pivot">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_pivot_screw.stl" />
+      </geometry>
+      <material name="Head_pivot_screw">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_side_yoke001.stl" />
+      </geometry>
+      <material name="Head_side_yoke001">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_pivot001.stl" />
+      </geometry>
+      <material name="Head_pivot001">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_pivot_screw001.stl" />
+      </geometry>
+      <material name="Head_pivot_screw001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_rear_cooling_slot.stl" />
+      </geometry>
+      <material name="Head_rear_cooling_slot">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_rear_cooling_slot001.stl" />
+      </geometry>
+      <material name="Head_rear_cooling_slot001">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_rear_cooling_slot002.stl" />
+      </geometry>
+      <material name="Head_rear_cooling_slot002">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_rear_cooling_slot003.stl" />
+      </geometry>
+      <material name="Head_rear_cooling_slot003">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Head_rear_cooling_slot004.stl" />
+      </geometry>
+      <material name="Head_rear_cooling_slot004">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="head_joint" type="fixed">
+    <parent link="torso" />
+    <child link="head" />
+    <origin xyz="0 0 0.074" rpy="0 0 0" />
+  </joint>
+  <link name="l_hip_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.035" />
+      <inertia ixx="2.1583333333333336e-06" iyy="2.426666666666667e-06" izz="3.0916666666666666e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_hip_roll_servo.stl" />
+      </geometry>
+      <material name="Left_hip_roll_servo">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="l_hip_roll" type="revolute">
+    <parent link="torso" />
+    <child link="l_hip_roll_link" />
+    <origin xyz="0.001 0.034 -0.014" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.52" upper="0.52" effort="1.2" velocity="6" />
+    <dynamics damping="0.015" friction="0.002" />
+  </joint>
+  <link name="l_hip_pitch_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.035" />
+      <inertia ixx="2.7095833333333336e-06" iyy="2.452916666666667e-06" izz="2.8291666666666665e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="l_hip_pitch" type="revolute">
+    <parent link="l_hip_roll_link" />
+    <child link="l_hip_pitch_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.05" upper="1.05" effort="1.2" velocity="6" />
+    <dynamics damping="0.015" friction="0.002" />
+  </joint>
+  <link name="l_thigh">
+    <inertial>
+      <origin xyz="0 0 -0.020359273071502332" />
+      <mass value="0.02" />
+      <inertia ixx="3.4300000000000006e-06" iyy="3.4300000000000006e-06" izz="1.3333333333333336e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 -0.020359273071502332" />
+      <geometry>
+        <box size="0.02 0.022 0.040718546143004665" />
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_hip_pitch_servo.stl" />
+      </geometry>
+      <material name="Left_hip_pitch_servo">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_thigh_motor.stl" />
+      </geometry>
+      <material name="Left_thigh_motor">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_thigh_inner_rail.stl" />
+      </geometry>
+      <material name="Left_thigh_inner_rail">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_thigh_armor.stl" />
+      </geometry>
+      <material name="Left_thigh_armor">
+        <color rgba="0.2196078431372549 0.25098039215686274 0.2784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_housing.stl" />
+      </geometry>
+      <material name="Left_joint_housing">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_alloy_ring.stl" />
+      </geometry>
+      <material name="Left_joint_alloy_ring">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_hub.stl" />
+      </geometry>
+      <material name="Left_joint_hub">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_axle_bolt.stl" />
+      </geometry>
+      <material name="Left_axle_bolt">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_armor_screw.stl" />
+      </geometry>
+      <material name="Left_armor_screw">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_armor_screw001.stl" />
+      </geometry>
+      <material name="Left_armor_screw001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_servo_cable.stl" />
+      </geometry>
+      <material name="Left_servo_cable">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="l_thigh_joint" type="fixed">
+    <parent link="l_hip_pitch_link" />
+    <child link="l_thigh" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="l_knee_link">
+    <inertial>
+      <origin xyz="0 0 -0.02437724348649781" />
+      <mass value="0.025" />
+      <inertia ixx="5.960416666666667e-06" iyy="5.627083333333333e-06" izz="1.6833333333333332e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 -0.02437724348649781" />
+      <geometry>
+        <box size="0.014 0.022 0.04875448697299562" />
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_shin_link.stl" />
+      </geometry>
+      <material name="Left_shin_link">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_shin_link001.stl" />
+      </geometry>
+      <material name="Left_shin_link001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_housing001.stl" />
+      </geometry>
+      <material name="Left_joint_housing001">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_alloy_ring001.stl" />
+      </geometry>
+      <material name="Left_joint_alloy_ring001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_hub001.stl" />
+      </geometry>
+      <material name="Left_joint_hub001">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_axle_bolt001.stl" />
+      </geometry>
+      <material name="Left_axle_bolt001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_link_hole.stl" />
+      </geometry>
+      <material name="Left_link_hole">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_link_hole001.stl" />
+      </geometry>
+      <material name="Left_link_hole001">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_link_hole002.stl" />
+      </geometry>
+      <material name="Left_link_hole002">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="l_knee" type="revolute">
+    <parent link="l_thigh" />
+    <child link="l_knee_link" />
+    <origin xyz="0 0 -0.040718546143004665" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="0" effort="0.8" velocity="6" />
+    <dynamics damping="0.015" friction="0.002" />
+  </joint>
+  <link name="l_shin">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.005" />
+      <inertia ixx="2.4833333333333337e-07" iyy="2.4833333333333337e-07" izz="1.6333333333333337e-07" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="l_shin_joint" type="fixed">
+    <parent link="l_knee_link" />
+    <child link="l_shin" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="l_foot">
+    <inertial>
+      <origin xyz="0 0 -0.015" />
+      <mass value="0.01" />
+      <inertia ixx="1.0833333333333335e-06" iyy="2.373333333333333e-06" izz="3.2166666666666662e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 -0.015" />
+      <geometry>
+        <box size="0.052 0.034 0.012" />
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_shin_motor.stl" />
+      </geometry>
+      <material name="Left_shin_motor">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_housing002.stl" />
+      </geometry>
+      <material name="Left_joint_housing002">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_alloy_ring002.stl" />
+      </geometry>
+      <material name="Left_joint_alloy_ring002">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_joint_hub002.stl" />
+      </geometry>
+      <material name="Left_joint_hub002">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_axle_bolt002.stl" />
+      </geometry>
+      <material name="Left_axle_bolt002">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_rubber_sole.stl" />
+      </geometry>
+      <material name="Left_rubber_sole">
+        <color rgba="0.3607843137254902 0.25882352941176473 0.47843137254901963 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_sole_gasket.stl" />
+      </geometry>
+      <material name="Left_sole_gasket">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_yellow_foot_deck.stl" />
+      </geometry>
+      <material name="Left_yellow_foot_deck">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_ankle_bracket.stl" />
+      </geometry>
+      <material name="Left_ankle_bracket">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_ankle_bracket001.stl" />
+      </geometry>
+      <material name="Left_ankle_bracket001">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_toe_grip.stl" />
+      </geometry>
+      <material name="Left_toe_grip">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_toe_grip001.stl" />
+      </geometry>
+      <material name="Left_toe_grip001">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_toe_grip002.stl" />
+      </geometry>
+      <material name="Left_toe_grip002">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_deck_fastener.stl" />
+      </geometry>
+      <material name="Left_deck_fastener">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_deck_fastener001.stl" />
+      </geometry>
+      <material name="Left_deck_fastener001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_deck_fastener002.stl" />
+      </geometry>
+      <material name="Left_deck_fastener002">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Left_deck_fastener003.stl" />
+      </geometry>
+      <material name="Left_deck_fastener003">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="l_foot_joint" type="fixed">
+    <parent link="l_shin" />
+    <child link="l_foot" />
+    <origin xyz="0 0 -0.04875448697299562" rpy="0 0.4453010438876859 0" />
+  </joint>
+  <link name="r_hip_roll_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.035" />
+      <inertia ixx="2.1583333333333336e-06" iyy="2.426666666666667e-06" izz="3.0916666666666666e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_hip_roll_servo.stl" />
+      </geometry>
+      <material name="Right_hip_roll_servo">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="r_hip_roll" type="revolute">
+    <parent link="torso" />
+    <child link="r_hip_roll_link" />
+    <origin xyz="0.001 -0.034 -0.014" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.52" upper="0.52" effort="1.2" velocity="6" />
+    <dynamics damping="0.015" friction="0.002" />
+  </joint>
+  <link name="r_hip_pitch_link">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.035" />
+      <inertia ixx="2.7095833333333336e-06" iyy="2.452916666666667e-06" izz="2.8291666666666665e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="r_hip_pitch" type="revolute">
+    <parent link="r_hip_roll_link" />
+    <child link="r_hip_pitch_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.05" upper="1.05" effort="1.2" velocity="6" />
+    <dynamics damping="0.015" friction="0.002" />
+  </joint>
+  <link name="r_thigh">
+    <inertial>
+      <origin xyz="0 0 -0.020359273071502332" />
+      <mass value="0.02" />
+      <inertia ixx="3.4300000000000006e-06" iyy="3.4300000000000006e-06" izz="1.3333333333333336e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 -0.020359273071502332" />
+      <geometry>
+        <box size="0.02 0.022 0.040718546143004665" />
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_hip_pitch_servo.stl" />
+      </geometry>
+      <material name="Right_hip_pitch_servo">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_thigh_motor.stl" />
+      </geometry>
+      <material name="Right_thigh_motor">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_thigh_inner_rail.stl" />
+      </geometry>
+      <material name="Right_thigh_inner_rail">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_thigh_armor.stl" />
+      </geometry>
+      <material name="Right_thigh_armor">
+        <color rgba="0.2196078431372549 0.25098039215686274 0.2784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_housing.stl" />
+      </geometry>
+      <material name="Right_joint_housing">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_alloy_ring.stl" />
+      </geometry>
+      <material name="Right_joint_alloy_ring">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_hub.stl" />
+      </geometry>
+      <material name="Right_joint_hub">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_axle_bolt.stl" />
+      </geometry>
+      <material name="Right_axle_bolt">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_armor_screw.stl" />
+      </geometry>
+      <material name="Right_armor_screw">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_armor_screw001.stl" />
+      </geometry>
+      <material name="Right_armor_screw001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_servo_cable.stl" />
+      </geometry>
+      <material name="Right_servo_cable">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="r_thigh_joint" type="fixed">
+    <parent link="r_hip_pitch_link" />
+    <child link="r_thigh" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="r_knee_link">
+    <inertial>
+      <origin xyz="0 0 -0.02437724348649781" />
+      <mass value="0.025" />
+      <inertia ixx="5.960416666666667e-06" iyy="5.627083333333333e-06" izz="1.6833333333333332e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 -0.02437724348649781" />
+      <geometry>
+        <box size="0.014 0.022 0.04875448697299562" />
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_shin_link.stl" />
+      </geometry>
+      <material name="Right_shin_link">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_shin_link001.stl" />
+      </geometry>
+      <material name="Right_shin_link001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_housing001.stl" />
+      </geometry>
+      <material name="Right_joint_housing001">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_alloy_ring001.stl" />
+      </geometry>
+      <material name="Right_joint_alloy_ring001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_hub001.stl" />
+      </geometry>
+      <material name="Right_joint_hub001">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_axle_bolt001.stl" />
+      </geometry>
+      <material name="Right_axle_bolt001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_link_hole.stl" />
+      </geometry>
+      <material name="Right_link_hole">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_link_hole001.stl" />
+      </geometry>
+      <material name="Right_link_hole001">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_link_hole002.stl" />
+      </geometry>
+      <material name="Right_link_hole002">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="r_knee" type="revolute">
+    <parent link="r_thigh" />
+    <child link="r_knee_link" />
+    <origin xyz="0 0 -0.040718546143004665" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="0" effort="0.8" velocity="6" />
+    <dynamics damping="0.015" friction="0.002" />
+  </joint>
+  <link name="r_shin">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.005" />
+      <inertia ixx="2.4833333333333337e-07" iyy="2.4833333333333337e-07" izz="1.6333333333333337e-07" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="r_shin_joint" type="fixed">
+    <parent link="r_knee_link" />
+    <child link="r_shin" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="r_foot">
+    <inertial>
+      <origin xyz="0 0 -0.015" />
+      <mass value="0.01" />
+      <inertia ixx="1.0833333333333335e-06" iyy="2.373333333333333e-06" izz="3.2166666666666662e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 -0.015" />
+      <geometry>
+        <box size="0.052 0.034 0.012" />
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_shin_motor.stl" />
+      </geometry>
+      <material name="Right_shin_motor">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_housing002.stl" />
+      </geometry>
+      <material name="Right_joint_housing002">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_alloy_ring002.stl" />
+      </geometry>
+      <material name="Right_joint_alloy_ring002">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_joint_hub002.stl" />
+      </geometry>
+      <material name="Right_joint_hub002">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_axle_bolt002.stl" />
+      </geometry>
+      <material name="Right_axle_bolt002">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_rubber_sole.stl" />
+      </geometry>
+      <material name="Right_rubber_sole">
+        <color rgba="0.3607843137254902 0.25882352941176473 0.47843137254901963 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_sole_gasket.stl" />
+      </geometry>
+      <material name="Right_sole_gasket">
+        <color rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_yellow_foot_deck.stl" />
+      </geometry>
+      <material name="Right_yellow_foot_deck">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_ankle_bracket.stl" />
+      </geometry>
+      <material name="Right_ankle_bracket">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_ankle_bracket001.stl" />
+      </geometry>
+      <material name="Right_ankle_bracket001">
+        <color rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_toe_grip.stl" />
+      </geometry>
+      <material name="Right_toe_grip">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_toe_grip001.stl" />
+      </geometry>
+      <material name="Right_toe_grip001">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_toe_grip002.stl" />
+      </geometry>
+      <material name="Right_toe_grip002">
+        <color rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_deck_fastener.stl" />
+      </geometry>
+      <material name="Right_deck_fastener">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_deck_fastener001.stl" />
+      </geometry>
+      <material name="Right_deck_fastener001">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_deck_fastener002.stl" />
+      </geometry>
+      <material name="Right_deck_fastener002">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/robot/meshes/futuristic/Right_deck_fastener003.stl" />
+      </geometry>
+      <material name="Right_deck_fastener003">
+        <color rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="r_foot_joint" type="fixed">
+    <parent link="r_shin" />
+    <child link="r_foot" />
+    <origin xyz="0 0 -0.04875448697299562" rpy="0 0.4453010438876859 0" />
+  </joint>
+</robot>

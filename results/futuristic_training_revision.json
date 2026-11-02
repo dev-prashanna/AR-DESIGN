@@ -1,0 +1,23 @@
+{
+  "profile": "futuristic_transfer_robust",
+  "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261102T032138Z_finetune_9784f901",
+  "observation_dimensions": 41,
+  "previous_run": "runs/20261102T020127Z_train_120699c4",
+  "previous_run_stopped_at_updates": 8473,
+  "policy_qualified": false,
+  "hardware_calibration_complete": false,
+  "hardware_tested": false,
+  "changes": [
+    "shared command slew and motor-target filter in GPU/CPU/physical sensor runtime",
+    "complete-target velocity and acceleration penalties and rate limits",
+    "dedicated backward and pivot commands; stronger yaw-error objective",
+    "adaptive PPO schedule and RSL-RL mirror-consistency loss",
+    "mass/inertia, friction, actuator strength/gains, latency and sensor randomization"
+  ],
+  "verification": {
+    "automated_tests_passed": 21,
+    "sensor_runtime_target_parity_rad": 0.0,
+    "standalone_onnx_runtime_without_simulator_dependencies": true
+  },
+  "calibration_contract": "docs/physical_policy_contract.json"
+}

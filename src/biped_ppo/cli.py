@@ -28,9 +28,15 @@ def main():
     p.add_argument("--max-transitions", type=int)
     p.add_argument("--iterations", type=int)
     p.add_argument("--resume", type=Path)
+    p.add_argument("--warm-start", type=Path)
     p = sub.add_parser("evaluate")
     p.add_argument("--checkpoint", required=True)
     p.add_argument("--suite", default="configs/evaluation/validation.yaml")
+    p = sub.add_parser("play")
+    p.add_argument("--checkpoint", required=True)
+    p.add_argument("--seconds", type=float)
+    p.add_argument("--headless", action="store_true")
+    p.add_argument("--output")
     p = sub.add_parser("export")
     p.add_argument("--checkpoint", required=True)
     p.add_argument("--format", choices=["onnx", "jit"], default="onnx")
@@ -42,6 +48,8 @@ def main():
         p = sub.add_parser(name)
         p.add_argument("--runs" if name == "analyze" else "--results", required=True)
     args = parser.parse_args()
+    if args.command == "play" and not args.headless:
+        os.environ["MUJOCO_GL"] = "glfw"
     if args.command == "doctor":
         from .diagnostics import doctor
 
@@ -80,7 +88,7 @@ def main():
         for key in ["seed", "max_wall_time", "max_transitions", "iterations"]:
             if getattr(args, key) is not None:
                 setattr(cfg, key, getattr(args, key))
-        print(train(cfg, args.resume))
+        print(train(cfg, args.resume, args.warm_start))
     elif args.command == "benchmark":
         from .benchmark import benchmark_one
 
@@ -124,6 +132,12 @@ def main():
         from .evaluation import evaluate
 
         print(evaluate(args.checkpoint, args.suite))
+    elif args.command == "play":
+        from .play import play
+
+        result = play(args.checkpoint, args.seconds, args.headless, args.output)
+        if result is not None:
+            print(result)
     elif args.command == "export":
         from .evaluation import export
 

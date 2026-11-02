@@ -1,0 +1,16 @@
+robot_path: configs/robot/futuristic_residual.yaml
+task_path: configs/task/futuristic_transfer.yaml
+profile: futuristic_transfer_nominal
+num_envs: 1024
+horizon: 24
+iterations: 2000
+max_wall_time: 14400.0
+max_transitions: 49152000
+checkpoint_interval: 100
+episode_seconds: 10
+curriculum: false
+randomization: false
+seed: 42
+init_std: 0.08
+ppo_schedule: adaptive
+learning_rate: 0.0001

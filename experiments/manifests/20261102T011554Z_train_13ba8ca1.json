@@ -1,0 +1,402 @@
+{
+  "run_id": "20261102T011554Z_train_13ba8ca1",
+  "created_utc": "20261102T011554Z",
+  "kind": "train",
+  "config": {
+    "init_std": 0.1,
+    "robot_path": "configs/robot/futuristic_residual.yaml",
+    "task_path": "configs/task/futuristic_residual.yaml",
+    "profile": "futuristic_residual",
+    "num_envs": 1024,
+    "horizon": 24,
+    "iterations": 5000,
+    "max_wall_time": 14400,
+    "max_transitions": 122880000,
+    "checkpoint_interval": 250,
+    "episode_seconds": 10,
+    "curriculum": false,
+    "randomization": false,
+    "seed": 42
+  },
+  "hardware": {
+    "timestamp": "2026-11-02T01:15:54Z",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "cpu": "x86_64",
+    "cpu_details": {
+      "lscpu": [
+        {
+          "field": "Architecture:",
+          "data": "x86_64"
+        },
+        {
+          "field": "CPU op-mode(s):",
+          "data": "32-bit, 64-bit"
+        },
+        {
+          "field": "Address sizes:",
+          "data": "48 bits physical, 48 bits virtual"
+        },
+        {
+          "field": "Byte Order:",
+          "data": "Little Endian"
+        },
+        {
+          "field": "CPU(s):",
+          "data": "16"
+        },
+        {
+          "field": "On-line CPU(s) list:",
+          "data": "0-15"
+        },
+        {
+          "field": "Vendor ID:",
+          "data": "AuthenticAMD"
+        },
+        {
+          "field": "Model name:",
+          "data": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics"
+        },
+        {
+          "field": "CPU family:",
+          "data": "25"
+        },
+        {
+          "field": "Model:",
+          "data": "117"
+        },
+        {
+          "field": "Thread(s) per core:",
+          "data": "2"
+        },
+        {
+          "field": "Core(s) per socket:",
+          "data": "8"
+        },
+        {
+          "field": "Socket(s):",
+          "data": "1"
+        },
+        {
+          "field": "Stepping:",
+          "data": "2"
+        },
+        {
+          "field": "Frequency boost:",
+          "data": "enabled"
+        },
+        {
+          "field": "CPU(s) scaling MHz:",
+          "data": "66%"
+        },
+        {
+          "field": "CPU max MHz:",
+          "data": "5102.7129"
+        },
+        {
+          "field": "CPU min MHz:",
+          "data": "416.5480"
+        },
+        {
+          "field": "BogoMIPS:",
+          "data": "7585.83"
+        },
+        {
+          "field": "Flags:",
+          "data": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpuid_fault cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze"
+        },
+        {
+          "field": "Virtualization:",
+          "data": "AMD-V"
+        },
+        {
+          "field": "L1d cache:",
+          "data": "256 KiB (8 instances)"
+        },
+        {
+          "field": "L1i cache:",
+          "data": "256 KiB (8 instances)"
+        },
+        {
+          "field": "L2 cache:",
+          "data": "8 MiB (8 instances)"
+        },
+        {
+          "field": "L3 cache:",
+          "data": "16 MiB (1 instance)"
+        },
+        {
+          "field": "NUMA node(s):",
+          "data": "1"
+        },
+        {
+          "field": "NUMA node0 CPU(s):",
+          "data": "0-15"
+        },
+        {
+          "field": "Vulnerability Gather data sampling:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Ghostwrite:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Indirect target selection:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Itlb multihit:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability L1tf:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Mds:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Meltdown:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Mmio stale data:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Old microcode:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Reg file data sampling:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Retbleed:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Spec rstack overflow:",
+          "data": "Mitigation; Safe RET"
+        },
+        {
+          "field": "Vulnerability Spec store bypass:",
+          "data": "Mitigation; Speculative Store Bypass disabled via prctl"
+        },
+        {
+          "field": "Vulnerability Spectre v1:",
+          "data": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+        },
+        {
+          "field": "Vulnerability Spectre v2:",
+          "data": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP always-on; PBRSB-eIBRS Not affected; BHI Not affected"
+        },
+        {
+          "field": "Vulnerability Srbds:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Tsa:",
+          "data": "Mitigation; Clear CPU buffers"
+        },
+        {
+          "field": "Vulnerability Tsx async abort:",
+          "data": "Not affected"
+        },
+        {
+          "field": "Vulnerability Vmscape:",
+          "data": "Mitigation; IBPB before exit to userspace"
+        }
+      ]
+    },
+    "ram_bytes": 16024748032,
+    "available_ram_bytes": 9864826880,
+    "cuda_available": true,
+    "torch_cuda": "12.8",
+    "packages": {
+      "mjlab": "1.6.0",
+      "mujoco": "3.11.0",
+      "mujoco-warp": "3.11.0",
+      "warp-lang": "1.18.0",
+      "rsl-rl-lib": "5.4.2",
+      "torch": "2.10.0+cu128"
+    },
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "vram_bytes": 8184725504,
+    "nvidia_smi": "Mon Nov  2 07:00:55 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    Off |   00000000:01:00.0  On |                  N/A |\n| N/A   51C    P5              6W /   55W |      46MiB /   8188MiB |      9%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            4137      G   /usr/lib/xorg/Xorg                       27MiB |\n+-----------------------------------------------------------------------------------------+\n"
+  },
+  "code_sha": "fee3b317efa3b15e3124b133f69a71095bf4c2e7",
+  "working_tree": "M README.md\n M paper/main.tex\n M src/biped_ppo/cli.py\n M src/biped_ppo/config.py\n M src/biped_ppo/diagnostics.py\n M src/biped_ppo/evaluation.py\n M src/biped_ppo/robot.py\n M src/biped_ppo/task.py\n M src/biped_ppo/tracking.py\n M src/biped_ppo/training.py\n?? assets/robot/meshes/\n?? assets/robot/models/futuristic.xml\n?? assets/robot/models/futuristic_residual.xml\n?? assets/robot/models/futuristic_stable.xml\n?? assets/robot/source/microduck_futuristic.urdf\n?? configs/evaluation/futuristic_test.yaml\n?? configs/evaluation/futuristic_validation.yaml\n?? configs/experiments/futuristic.yaml\n?? configs/experiments/futuristic_gait.yaml\n?? configs/experiments/futuristic_residual.yaml\n?? configs/robot/futuristic.yaml\n?? configs/robot/futuristic_residual.yaml\n?? configs/robot/futuristic_stable.yaml\n?? configs/task/futuristic.yaml\n?? configs/task/futuristic_gait.yaml\n?? configs/task/futuristic_residual.yaml\n?? docs/FUTURISTIC.md\n?? docs/futuristic_cpu_gpu_parity.json\n?? docs/futuristic_model_audit.json\n?? docs/futuristic_pd_diagnostic.json\n?? docs/futuristic_residual_model_audit.json\n?? docs/futuristic_stable_model_audit.json\n?? experiments/manifests/20261102T010055Z_train_ac629d96.json\n?? experiments/manifests/20261102T010125Z_train_d770f135.json\n?? experiments/manifests/20261102T010357Z_train_f2d1d76b.json\n?? experiments/manifests/20261102T010511Z_train_73106bab.json\n?? experiments/manifests/20261102T010827Z_train_9e8fde46.json\n?? results/figures/futuristic_robot.png\n?? results/futuristic_validation_history.json\n?? scripts/build_futuristic_robot.py\n?? scripts/export_futuristic_cad.py\n?? scripts/render_futuristic.py\n?? scripts/report_futuristic.py\n?? scripts/watch_futuristic_validation.py\n?? src/biped_ppo/gait.py\n?? src/biped_ppo/play.py\n?? tests/test_futuristic.py",
+  "diff": "diff --git a/README.md b/README.md\nindex 2d59fc5..561d139 100644\n--- a/README.md\n+++ b/README.md\n@@ -10,6 +10,14 @@ are included under `assets/robot/source/cad/`. The training\n robot uses the supplied URDF, not an invented mechanism extracted from CAD.\n All physical parameters remain estimates until hardware specifications arrive.\n \n+## Futuristic CAD and WASD control\n+\n+The futuristic FreeCAD design now has an articulated MuJoCo model with its actual\n+122 CAD surfaces, CAD-based leg proportions and a bent neutral stance. GPU PPO\n+training and a native WASD viewer are provided. See [the setup and controls](docs/FUTURISTIC.md)\n+and `results/futuristic_results.json` for measured command performance. Model\n+parameters remain provisional. The original study below is preserved separately.\n+\n ## First successful run\n \n Ubuntu 24.04, Python 3.12, recent NVIDIA driver. The project creates its own\ndiff --git a/paper/main.tex b/paper/main.tex\nindex 0b0e794..40dbaa8 100644\n--- a/paper/main.tex\n+++ b/paper/main.tex\n@@ -9,11 +9,11 @@\n \\begin{document}\n \\maketitle\n \\begin{abstract}\n-This report documents an executable pipeline for a user-supplied six-joint biped model. The central research question is how curriculum learning and physically consistent randomization affect locomotion reliability under a fixed local compute budget. The implementation uses MuJoCo, MuJoCo Warp, mjlab, and maintained RSL-RL PPO. Model masses, inertia tensors, and actuator ratings originate from an uncalibrated URDF and remain provisional. The model has total mass \\RobotMass\\ kg. A conservative standing diagnostic reaches a minimum base height of \\StandingHeight\\ m. There are \\CompletedRuns\\ recorded training runs in the accompanying artifact index; their existence is not evidence of reliable walking. The independent study contains \\StudyRuns\\ policies. Its status is \\StudyStatus. Longer-budget experiments remain unmeasured. Hardware deployment and transfer performance are untested. This preliminary report separates verified engineering behavior from planned research claims.\n+This report documents an executable pipeline for a user-supplied six-joint biped model. The central research question is how curriculum learning and physically consistent randomization affect locomotion reliability under a fixed local compute budget. The implementation uses MuJoCo, MuJoCo Warp, mjlab, and maintained RSL-RL PPO. Model masses, inertia tensors, and actuator ratings originate from an uncalibrated URDF and remain provisional. The model has total mass \\RobotMass\\ kg. A conservative standing diagnostic reaches a minimum base height of \\StandingHeight\\ m. There are \\CompletedRuns\\ recorded training runs in the accompanying artifact index; their existence is not evidence of reliable walking. The independent study contains \\StudyRuns\\ policies. Its status is \\StudyStatus. A separate futuristic-CAD and keyboard-control extension is reported with its own measured artifacts below. Hardware deployment and transfer performance are untested. This preliminary report separates verified engineering behavior from planned research claims.\n \\end{abstract}\n \n \\section{Scope and research question}\n-The project begins with an articulated URDF and a separate appearance-oriented CAD model. These inputs serve different purposes: the URDF defines kinematics and estimated rigid-body dynamics, whereas the redesigned CAD provides a visual design concept. No density-based mass extraction or joint-clearance validation is claimed for the CAD. Transferring detailed surfaces into the simulator without establishing hardware dimensions would imply unsupported mechanical knowledge.\n+The project begins with an articulated URDF and a separate appearance-oriented CAD model. These inputs serve different purposes: the URDF defines kinematics and estimated rigid-body dynamics, whereas the redesigned CAD provides a visual design concept. No density-based mass extraction or joint-clearance validation is claimed for the CAD. The later futuristic extension imports the actual detailed surfaces and uses explicit provisional joint mappings and dynamics; importing appearance does not establish calibrated hardware dimensions.\n \n The intended empirical question is: for this custom biped and a fixed local compute budget, how do a command curriculum and physically grounded domain randomization affect reliability and robustness? A new morphology with standard PPO is not an algorithmic novelty. This report describes the infrastructure needed to evaluate the question, records executed checks, and explicitly leaves absent experiments unmeasured.\n \n@@ -120,8 +120,10 @@ The initial study uses 1,536,000 aggregate transitions per policy with three tra\n \\input{study_findings}\n \\textbf{Terrain generalization, held-out mass/delay grids, and hardware transfer: NOT MEASURED.} The generated result manifest maps available model and run evidence to its source hashes. Missing experiments are not replaced with synthetic learning curves or fabricated confidence intervals. Raw curves, when present, are pipeline diagnostics and are not evidence of reliable locomotion.\n \n+\\IfFileExists{futuristic_results.tex}{\\input{futuristic_results}}{}\n+\n \\section{Limitations, failure cases, and next gates}\n-The physical model is only a provisional URDF approximation. The detailed appearance CAD has different proportions and has not been converted into a calibrated articulated assembly. Missing manufacturer identities prevent claims about gear efficiency, motor heating, bus delay, backlash, or servo bandwidth. Self-collision is disabled in the initial baseline. The model has no independently controlled ankles, and its small support geometry restricts feasible motions. Saturation, contact stability, foot slip, and unintended body contacts require explicit review before escalating command ranges.\n+The physical model is only a provisional URDF approximation. The futuristic extension uses CAD proportions in an assumed articulated assembly; it has not been calibrated against hardware. Missing manufacturer identities prevent claims about gear efficiency, motor heating, bus delay, backlash, or servo bandwidth. Self-collision is disabled in the initial baseline. The model has no independently controlled ankles, and its small support geometry restricts feasible motions. Saturation, contact stability, foot slip, and unintended body contacts require explicit review before escalating command ranges.\n \n A conservative standing gate can pass while a learned controller falls immediately. Short PPO runs establish that gradients and checkpoints execute, not that a stable gait has emerged. The execution manifest records bounded pilot training, resumed continuation, fixed validation and export parity. Matched-study status is \\StudyStatus; successful execution is not equivalent to reliable walking. Any failed run remains in the artifact index. Push, delay, mass, and terrain failure boundaries must be evaluated over predefined grids before robust locomotion can be claimed.\n \ndiff --git a/src/biped_ppo/cli.py b/src/biped_ppo/cli.py\nindex 7e40710..df52180 100644\n--- a/src/biped_ppo/cli.py\n+++ b/src/biped_ppo/cli.py\n@@ -31,6 +31,11 @@ def main():\n     p = sub.add_parser(\"evaluate\")\n     p.add_argument(\"--checkpoint\", required=True)\n     p.add_argument(\"--suite\", default=\"configs/evaluation/validation.yaml\")\n+    p = sub.add_parser(\"play\")\n+    p.add_argument(\"--checkpoint\", required=True)\n+    p.add_argument(\"--seconds\", type=float)\n+    p.add_argument(\"--headless\", action=\"store_true\")\n+    p.add_argument(\"--output\")\n     p = sub.add_parser(\"export\")\n     p.add_argument(\"--checkpoint\", required=True)\n     p.add_argument(\"--format\", choices=[\"onnx\", \"jit\"], default=\"onnx\")\n@@ -124,6 +129,10 @@ def main():\n         from .evaluation import evaluate\n \n         print(evaluate(args.checkpoint, args.suite))\n+    elif args.command == \"play\":\n+        from .play import play\n+\n+        print(play(args.checkpoint, args.seconds, args.headless, args.output))\n     elif args.command == \"export\":\n         from .evaluation import export\n \ndiff --git a/src/biped_ppo/config.py b/src/biped_ppo/config.py\nindex bb62859..4af8d3f 100644\n--- a/src/biped_ppo/config.py\n+++ b/src/biped_ppo/config.py\n@@ -14,6 +14,9 @@ def read(path):\n \n @dataclass\n class RunConfig:\n+    init_std: float = 0.5\n+    robot_path: str = \"configs/robot/custom.yaml\"\n+    task_path: str = \"configs/task/flat.yaml\"\n     profile: str = \"smoke\"\n     num_envs: int = 32\n     horizon: int = 24\ndiff --git a/src/biped_ppo/diagnostics.py b/src/biped_ppo/diagnostics.py\nindex f6f68f2..b163fa4 100644\n--- a/src/biped_ppo/diagnostics.py\n+++ b/src/biped_ppo/diagnostics.py\n@@ -81,12 +81,17 @@ def physics_checks(model, cfg):\n         bounds.append((d.geom_xpos[index] - extent, d.geom_xpos[index] + extent))\n     report[\"height_m\"] = float(max(b[1][2] for b in bounds) - min(b[0][2] for b in bounds))\n     report[\"foot_contact_sites\"] = [\"l_foot_contact\", \"r_foot_contact\"]\n-    report[\"nominal_support_xy_m\"] = [\n-        [-0.019, -0.051],\n-        [0.019, -0.051],\n-        [0.019, 0.051],\n-        [-0.019, 0.051],\n-    ]\n+    feet = [i for i in collision_ids if model.geom(i).name.startswith((\"l_foot_\", \"r_foot_\"))]\n+    corners = []\n+    for i in feet:\n+        rotation = d.geom_xmat[i].reshape(3, 3)\n+        for x in (-1, 1):\n+            for y in (-1, 1):\n+                corners.append((d.geom_xpos[i] + rotation @ (model.geom_size[i] * [x, y, -1]))[:2])\n+    from scipy.spatial import ConvexHull\n+\n+    corners = np.asarray(corners)\n+    report[\"nominal_support_xy_m\"] = corners[ConvexHull(corners).vertices].tolist()\n     report[\"joint_command_checks\"] = []\n     # Floating robot in the air avoids floor friction masking sign checks.\n     for n, qi, vi, ai in zip(cfg[\"joint_names\"], qids, vids, aid):\ndiff --git a/src/biped_ppo/evaluation.py b/src/biped_ppo/evaluation.py\nindex 5988bbb..9fead3c 100644\n--- a/src/biped_ppo/evaluation.py\n+++ b/src/biped_ppo/evaluation.py\n@@ -4,11 +4,19 @@ import json\n import time\n import numpy as np\n import torch\n+from tensordict import TensorDict\n from .config import ROOT, RunConfig, read\n from .tracking import sha, write_json, append_json, seed_all\n from .training import construct, load_checkpoint\n \n \n+def command_observations(env):\n+    # External command changes must invalidate mjlab's cached observation frame.\n+    return TensorDict(\n+        env.env.observation_manager.compute(update_history=True), batch_size=[env.num_envs]\n+    )\n+\n+\n def evaluate(checkpoint, suite_path):\n     checkpoint = Path(checkpoint).resolve()\n     state = torch.load(checkpoint, map_location=\"cpu\", weights_only=False)[\"project\"]\n@@ -71,7 +79,7 @@ def evaluate(checkpoint, suite_path):\n         env.acc.zero_()\n         env.last_x[:] = env.env.scene[\"robot\"].data.root_link_pos_w[:, :2]\n         env.completed = []\n-        obs = env.get_observations()\n+        obs = command_observations(env)\n         active = torch.ones(len(cases), device=env.device, dtype=torch.bool)\n         selected = [\n             i\n@@ -86,12 +94,14 @@ def evaluate(checkpoint, suite_path):\n         stopped = False\n         stop_time = torch.zeros(len(cases), device=env.device)\n         stop_speed_sq = torch.zeros(len(cases), device=env.device)\n-        mass = json.loads((ROOT / \"docs/model_audit.json\").read_text())[\"mass_kg\"]\n+        mass = json.loads(\n+            (ROOT / read(cfg.robot_path).get(\"audit_path\", \"docs/model_audit.json\")).read_text()\n+        )[\"mass_kg\"]\n         with torch.inference_mode():\n             for step in range(round(suite[\"episode_seconds\"] / env.env.step_dt) + 1):\n                 if stop_at is not None and not stopped and step * env.env.step_dt >= stop_at:\n                     term.vel_command_b[:] = 0.0\n-                    obs = env.get_observations()\n+                    obs = command_observations(env)\n                     stopped = True\n                 obs, _, done, extras = env.step(runner.alg.actor(obs))\n                 ids = extras[\"terminal_env_ids\"].tolist()\n@@ -229,11 +239,14 @@ def inference_runner(checkpoint):\n \n     state = torch.load(checkpoint, map_location=\"cpu\", weights_only=False)\n     project = state[\"project\"]\n-    if project[\"robot_hash\"] != sha(ROOT / \"configs/robot/custom.yaml\") or project[\n-        \"urdf_hash\"\n-    ] != sha(ROOT / read(\"configs/robot/custom.yaml\")[\"urdf\"]):\n+    cfg = RunConfig(**project[\"config\"])\n+    if project[\"robot_hash\"] != sha(ROOT / cfg.robot_path) or project[\"urdf_hash\"] != sha(\n+        ROOT / read(cfg.robot_path)[\"urdf\"]\n+    ):\n         raise ValueError(\"Robot assets changed since checkpoint\")\n \n+    dimension = 29 if \"gait_frequency_hz\" in read(cfg.task_path) else 27\n+\n     class InferenceEnv:\n         num_envs = 1\n         num_actions = 6\n@@ -242,7 +255,8 @@ def inference_runner(checkpoint):\n \n         def get_observations(self):\n             return TensorDict(\n-                {\"actor\": torch.zeros(1, 27), \"critic\": torch.zeros(1, 27)}, batch_size=[1]\n+                {\"actor\": torch.zeros(1, dimension), \"critic\": torch.zeros(1, dimension)},\n+                batch_size=[1],\n             )\n \n     runner = MjlabOnPolicyRunner(\n@@ -291,19 +305,29 @@ def export(checkpoint, fmt=\"onnx\"):\n             runner.export_policy_to_jit(str(directory), \"policy.pt\")\n             policy = runner.alg.actor.as_jit().cpu().eval()\n             traced = torch.jit.load(str(directory / \"policy.pt\"))\n-            x = torch.randn(1, 27)\n+            config = RunConfig(\n+                **torch.load(checkpoint, map_location=\"cpu\", weights_only=False)[\"project\"][\n+                    \"config\"\n+                ]\n+            )\n+            x = torch.randn(1, 29 if \"gait_frequency_hz\" in read(config.task_path) else 27)\n             with torch.no_grad():\n                 max_error = float((policy(x) - traced(x)).abs().max())\n             if max_error > 1e-5:\n                 raise AssertionError(\"JIT parity failed\")\n-        robot = read(\"configs/robot/custom.yaml\")\n+        cfg = RunConfig(\n+            **torch.load(checkpoint, map_location=\"cpu\", weights_only=False)[\"project\"][\"config\"]\n+        )\n+        robot = read(cfg.robot_path)\n         write_json(\n             directory / \"deployment.json\",\n             dict(\n                 robot=robot,\n                 actuator_limits={\n                     j[\"name\"]: j[\"limits\"]\n-                    for j in json.loads((ROOT / \"docs/model_audit.json\").read_text())[\"joints\"]\n+                    for j in json.loads(\n+                        (ROOT / robot.get(\"audit_path\", \"docs/model_audit.json\")).read_text()\n+                    )[\"joints\"]\n                     if j[\"type\"] == \"revolute\"\n                 },\n                 checkpoint_sha=sha(checkpoint),\n@@ -317,6 +341,10 @@ def export(checkpoint, fmt=\"onnx\"):\n                     [\"command_vx_vy_wz\", 3, 1],\n                 ],\n                 frames=\"body frame; x forward y left z up; radians, seconds, SI\",\n+                gait_phase_hz=read(cfg.task_path).get(\"gait_frequency_hz\"),\n+                gait_phase_fields=[\"sin(phase)\", \"cos(phase)\"]\n+                if \"gait_frequency_hz\" in read(cfg.task_path)\n+                else [],\n                 history=1,\n                 frequency_hz=50,\n                 normalization=\"embedded\",\ndiff --git a/src/biped_ppo/robot.py b/src/biped_ppo/robot.py\nindex e13640e..4f12bf5 100644\n--- a/src/biped_ppo/robot.py\n+++ b/src/biped_ppo/robot.py\n@@ -35,6 +35,7 @@ def generate(robot_path=\"configs/robot/custom.yaml\", output=None, ground=False,\n     ET.SubElement(\n         default, \"geom\", friction=f\"{cfg['friction']} 0.005 0.0001\", condim=\"3\", solref=\"0.008 1\"\n     )\n+    asset = ET.SubElement(mj, \"asset\")\n     world = ET.SubElement(mj, \"worldbody\")\n     if ground:\n         ET.SubElement(\n@@ -81,6 +82,7 @@ def generate(robot_path=\"configs/robot/custom.yaml\", output=None, ground=False,\n                 \"joint\",\n                 name=joint.get(\"name\"),\n                 type=\"hinge\",\n+                armature=str(cfg.get(\"armature\", 0.0)),\n                 axis=joint.find(\"axis\").get(\"xyz\"),\n                 range=f\"{lim.get('lower')} {lim.get('upper')}\",\n                 damping=dyn.get(\"damping\", \"0\") if dyn is not None else \"0\",\n@@ -132,8 +134,32 @@ def generate(robot_path=\"configs/robot/custom.yaml\", output=None, ground=False,\n         for kind in [\"visual\", \"collision\"]:\n             for idx, g in enumerate(link.findall(kind)):\n                 box = g.find(\"geometry/box\")\n+                mesh = g.find(\"geometry/mesh\")\n+                if mesh is not None and kind == \"visual\":\n+                    mesh_name = f\"{name}_mesh_{idx}\"\n+                    ET.SubElement(\n+                        asset,\n+                        \"mesh\",\n+                        name=mesh_name,\n+                        file=str((ROOT / mesh.get(\"filename\")).resolve()),\n+                        scale=mesh.get(\"scale\", \"1 1 1\"),\n+                    )\n+                    ET.SubElement(\n+                        body,\n+                        \"geom\",\n+                        name=f\"{name}_visual_{idx}\",\n+                        type=\"mesh\",\n+                        mesh=mesh_name,\n+                        **origin(g),\n+                        contype=\"0\",\n+                        conaffinity=\"0\",\n+                        group=\"2\",\n+                        mass=\"0\",\n+                        rgba=g.find(\"material/color\").get(\"rgba\"),\n+                    )\n+                    continue\n                 if box is None:\n-                    raise ValueError(\"This importer currently accepts supplied box geometry only\")\n+                    raise ValueError(\"Expected box collision or visual mesh\")\n                 geom = dict(\n                     name=f\"{name}_{kind}_{idx}\",\n                     type=\"box\",\n@@ -159,7 +185,13 @@ def generate(robot_path=\"configs/robot/custom.yaml\", output=None, ground=False,\n                     )\n                 ET.SubElement(body, \"geom\", **geom)\n         if name in (\"l_foot\", \"r_foot\"):\n-            ET.SubElement(body, \"site\", name=name + \"_contact\", pos=\"0 0 -.008\", size=\".002\")\n+            ET.SubElement(\n+                body,\n+                \"site\",\n+                name=name + \"_contact\",\n+                pos=cfg.get(\"foot_site_pos\", \"0 0 -.008\"),\n+                size=\".002\",\n+            )\n         for j in joints:\n             if j.find(\"parent\").get(\"link\") == name:\n                 audit_joints.append(\n@@ -213,7 +245,10 @@ def validate(robot_path=\"configs/robot/custom.yaml\"):\n     from .diagnostics import physics_checks, render_model\n \n     xml, report = generate(\n-        robot_path, ROOT / \"assets/robot/models/microduck.xml\", ground=True, motors=True\n+        robot_path,\n+        ROOT / read(robot_path).get(\"model_path\", \"assets/robot/models/microduck.xml\"),\n+        ground=True,\n+        motors=True,\n     )\n     import hashlib\n \n@@ -224,6 +259,12 @@ def validate(robot_path=\"configs/robot/custom.yaml\"):\n     report[\"robot_spec_sha\"] = sha(ROOT / robot_path)\n     model = mujoco.MjModel.from_xml_string(xml)\n     report.update(physics_checks(model, report[\"robot\"]))\n-    (ROOT / \"docs/model_audit.json\").write_text(json.dumps(report, indent=2))\n-    render_model(model, report[\"robot\"], ROOT / \"results/figures/imported_robot.png\")\n+    (ROOT / report[\"robot\"].get(\"audit_path\", \"docs/model_audit.json\")).write_text(\n+        json.dumps(report, indent=2)\n+    )\n+    render_model(\n+        model,\n+        report[\"robot\"],\n+        ROOT / report[\"robot\"].get(\"figure_path\", \"results/figures/imported_robot.png\"),\n+    )\n     return report\ndiff --git a/src/biped_ppo/task.py b/src/biped_ppo/task.py\nindex 3d54c7e..da2c193 100644\n--- a/src/biped_ppo/task.py\n+++ b/src/biped_ppo/task.py\n@@ -27,7 +27,22 @@ from .robot import generate\n \n class BoundedPositionAction(JointPositionAction):\n     def process_actions(self, actions):\n-        super().process_actions(torch.tanh(actions))\n+        bounded = torch.tanh(actions)\n+        task = self._env.cfg.task_spec\n+        if task.get(\"reference_gait\", False):\n+            from .gait import reference_targets\n+\n+            cmd = self._env.command_manager.get_command(\"twist\")\n+            time = self._env.episode_length_buf * self._env.step_dt\n+            reference = reference_targets(\n+                time, cmd, self._offset, frequency=task[\"gait_frequency_hz\"]\n+            )\n+            self._raw_actions[:] = bounded\n+            self._processed_actions = torch.clamp(\n+                reference + bounded * self._scale, min=self._clip[:, :, 0], max=self._clip[:, :, 1]\n+            )\n+        else:\n+            super().process_actions(bounded)\n \n \n @dataclass(kw_only=True)\n@@ -39,6 +54,7 @@ class BoundedPositionActionCfg(JointPositionActionCfg):\n @dataclass(kw_only=True)\n class MicroduckEnvCfg(ManagerBasedRlEnvCfg):\n     robot_spec: dict = field(default_factory=dict)\n+    task_spec: dict = field(default_factory=dict)\n \n \n def robot(env):\n@@ -53,29 +69,50 @@ def previous_action(env):\n     return torch.tanh(env.action_manager.action)\n \n \n+def gait_phase(env):\n+    frequency = env.cfg.task_spec[\"gait_frequency_hz\"]\n+    phase = 2 * math.pi * frequency * env.episode_length_buf * env.step_dt\n+    return torch.stack((phase.sin(), phase.cos()), dim=-1)\n+\n+\n def reward_terms(env, term):\n+    task = getattr(env.cfg, \"task_spec\", TASK_SPEC) if hasattr(env, \"cfg\") else TASK_SPEC\n     d = robot(env)\n     cmd = env.command_manager.get_command(\"twist\")\n+    if term in (\"clearance\", \"contact_phase\"):\n+        phase = gait_phase(env)[:, 0]\n+        moving = (cmd[:, 0].abs() > 0.005) | (cmd[:, 2].abs() > 0.025)\n+        swing = torch.stack((phase, -phase), dim=-1)\n+        lift = ((swing - 0.3) / 0.7).clamp_min(0) * moving[:, None]\n+        if term == \"contact_phase\":\n+            contact = env.scene[\"feet\"].data.found > 0\n+            expected = lift < 0.05\n+            return (contact == expected).float().mean(-1)\n+        ids, _ = env.scene[\"robot\"].find_sites((\"l_foot_contact\", \"r_foot_contact\"))\n+        height = d.site_pos_w[:, ids, 2]\n+        target = task[\"foot_clearance_m\"] * lift\n+        return torch.exp(-((height - target) / 0.004).square()).mean(-1)\n+    if term == \"termination\":\n+        return env.termination_manager.terminated.float()\n     if term == \"tracking\":\n         return torch.exp(\n             -((d.root_link_lin_vel_b[:, :2] - cmd[:, :2]) ** 2).sum(-1)\n-            / TASK_SPEC[\"tracking_bandwidth_m_s\"] ** 2\n+            / task[\"tracking_bandwidth_m_s\"] ** 2\n         )\n     if term == \"yaw\":\n         return torch.exp(\n-            -((d.root_link_ang_vel_b[:, 2] - cmd[:, 2]) ** 2)\n-            / TASK_SPEC[\"yaw_bandwidth_rad_s\"] ** 2\n+            -((d.root_link_ang_vel_b[:, 2] - cmd[:, 2]) ** 2) / task[\"yaw_bandwidth_rad_s\"] ** 2\n         )\n     if term == \"upright\":\n         return torch.exp(\n-            -d.projected_gravity_b[:, :2].square().sum(-1) / TASK_SPEC[\"upright_bandwidth\"] ** 2\n+            -d.projected_gravity_b[:, :2].square().sum(-1) / task[\"upright_bandwidth\"] ** 2\n         )\n     if term == \"height\":\n         return torch.exp(\n             -(\n                 (\n                     (d.root_link_pos_w[:, 2] - env.cfg.robot_spec[\"base_height\"])\n-                    / TASK_SPEC[\"height_bandwidth_m\"]\n+                    / task[\"height_bandwidth_m\"]\n                 )\n                 ** 2\n             )\n@@ -112,7 +149,6 @@ def reward_terms(env, term):\n \n \n TASK_SPEC = read(\"configs/task/flat.yaml\")\n-REWARDS = {name: term[\"weight\"] for name, term in TASK_SPEC[\"rewards\"].items()}\n \n \n def fall(env):\n@@ -136,7 +172,9 @@ def invalid(env):\n     return torch.zeros(env.num_envs, device=env.device, dtype=torch.bool)\n \n \n-def make_cfg(run, robot_path=\"configs/robot/custom.yaml\"):\n+def make_cfg(run, robot_path=None):\n+    robot_path = robot_path or run.robot_path\n+    task = read(run.task_path)\n     spec = read(robot_path)\n     xml, audit = generate(robot_path)\n     limits = {j[\"name\"]: j[\"limits\"] for j in audit[\"joints\"] if j[\"type\"] == \"revolute\"}\n@@ -179,15 +217,19 @@ def make_cfg(run, robot_path=\"configs/robot/custom.yaml\"):\n             func=mdp.generated_commands, params={\"command_name\": \"twist\"}\n         ),\n     }\n+    if \"gait_frequency_hz\" in task:\n+        terms[\"gait_phase\"] = ObservationTermCfg(func=gait_phase)\n     cmd = UniformVelocityCommandCfg(\n         entity_name=\"robot\",\n-        resampling_time_range=(3.0, 3.0),\n-        rel_standing_envs=0.2,\n+        resampling_time_range=(task[\"command_resampling_seconds\"],) * 2,\n+        rel_standing_envs=task[\"standing_fraction\"],\n         rel_heading_envs=0.0,\n         rel_forward_envs=0.0,\n         heading_command=False,\n         ranges=UniformVelocityCommandCfg.Ranges(\n-            lin_vel_x=(0.0, 0.06), lin_vel_y=(0.0, 0.0), ang_vel_z=(-0.15, 0.15)\n+            lin_vel_x=tuple(task[\"final_forward_range\"]),\n+            lin_vel_y=(0.0, 0.0),\n+            ang_vel_z=tuple(task[\"final_yaw_range\"]),\n         ),\n     )\n     if run.curriculum:\n@@ -200,9 +242,9 @@ def make_cfg(run, robot_path=\"configs/robot/custom.yaml\"):\n             mode=\"reset\",\n             params={\n                 \"pose_range\": {\n-                    \"roll\": (-TASK_SPEC[\"reset_base_tilt_rad\"], TASK_SPEC[\"reset_base_tilt_rad\"]),\n-                    \"pitch\": (-TASK_SPEC[\"reset_base_tilt_rad\"], TASK_SPEC[\"reset_base_tilt_rad\"]),\n-                    \"z\": (0.0, TASK_SPEC[\"reset_spawn_lift_m\"]),\n+                    \"roll\": (-task[\"reset_base_tilt_rad\"], task[\"reset_base_tilt_rad\"]),\n+                    \"pitch\": (-task[\"reset_base_tilt_rad\"], task[\"reset_base_tilt_rad\"]),\n+                    \"z\": (0.0, task[\"reset_spawn_lift_m\"]),\n                 },\n                 \"velocity_range\": {},\n             },\n@@ -212,8 +254,8 @@ def make_cfg(run, robot_path=\"configs/robot/custom.yaml\"):\n             mode=\"reset\",\n             params={\n                 \"position_range\": (\n-                    -TASK_SPEC[\"reset_joint_offset_rad\"],\n-                    TASK_SPEC[\"reset_joint_offset_rad\"],\n+                    -task[\"reset_joint_offset_rad\"],\n+                    task[\"reset_joint_offset_rad\"],\n                 ),\n                 \"velocity_range\": (0.0, 0.0),\n             },\n@@ -247,6 +289,7 @@ def make_cfg(run, robot_path=\"configs/robot/custom.yaml\"):\n         )\n     return MicroduckEnvCfg(\n         robot_spec=spec,\n+        task_spec=task,\n         seed=run.seed,\n         scene=SceneCfg(\n             num_envs=run.num_envs,\n@@ -297,7 +340,7 @@ def make_cfg(run, robot_path=\"configs/robot/custom.yaml\"):\n         events=events,\n         rewards={\n             n: RewardTermCfg(func=reward_terms, weight=w, params={\"term\": n})\n-            for n, w in REWARDS.items()\n+            for n, w in {n: r[\"weight\"] for n, r in task[\"rewards\"].items()}.items()\n         },\n         terminations={\n             \"timeout\": TerminationTermCfg(func=mdp.time_out, time_out=True),\ndiff --git a/src/biped_ppo/tracking.py b/src/biped_ppo/tracking.py\nindex c79577c..72a22bf 100644\n--- a/src/biped_ppo/tracking.py\n+++ b/src/biped_ppo/tracking.py\n@@ -89,5 +89,5 @@ def new_run(cfg, kind=\"train\", parent=None):\n     write_json(path / \"manifest.json\", manifest)\n     write_json(ROOT / \"experiments/manifests\" / f\"{run_id}.json\", manifest)\n     (path / \"uv.lock\").write_bytes((ROOT / \"uv.lock\").read_bytes())\n-    (path / \"robot.yaml\").write_bytes((ROOT / \"configs/robot/custom.yaml\").read_bytes())\n+    (path / \"robot.yaml\").write_bytes((ROOT / cfg.robot_path).read_bytes())\n     return path\ndiff --git a/src/biped_ppo/training.py b/src/biped_ppo/training.py\nindex cb5844f..d655dba 100644\n--- a/src/biped_ppo/training.py\n+++ b/src/biped_ppo/training.py\n@@ -12,7 +12,7 @@ from tensordict import TensorDict\n from mjlab.rl import RslRlVecEnvWrapper, RslRlOnPolicyRunnerCfg, RslRlModelCfg, RslRlPpoAlgorithmCfg\n from mjlab.rl.runner import MjlabOnPolicyRunner\n from torch.utils.tensorboard import SummaryWriter\n-from .config import ROOT, read\n+from .config import ROOT, RunConfig, read\n from .tracking import new_run, append_json, write_json, seed_all, rng_state, restore_rng, sha\n from .task import make_env\n from .resources import ResourceMonitor\n@@ -123,7 +123,7 @@ def runner_config(cfg):\n                 obs_normalization=True,\n                 distribution_cfg={\n                     \"class_name\": \"GaussianDistribution\",\n-                    \"init_std\": 0.5,\n+                    \"init_std\": cfg.init_std,\n                     \"std_type\": \"scalar\",\n                 },\n             ),\n@@ -168,9 +168,9 @@ def save_checkpoint(path, runner, cfg, updates, transitions, level):\n             transitions=transitions,\n             curriculum_level=level,\n             rng=rng_state(),\n-            robot_hash=sha(ROOT / \"configs/robot/custom.yaml\"),\n-            urdf_hash=sha(ROOT / read(\"configs/robot/custom.yaml\")[\"urdf\"]),\n-            task_hash=sha(ROOT / \"configs/task/flat.yaml\"),\n+            robot_hash=sha(ROOT / cfg.robot_path),\n+            urdf_hash=sha(ROOT / read(cfg.robot_path)[\"urdf\"]),\n+            task_hash=sha(ROOT / cfg.task_path),\n             lock_hash=sha(ROOT / \"uv.lock\"),\n             simulator_state_restored=False,\n         ),\n@@ -182,13 +182,14 @@ def save_checkpoint(path, runner, cfg, updates, transitions, level):\n \n def load_checkpoint(path, runner, training=False):\n     state = torch.load(path, map_location=\"cuda:0\", weights_only=False)\n-    if state[\"project\"][\"robot_hash\"] != sha(ROOT / \"configs/robot/custom.yaml\"):\n+    cfg = RunConfig(**state[\"project\"][\"config\"])\n+    if state[\"project\"][\"robot_hash\"] != sha(ROOT / cfg.robot_path):\n         raise ValueError(\"Robot specification changed since checkpoint\")\n-    if state[\"project\"][\"urdf_hash\"] != sha(ROOT / read(\"configs/robot/custom.yaml\")[\"urdf\"]):\n+    if state[\"project\"][\"urdf_hash\"] != sha(ROOT / read(cfg.robot_path)[\"urdf\"]):\n         raise ValueError(\"Robot URDF changed since checkpoint\")\n     if training and state[\"project\"][\"lock_hash\"] != sha(ROOT / \"uv.lock\"):\n         raise ValueError(\"Dependency lock changed since checkpoint\")\n-    if state[\"project\"][\"task_hash\"] != sha(ROOT / \"configs/task/flat.yaml\"):\n+    if state[\"project\"][\"task_hash\"] != sha(ROOT / cfg.task_path):\n         raise ValueError(\"Task definition changed since checkpoint\")\n     runner.alg.load(state, None, True)\n     if training:\n@@ -204,13 +205,13 @@ def set_level(env, level):\n \n \n def train(cfg, resume=None):\n-    audit = ROOT / \"docs/model_audit.json\"\n+    audit = ROOT / read(cfg.robot_path).get(\"audit_path\", \"docs/model_audit.json\")\n     if not audit.exists() or not json.loads(audit.read_text())[\"gates_passed\"]:\n         raise RuntimeError(\"Run validate-model and pass physics gates before training\")\n     model_report = json.loads(audit.read_text())\n-    if model_report[\"urdf_sha\"] != sha(\n-        ROOT / read(\"configs/robot/custom.yaml\")[\"urdf\"]\n-    ) or model_report[\"robot_spec_sha\"] != sha(ROOT / \"configs/robot/custom.yaml\"):\n+    if model_report[\"urdf_sha\"] != sha(ROOT / read(cfg.robot_path)[\"urdf\"]) or model_report[\n+        \"robot_spec_sha\"\n+    ] != sha(ROOT / cfg.robot_path):\n         raise RuntimeError(\"Model changed after validation; rerun validate-model\")\n     seed_all(cfg.seed)\n     torch.set_num_threads(4)\n@@ -234,6 +235,8 @@ def train(cfg, resume=None):\n             state = load_checkpoint(resume, runner, training=True)\n             old = state[\"config\"]\n             for key in (\n+                \"robot_path\",\n+                \"task_path\",\n                 \"num_envs\",\n                 \"horizon\",\n                 \"curriculum\",",
+  "command": [
+    "/home/prashanna/Documents/AR_DESIGN/biped-ppo/src/biped_ppo/__main__.py",
+    "train",
+    "--config",
+    "configs/experiments/futuristic_residual.yaml"
+  ],
+  "parent_checkpoint": null,
+  "assets": {
+    "assets/robot/models/futuristic_residual.xml": "1650c580e2e9993d64762cfd50376f10425655d50051d6b4208987cb1329324d",
+    "assets/robot/models/futuristic_stable.xml": "1387bbc95bf0f24a491b3abea9f84985178955cedf21eac7763c1396dfa856d4",
+    "assets/robot/models/microduck.xml": "a48c77e6faf0c52784a6aae7e2e61f5b05c8ec005887ca859b299bc3e7bdf8aa",
+    "assets/robot/models/futuristic.xml": "3c43856a6aa4586141705f72b7712dd21b8cf623c2c838087eccd1646c26ac9c",
+    "assets/robot/source/microduck_futuristic.urdf": "5567431d7d53ef49b3b0744bd9128bbc587e22c61bde58e46ef85e4b9dd86ad0",
+    "assets/robot/source/microduck_minimal.urdf": "e12418e047380443cb269fe41bd37cdeee1401d6b2fd4020f6ede34233c83da5",
+    "assets/robot/meshes/futuristic/Left_axle_bolt.stl": "5416f0f361aab58f5a7839e4a4e5eae9c92b3d544f9a3048b5ce96736da46c40",
+    "assets/robot/meshes/futuristic/Neck_fastener.stl": "54f022ac0ff5a64c7cb71e13fe7908358bdee2ed14d5bdc491492c9c7423a45e",
+    "assets/robot/meshes/futuristic/Head_pivot_screw.stl": "ff30a60ed4b5a0eebcebbd9f09335ceeed07abc3326fbe20b1736d3ac6d6bddf",
+    "assets/robot/meshes/futuristic/Right_deck_fastener001.stl": "23b71f2a72e874aedf49f3098dddbb2e90460a3bd6857a663e5107e3688694f6",
+    "assets/robot/meshes/futuristic/Left_link_hole.stl": "4f8896c913b4482a8332cfbb1950ecb44b156a70fa822327e5ab5d11012eac1e",
+    "assets/robot/meshes/futuristic/Right_thigh_armor.stl": "d8d1514b4b1efc3c9e6a5790f96c072e641e6a94cbeaa573013ba89117400c64",
+    "assets/robot/meshes/futuristic/Recessed_sensor_visor.stl": "8061dbc99fcd0036d86bc7336abb38df8bef67a93af60f262557fe81d4fdc8ea",
+    "assets/robot/meshes/futuristic/Right_axle_bolt001.stl": "44c6982822ab87ca1bd84edca9be1b0d668e21db23111050933f046c02a07115",
+    "assets/robot/meshes/futuristic/Left_joint_housing002.stl": "23f5d7e7677432fa9b78c0de3d80976ad885ea6afa1b2de6cbbb2e28c164fe4c",
+    "assets/robot/meshes/futuristic/Beak_mouth_recess.stl": "8d02e6e106521253795cdfd2c7fca57cf241a5859e15b1a5453d47ff19b3d831",
+    "assets/robot/meshes/futuristic/Head_rear_cooling_slot003.stl": "ec8dc12fd63c814e8207b07723798adef1f01a5bc006b075c53d6a7c2c280989",
+    "assets/robot/meshes/futuristic/Right_axle_bolt002.stl": "2294ab67cc83033dc6912ef30f4e397999bbbb953c5d05e7f0c9c2f9d15b14ce",
+    "assets/robot/meshes/futuristic/Head_side_yoke.stl": "0ae889a328cf7acc42eb7a8ee94735f421e49524aa4ef8181c5235d3ffa086a9",
+    "assets/robot/meshes/futuristic/Right_joint_hub.stl": "0b642ea4ee5d6a72be5970e2f91c8ee3f7273fbc0a0fbc54e85a20419147e995",
+    "assets/robot/meshes/futuristic/Left_toe_grip002.stl": "c416c2bcce44fb1dca92b7f9461fe83df870ef567faa259317235cbfb53c2b97",
+    "assets/robot/meshes/futuristic/Left_link_hole002.stl": "4fe95d86ba3e34da4aeafe845dcdf7363ed13ab4fdcf07c29a9df0e5dcd7bfbb",
+    "assets/robot/meshes/futuristic/Right_link_hole002.stl": "5e95383ad6df08d45e92bec2b1dc26bf95e53d8d394b3b523562cca59fcd98e0",
+    "assets/robot/meshes/futuristic/Left_deck_fastener002.stl": "a109cbbdf716c8b46a051a2e82358bc3eb6de5fc9c7a509a31b13544cca8a280",
+    "assets/robot/meshes/futuristic/Torso_top_inset.stl": "254d328dec880c9432e8b4aba58b8e2f3ac69ba5c3021d84ce735ffa09f83358",
+    "assets/robot/meshes/futuristic/Neck_wiring002.stl": "f6831affde514b9e3d49f4a794ae2847bd42e1dee110f915fedab17198197937",
+    "assets/robot/meshes/futuristic/Left_servo_cable.stl": "992a4be31db79a43ad044c597821806c73f7b295079c244395a2e91afcf123f9",
+    "assets/robot/meshes/futuristic/Head_rear_cooling_slot002.stl": "5766474f591a93edca7045c1ab9783104c772dbf03fc16decd42cdceb24eefc2",
+    "assets/robot/meshes/futuristic/Neck_wiring.stl": "b781b8f51db4556c8016660c953b85a6d6bddbf75593a60b4d5b3179e4ef8b07",
+    "assets/robot/meshes/futuristic/Right_toe_grip001.stl": "a0f74b6ed8bfcecb1eed0235778da6df1bcd2ddd3252343a00ba601a0452aa54",
+    "assets/robot/meshes/futuristic/Yellow_beak_upper.stl": "b6820c24c3546c26203985595e15a6c6a4e9cfe0926272ae4d3b41e8e19667a1",
+    "assets/robot/meshes/futuristic/Right_sole_gasket.stl": "079b1b497e54fa27920d50625489fbfc67fc37933be3d438797f508277758d17",
+    "assets/robot/meshes/futuristic/Left_joint_housing.stl": "c0fabcaeee15e2e2d83b67a1b9679b58c52aa5db5ad0babd359e540800ed80e1",
+    "assets/robot/meshes/futuristic/Head_arched_housing.stl": "9957dcd868854a64b99eae39d6fe36afa43d95b71a0c1a3e17cbb4d14b435026",
+    "assets/robot/meshes/futuristic/Right_armor_screw001.stl": "12aaf2a55a2a4f75c880c5dfd22f248cd23d92b3ad6cb42957fa8377f517726f",
+    "assets/robot/meshes/futuristic/Right_hip_roll_servo.stl": "68cdd7656bfd1fd10ad85f291e6e524786e6a10d260dca3ca2bec7446704eb7a",
+    "assets/robot/meshes/futuristic/Torso_status_bar.stl": "18332b9d3bb60638a872d5c50ede7940173d03d36e1001dad905c9b063afe346",
+    "assets/robot/meshes/futuristic/Left_joint_alloy_ring002.stl": "93de00a8c24a8db0ad2f90ccd7b1e4c6a58692d7a1dc0897418f7d57a26cddae",
+    "assets/robot/meshes/futuristic/Head_rear_cooling_slot004.stl": "89fb12a608add334b6ac27826e967a651af1e1943886be04bd377bdb7d2ca95b",
+    "assets/robot/meshes/futuristic/Lens_reflection.stl": "6c30ca2ede4ae52432e1759eca953567ce923495bb6c42421e4c0b7e5ea9d7a8",
+    "assets/robot/meshes/futuristic/Lower_head_gasket.stl": "ecda524a488e18e407158197b7a8e64406fb857f83505b4a643d0c238b6a6871",
+    "assets/robot/meshes/futuristic/Head_rear_cooling_slot.stl": "917b45ad57ad2ffb1ba4a87d9dc072ab9580c226c72b8f130a565c6ece989d77",
+    "assets/robot/meshes/futuristic/Head_side_yoke001.stl": "c4628e38afffa0212181b427b89b55501474368e4e4e7ae44b44723dbe7b48f8",
+    "assets/robot/meshes/futuristic/Left_joint_alloy_ring001.stl": "7a581c8e999f6c8b7de9a08eda3f0a47450800f0ea5685dc5248afa8dd2034b0",
+    "assets/robot/meshes/futuristic/Neck_fastener002.stl": "88a04c52c1c851414dd5178b1fa148454f22bea5eaef33fe59f0b89c3e097527",
+    "assets/robot/meshes/futuristic/Torso_graphite_shell.stl": "6a7491c287ab0648ed4d78202522e8eb32c5f31a3e747eff1fc7b7729dd499f2",
+    "assets/robot/meshes/futuristic/Left_toe_grip.stl": "f1c7aa93159df2fbbd6d227a3f00ad3ee6c9d87d14b397d02ac9e3478e19302f",
+    "assets/robot/meshes/futuristic/Left_thigh_armor.stl": "70b7745bbbb102706cad61dad5f072565c0df60bfbc35cded3ef79e38bc5cc6a",
+    "assets/robot/meshes/futuristic/Right_deck_fastener.stl": "8e2466106b48ead5036ae38f1d2ac2c6d09872885a621d0ed0cde32d909bbd68",
+    "assets/robot/meshes/futuristic/Camera_inner_aperture.stl": "02aed84e1be8845f37160ab12ed5e3b54984e8a29a7fd4ce462a4e6958413832",
+    "assets/robot/meshes/futuristic/Right_joint_housing001.stl": "6f3a1172125ed328cfd290cc54c3873740f0b11fa4a93dc21394bce63f4bac9f",
+    "assets/robot/meshes/futuristic/Status_light.stl": "920f2eea231f5ad1b328ae625863fe22329a2849a69924f210156be485c033c7",
+    "assets/robot/meshes/futuristic/Right_rubber_sole.stl": "7a27e75a3ab5b9cdb114e431bd2f140e8fa075e4a9666ec3ed0bf9034da05ae5",
+    "assets/robot/meshes/futuristic/Head_pivot_screw001.stl": "c6fcfcd2d23998d67dfa24eecfc5aa7d2a365c085faf5ca08408499165d6a15f",
+    "assets/robot/meshes/futuristic/Neck_linkage001.stl": "1df9caf4790e7789f773eb877c983df8d2a738e3c3125afd219898adb1001254",
+    "assets/robot/meshes/futuristic/Right_armor_screw.stl": "ff91a413bcb81df2120a5d46de6b222b3acad5ced2ba85799de76eac094c1283",
+    "assets/robot/meshes/futuristic/Right_shin_motor.stl": "005c7f1eda9dea408989442f958a902531e46252bbbe18e69d373fd9f1295012",
+    "assets/robot/meshes/futuristic/Left_joint_housing001.stl": "308b89d5556ce742f79c5d6bc69601ed5112d30b38be7655222907884fc80dfc",
+    "assets/robot/meshes/futuristic/Left_thigh_inner_rail.stl": "48b5f8972c0eba5723d9e3f95862497111845248317e71329152f748f97f49d1",
+    "assets/robot/meshes/futuristic/Left_joint_hub002.stl": "ebc9e810471335c2f7623ac0c314c1dc3355fd06080840b03bf0964ff3fea7a8",
+    "assets/robot/meshes/futuristic/Head_rear_cooling_slot001.stl": "c91fa76d5677259256d5d9d44d8c861e93adaa5e15b749bd74f03a6f91f8d013",
+    "assets/robot/meshes/futuristic/Neck_horn003.stl": "6dfe95572f2454b015fc4d0756de448117c5f52c1b7b9aeeaef247ff30a00144",
+    "assets/robot/meshes/futuristic/Head_pivot.stl": "bb4471110b2a631ab2bb3e426a2db3372fe4ac1fc36e2b7b2ce67edfbf0b8a5f",
+    "assets/robot/meshes/futuristic/Neck_lower_servo.stl": "92174b07b8355ab1cc83b6653150666083dd99cea8a0d564be9399cedea91ca3",
+    "assets/robot/meshes/futuristic/Neck_linkage.stl": "9f42095188e65258dddfb4f2add55c0d4a79bc235754b10a2c58fea6866e40ee",
+    "assets/robot/meshes/futuristic/Right_axle_bolt.stl": "bb86374262d3d17ddef93cc685056f89008ab9efcd5df95446b135f2054bc7d7",
+    "assets/robot/meshes/futuristic/Right_servo_cable.stl": "2ed6757ef6610386d0aeedf654ab063119e9841bbb7d6dc95898c05f9f660388",
+    "assets/robot/meshes/futuristic/Left_joint_alloy_ring.stl": "8b1d4d581f969bf712c499c31e8993215c41ef3b1a9a5029d32e581c3196596f",
+    "assets/robot/meshes/futuristic/Right_joint_hub002.stl": "1c219d246cb6f1c74f80c1727b7491c81a44da63c7cdf012d100c8ac0b36cf79",
+    "assets/robot/meshes/futuristic/Left_thigh_motor.stl": "75dec8b08efcdab9d3a6c359641f9f575e9cb406b3bde5558881184d73f5c7aa",
+    "assets/robot/meshes/futuristic/Right_deck_fastener003.stl": "d73f89d904b84248c093e9e7708ec816cc5094144adb8230b139ac65c2a52908",
+    "assets/robot/meshes/futuristic/Right_link_hole001.stl": "4da524e63c4604287e3e1f47200992b790e72136597c7ef532508c1053592997",
+    "assets/robot/meshes/futuristic/Right_toe_grip.stl": "4e7d4316401f428d6d0133609f12408fc6d25b5bbfec0ac9cc30cd093a1624db",
+    "assets/robot/meshes/futuristic/Head_pivot001.stl": "1cc07fe8d7d63356dd585c65bb5cb952f1ae5aa167160bb44aa99e41bce7e2a2",
+    "assets/robot/meshes/futuristic/Right_joint_hub001.stl": "7ae29a1858e9ae5b06e771052a09426fe71dd3d1b1e5b8cab6a1a4f18c571f68",
+    "assets/robot/meshes/futuristic/Right_ankle_bracket001.stl": "ed1d57552df420db823492d54c7b03feeb294d1fc3040c7789de503b2c8cd0b9",
+    "assets/robot/meshes/futuristic/Right_shin_link.stl": "16747ad91bf25d4203827c62336f2133b37e1202af817560becbdf7edaa26c24",
+    "assets/robot/meshes/futuristic/Right_joint_alloy_ring002.stl": "786f7dd86ad9ec58c6309db1cfda8e880a4cf42fa43a373bebd498d57b43b1c3",
+    "assets/robot/meshes/futuristic/Right_joint_alloy_ring.stl": "67b319c8ee91a6a898c9e847e40b29de2c9805fd3c5cc62da87152824a82cb92",
+    "assets/robot/meshes/futuristic/Neck_fastener001.stl": "e1a71a5c0e355db5581c7f4570918d928fcae2b107e7e79ccb452caf69676782",
+    "assets/robot/meshes/futuristic/Right_hip_pitch_servo.stl": "07bf461c95441ab520ee98c5fc709597538e122d61b85660ee5e0fab89de630c",
+    "assets/robot/meshes/futuristic/Neck_wiring001.stl": "254c5e37c34bad10da7de5c6b2b8f3f07e59cd914630901430af3cd43bc2f5c0",
+    "assets/robot/meshes/futuristic/Left_deck_fastener.stl": "2b49535680db735abdbb06077ce76aeccfab5b378f7679bbc66a49a4acc55317",
+    "assets/robot/meshes/futuristic/Left_joint_hub001.stl": "9d785ddac901b1f329b47a36b9f9d379b2659037b6923f2f8574c8c7019b508e",
+    "assets/robot/meshes/futuristic/Neck_upper_servo.stl": "5df16c2a282d0fe100381ce328f31f5eed658da833058cd24d995424cb089e3f",
+    "assets/robot/meshes/futuristic/Left_hip_pitch_servo.stl": "25d3da17eeeea56db279417346e5a6bb9e5601c9f0efdfc78d9d0485c6551fd2",
+    "assets/robot/meshes/futuristic/Camera_machined_bezel.stl": "9bb5b26d0d70185dbbbf117563b1dc46005a61ef0adfaddb1e6839df0e582ebd",
+    "assets/robot/meshes/futuristic/Right_joint_alloy_ring001.stl": "74fb6bc47afc9c63a1239743b656cdc0dc81d7b41255833a6f71d27f141ea4ea",
+    "assets/robot/meshes/futuristic/Right_thigh_inner_rail.stl": "cffd867693aa877e253f396944a11184f5c9514fab3b66c902eb0ad2b41514b6",
+    "assets/robot/meshes/futuristic/Camera_black_barrel.stl": "61353f30d7ba300361331ee56e658c420c03a00934689cc6878e4624f93acb76",
+    "assets/robot/meshes/futuristic/Left_shin_link001.stl": "d9de6e2c726d704cb80263ec7d6027e11eb3f462cea56e9d268f6f975f61000a",
+    "assets/robot/meshes/futuristic/Neck_horn002.stl": "1fcc6c378ef18e6451a3102feea56fe707b17a1d4ac512e136422e66dd867e96",
+    "assets/robot/meshes/futuristic/Camera_yellow_ring.stl": "bafc01fd51950651f4bf49a45b8aade416cb4be42ed4d50f8cd95010f39b85af",
+    "assets/robot/meshes/futuristic/Lower_beak_violet_insert.stl": "c769cfb6a30d99f3bfe335ca2cb9e810914f8e568bbb59c8b62f03472117ab9b",
+    "assets/robot/meshes/futuristic/Left_hip_roll_servo.stl": "7327ca3ccb4f3ff412fe28e6d01ebaa65bd7a60a7494178078fa8050b343f9ad",
+    "assets/robot/meshes/futuristic/Right_toe_grip002.stl": "cd6ad25ccaad1f0d6150356f4775203f1a5a0adfe87ec12941180735203198a4",
+    "assets/robot/meshes/futuristic/Left_deck_fastener003.stl": "00d1225f9bebd42d5b283b15469b29bb3d7b7f5495e630e690aeda52fc2ad1d6",
+    "assets/robot/meshes/futuristic/Status_light001.stl": "0e9b079b57af4a14dd5c0248e5f66041296cb13752a1e5c32b2331880061616a",
+    "assets/robot/meshes/futuristic/Neck_fastener003.stl": "c570672dc16207f3d1f3ad7c1b7afa4168f6dab36f50613b0e63f3b002f26252",
+    "assets/robot/meshes/futuristic/Right_deck_fastener002.stl": "674adaa3228436da757cfe395e5b911b7427ae63f9236e54d273aa86ec4766d2",
+    "assets/robot/meshes/futuristic/Left_link_hole001.stl": "25fc88f1dbc95620f957d23c9a2fe3a95a947abcc349aeca53fbcd809fafe0e9",
+    "assets/robot/meshes/futuristic/Left_armor_screw001.stl": "d385be501ca6f5bfba18c99d6f4177163a1a5a320ec3696bc642d26cbc8588cc",
+    "assets/robot/meshes/futuristic/Left_armor_screw.stl": "e8593bafc9381ebc979f6ffa4b4f9350f4f32bf96c10612af917a5a2e5ea05d3",
+    "assets/robot/meshes/futuristic/Left_toe_grip001.stl": "a0f74b6ed8bfcecb1eed0235778da6df1bcd2ddd3252343a00ba601a0452aa54",
+    "assets/robot/meshes/futuristic/Right_joint_housing002.stl": "a107c9672e9bb3c8191f35221e72aafe5dbfea183a3fef3e40d175082485a396",
+    "assets/robot/meshes/futuristic/Right_joint_housing.stl": "010c920720e41699bf60d743fc22255c6808b8813ba0fe788564a1249ad2f1b6",
+    "assets/robot/meshes/futuristic/Torso_lower_chassis.stl": "0bcc90d8c7de3f2e6c249262312050931479a8caa4e4e1fe9ba376d3361f3b58",
+    "assets/robot/meshes/futuristic/Left_rubber_sole.stl": "b50f1543be006d117a488575f99698696a1f5e9637f9d08b1ff1669d236a1b03",
+    "assets/robot/meshes/futuristic/Visor_faceplate.stl": "a96f17d324aaec78246e382337ca7c45614ca6a2c68ee73a6ad21cdf0acad168",
+    "assets/robot/meshes/futuristic/Torso_front_trim.stl": "007ed3e4d318474db580f72628b552432b3c67a52ad88958b88e80cb0537f520",
+    "assets/robot/meshes/futuristic/Left_sole_gasket.stl": "501f5f97afd9884617c3594c6d001d39218f416f743cec200b47fd90323bdfba",
+    "assets/robot/meshes/futuristic/Left_ankle_bracket001.stl": "ed1d57552df420db823492d54c7b03feeb294d1fc3040c7789de503b2c8cd0b9",
+    "assets/robot/meshes/futuristic/Left_ankle_bracket.stl": "1532cdb09d662e1ba985b0ed3c796a1ae9e2cd35de285b4f55a04b717899040d",
+    "assets/robot/meshes/futuristic/Right_link_hole.stl": "31554ef6b2be92555aeb6d8f92460a1319332f0356c07174d8ec03b1938c55aa",
+    "assets/robot/meshes/futuristic/Left_shin_link.stl": "de92ff983b262dec27fff7989d72b00d6c5f5dcce77577fc4fad7833986eb014",
+    "assets/robot/meshes/futuristic/Left_shin_motor.stl": "e5d7d1a2a8f79d427a293c8834144450d53c27435fbef0e32efca03a8acc0cba",
+    "assets/robot/meshes/futuristic/Right_thigh_motor.stl": "b8a5d5304efed45ee737f9077ebdd432bcbddc7143354ad85456c45d02c0de02",
+    "assets/robot/meshes/futuristic/Camera_optical_glass.stl": "6c925ee395a2853ac45afacf8fd65b7ce8fe94a616f32404b77eb3727521273c",
+    "assets/robot/meshes/futuristic/Left_deck_fastener001.stl": "9d18f141f97d331ea1454535f415e9745648c63328f360f019d9af6f1408c0be",
+    "assets/robot/meshes/futuristic/Neck_horn001.stl": "d7dd718526db2ba87b2f3b6b8dc5b335c058c736859121b78d5af6cd705637bb",
+    "assets/robot/meshes/futuristic/Right_shin_link001.stl": "70541db7a5263710ebd7290b0b6a135ddaa9a73836169848232f716df6a23ae3",
+    "assets/robot/meshes/futuristic/manifest.json": "047aa14b8032363cca8d7d73271fd202968f05d00c134b63b039b875d8b0fa84",
+    "assets/robot/meshes/futuristic/Left_axle_bolt001.stl": "4858f998cbd14ccbb6e3bb30b6d96608e2389437227de497afe93fa0d75d8815",
+    "assets/robot/meshes/futuristic/Left_yellow_foot_deck.stl": "d3f905bde8609dfe10658fc98ef94fe36110ebf087c221e9a16fe863b21d6f2e",
+    "assets/robot/meshes/futuristic/Left_joint_hub.stl": "634cbee0c15431cc358c42648cdc31e91c08bd0004b42457e56d6ea48dd325be",
+    "assets/robot/meshes/futuristic/Right_yellow_foot_deck.stl": "d63e235a34606f4a723a82010f7ccf10ef6b7ce707c275a7660267b695752a7d",
+    "assets/robot/meshes/futuristic/Left_axle_bolt002.stl": "767e1681e0d020853b511ca1760deee237cbdf59ed8a7315e9feea52685e2638",
+    "assets/robot/meshes/futuristic/Right_ankle_bracket.stl": "1532cdb09d662e1ba985b0ed3c796a1ae9e2cd35de285b4f55a04b717899040d",
+    "assets/robot/meshes/futuristic/Neck_horn.stl": "581d96561f056bfe3c48fef89e2edfac08f64ad2663abd73696368dad5557b15",
+    "assets/robot/source/cad/MicroDuckMin.FCStd": "751c436e220437afd1c82c6b1fb38d53f941900521581d9febf9fecd489794d0",
+    "assets/robot/source/cad/MicroDuck_Futuristic.FCStd": "ab33d3fcbc613e9943ca5eb45dd75b3a3807955b0ecfad606c83bb229f469b6c",
+    "assets/robot/source/cad/MicroDuck_Futuristic.step": "e4e928ea9e853d9a242d4a1c9b5da3180decd901c3d5e25acce6bdb280555ab2",
+    "assets/robot/source/cad/MicroDuck_Futuristic_preview.png": "b54075021ae93d11aa872ccb494e6a7873e4ced0b856cfefc966c47e06188d3b",
+    "assets/robot/source/cad/redesign_microduck.py": "96442cd9720827b16ce6935f0b6c81a99112344854312d86c89bba89114d3b4e"
+  },
+  "config_hash": "f4f5cda849281cf72a8ffb81f170f0dc96a38e9744a71a516c645f23e9e7f226",
+  "config_files": {
+    "configs/evaluation/futuristic_test.yaml": "60b6d7a2065e0b9d25d26e8201a42b7e8c139cf59838fdf6e871343e107c4bdf",
+    "configs/evaluation/stopping.yaml": "f1c045f3f724ef4e1ab5cbaca36c74cf08dfffcd6866f0341baab816b3d65dd4",
+    "configs/evaluation/validation.yaml": "7b321603935a4bcf3625fb15b0d47a2c6cbd0f59791779caf65888baabc36c55",
+    "configs/evaluation/test.yaml": "4d9176bcd60c0a3a5af9326200efa13c0adc65cddd1b8496929febfb07aa76e2",
+    "configs/evaluation/futuristic_validation.yaml": "27009ef913e1ef04dc7928ff25513c73089cb884e0177fba561d85f1b70ea2f7",
+    "configs/task/futuristic_gait.yaml": "509be9ceaeb0ec3762bb7cff0e5e272b1b7b52d490fd8ea6e2ade940e9c88101",
+    "configs/task/futuristic_residual.yaml": "171d623f2621becd4249ece71484c9ee5b5a397d85ec1b540168288a0c08116d",
+    "configs/task/futuristic.yaml": "fd71001f2125d5b47ff063d5b790b868f33708c996014d7a7480f8f8d953e829",
+    "configs/task/flat.yaml": "8da081b57794f403e957f9a79678d2ec2695f9033830a40f676e94eea39f0f8c",
+    "configs/robot/custom.yaml": "51eb6980ca35cd2b571a9dba242c3f6e893a278057c0152b9fd7c5fa3483532a",
+    "configs/robot/futuristic_residual.yaml": "6e79cb4713e3384da41735260b7dcb02dea7281f32013728a51138c0ffd7fc0f",
+    "configs/robot/futuristic.yaml": "5174d02e6a3e55f6d64509463a62d962f2a60999f3254e7f9b8d1e1d9b16c107",
+    "configs/robot/futuristic_stable.yaml": "eb6a67ec25f5cb2fd1ab2d433877d03eb2d603b9d4ff2051d2a5f422663dd503",
+    "configs/experiments/futuristic_gait.yaml": "27ab9a3daf835d6713b74713d279d0436276e77ea345a8e64e58a7eb796171ad",
+    "configs/experiments/futuristic_residual.yaml": "0ba9cc4f78e06c7a8b25f2fcbe1c41950eda7a21a4b86fd8433fa737ef5dadae",
+    "configs/experiments/smoke.yaml": "b642914329c2984064ecf86fd110bb51a9729bf8c2429a74a749838448aaea0f",
+    "configs/experiments/pilot.yaml": "fa89b6629c5696656fded2e5f88043e3dc796091f00c383144bb1b38b702c11c",
+    "configs/experiments/futuristic.yaml": "37a2f06d232f4bf751c77293139660cc50748ae7f19eb6e69b02048576c6be12",
+    "configs/experiments/full.yaml": "d4122773e3a6a772cef55d1e0251e2af128c163b39cf2a1718974f09a4069121",
+    "configs/experiments/randomized-smoke.yaml": "4ad42cc944864a3bfd22d1bd93059986ac08a0803e8c7c8d3202bb8c7c0579f3",
+    "configs/experiments/ablation-matrix.yaml": "c10671e551a2a6d2368beb8920400d145f6666ce710422267ca625d88217b37c",
+    "configs/experiments/initial-study.yaml": "5d2a1be67b1d5ec24df586eae4fa750a8556cca908c442cc114fa2b5af9bcc00"
+  },
+  "lock_hash": "88847f5961277ef9f05aa480c47df2ca56046d94fcf70a59c9f21d7b61b3c250",
+  "simulation_state_resume": "reset at resume; not bitwise restoration"
+}

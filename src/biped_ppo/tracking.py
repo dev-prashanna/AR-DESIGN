@@ -6,6 +6,7 @@ import random
 import subprocess
 import sys
 import uuid
+import tarfile
 from datetime import datetime, timezone
 from dataclasses import asdict
 import numpy as np
@@ -65,7 +66,20 @@ def new_run(cfg, kind="train", parent=None):
     run_id = f"{stamp}_{kind}_{uuid.uuid4().hex[:8]}"
     path = Path(os.getenv("BIPED_RUNS", ROOT / "runs")) / run_id
     path.mkdir(parents=True)
+    sources = [
+        p
+        for directory in ("src", "configs", "scripts")
+        for p in (ROOT / directory).rglob("*")
+        if p.is_file()
+        and (p.suffix in (".py", ".yaml", ".sh") or p.name in ("run", "play_futuristic"))
+    ]
+    snapshot = path / "source.tar.gz"
+    with tarfile.open(snapshot, "w:gz") as archive:
+        for source in sorted(sources):
+            archive.add(source, arcname=str(source.relative_to(ROOT)))
     manifest = dict(
+        source_snapshot_sha=sha(snapshot),
+        source_files={str(p.relative_to(ROOT)): sha(p) for p in sources},
         run_id=run_id,
         created_utc=stamp,
         kind=kind,
@@ -89,5 +103,5 @@ def new_run(cfg, kind="train", parent=None):
     write_json(path / "manifest.json", manifest)
     write_json(ROOT / "experiments/manifests" / f"{run_id}.json", manifest)
     (path / "uv.lock").write_bytes((ROOT / "uv.lock").read_bytes())
-    (path / "robot.yaml").write_bytes((ROOT / "configs/robot/custom.yaml").read_bytes())
+    (path / "robot.yaml").write_bytes((ROOT / cfg.robot_path).read_bytes())
     return path

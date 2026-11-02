@@ -35,6 +35,7 @@ def generate(robot_path="configs/robot/custom.yaml", output=None, ground=False, 
     ET.SubElement(
         default, "geom", friction=f"{cfg['friction']} 0.005 0.0001", condim="3", solref="0.008 1"
     )
+    asset = ET.SubElement(mj, "asset")
     world = ET.SubElement(mj, "worldbody")
     if ground:
         ET.SubElement(
@@ -81,6 +82,7 @@ def generate(robot_path="configs/robot/custom.yaml", output=None, ground=False, 
                 "joint",
                 name=joint.get("name"),
                 type="hinge",
+                armature=str(cfg.get("armature", 0.0)),
                 axis=joint.find("axis").get("xyz"),
                 range=f"{lim.get('lower')} {lim.get('upper')}",
                 damping=dyn.get("damping", "0") if dyn is not None else "0",
@@ -132,8 +134,32 @@ def generate(robot_path="configs/robot/custom.yaml", output=None, ground=False, 
         for kind in ["visual", "collision"]:
             for idx, g in enumerate(link.findall(kind)):
                 box = g.find("geometry/box")
+                mesh = g.find("geometry/mesh")
+                if mesh is not None and kind == "visual":
+                    mesh_name = f"{name}_mesh_{idx}"
+                    ET.SubElement(
+                        asset,
+                        "mesh",
+                        name=mesh_name,
+                        file=str((ROOT / mesh.get("filename")).resolve()),
+                        scale=mesh.get("scale", "1 1 1"),
+                    )
+                    ET.SubElement(
+                        body,
+                        "geom",
+                        name=f"{name}_visual_{idx}",
+                        type="mesh",
+                        mesh=mesh_name,
+                        **origin(g),
+                        contype="0",
+                        conaffinity="0",
+                        group="2",
+                        mass="0",
+                        rgba=g.find("material/color").get("rgba"),
+                    )
+                    continue
                 if box is None:
-                    raise ValueError("This importer currently accepts supplied box geometry only")
+                    raise ValueError("Expected box collision or visual mesh")
                 geom = dict(
                     name=f"{name}_{kind}_{idx}",
                     type="box",
@@ -159,7 +185,13 @@ def generate(robot_path="configs/robot/custom.yaml", output=None, ground=False, 
                     )
                 ET.SubElement(body, "geom", **geom)
         if name in ("l_foot", "r_foot"):
-            ET.SubElement(body, "site", name=name + "_contact", pos="0 0 -.008", size=".002")
+            ET.SubElement(
+                body,
+                "site",
+                name=name + "_contact",
+                pos=cfg.get("foot_site_pos", "0 0 -.008"),
+                size=".002",
+            )
         for j in joints:
             if j.find("parent").get("link") == name:
                 audit_joints.append(
@@ -213,7 +245,10 @@ def validate(robot_path="configs/robot/custom.yaml"):
     from .diagnostics import physics_checks, render_model
 
     xml, report = generate(
-        robot_path, ROOT / "assets/robot/models/microduck.xml", ground=True, motors=True
+        robot_path,
+        ROOT / read(robot_path).get("model_path", "assets/robot/models/microduck.xml"),
+        ground=True,
+        motors=True,
     )
     import hashlib
 
@@ -224,6 +259,12 @@ def validate(robot_path="configs/robot/custom.yaml"):
     report["robot_spec_sha"] = sha(ROOT / robot_path)
     model = mujoco.MjModel.from_xml_string(xml)
     report.update(physics_checks(model, report["robot"]))
-    (ROOT / "docs/model_audit.json").write_text(json.dumps(report, indent=2))
-    render_model(model, report["robot"], ROOT / "results/figures/imported_robot.png")
+    (ROOT / report["robot"].get("audit_path", "docs/model_audit.json")).write_text(
+        json.dumps(report, indent=2)
+    )
+    render_model(
+        model,
+        report["robot"],
+        ROOT / report["robot"].get("figure_path", "results/figures/imported_robot.png"),
+    )
     return report

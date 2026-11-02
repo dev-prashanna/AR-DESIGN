@@ -1,0 +1,1062 @@
+{
+  "robot": {
+    "name": "microduck_futuristic_stable_v1",
+    "urdf": "assets/robot/source/microduck_futuristic.urdf",
+    "provenance": {
+      "geometry": "Actual futuristic FCStd surfaces; explicit CAD hip/knee/ankle landmarks; simplified collision proxies",
+      "mass_inertia": "Estimated 0.500 kg assembly; box inertias, not material-derived CAD masses",
+      "torque_speed": "supplied URDF limits; manufacturer and gearing unknown",
+      "gains": "provisional simulation tuning, not calibrated servo gains",
+      "nominal_pose": "CAD bent-leg stance, feet level; six assumed actuated axes; fixed ankles and head",
+      "dimensions_units": "metres; radians; kilograms; seconds; newton-metres",
+      "armature": "1e-4 kg m^2 assumed reflected rotor inertia per joint; stabilizes explicit 500 Hz PD; uncalibrated"
+    },
+    "joint_names": [
+      "l_hip_roll",
+      "l_hip_pitch",
+      "l_knee",
+      "r_hip_roll",
+      "r_hip_pitch",
+      "r_knee"
+    ],
+    "nominal": [
+      0,
+      0.430692511386508,
+      -0.8759935552741939,
+      0,
+      0.430692511386508,
+      -0.8759935552741939
+    ],
+    "action_scale": [
+      0.3,
+      0.65,
+      0.65,
+      0.3,
+      0.65,
+      0.65
+    ],
+    "kp": [
+      2,
+      2,
+      1.5,
+      2,
+      2,
+      1.5
+    ],
+    "kd": [
+      0.06,
+      0.06,
+      0.04,
+      0.06,
+      0.06,
+      0.04
+    ],
+    "base_height": 0.1165,
+    "physics_dt": 0.002,
+    "policy_dt": 0.02,
+    "friction": 0.8,
+    "fall_height": 0.065,
+    "fall_angle": 0.9,
+    "standing_gate_seconds": 5.0,
+    "standing_gate_min_height": 0.095,
+    "self_collision": false,
+    "foot_site_pos": "0 0 -.021",
+    "model_path": "assets/robot/models/futuristic_stable.xml",
+    "audit_path": "docs/futuristic_stable_model_audit.json",
+    "figure_path": "results/figures/futuristic_robot.png",
+    "armature": 0.0001
+  },
+  "root": "torso",
+  "links": [
+    {
+      "name": "torso",
+      "mass_kg": 0.12,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_kg_m2": [
+        [
+          6.5e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.1e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          7.400000000000001e-05
+        ]
+      ],
+      "principal_moments": [
+        4.1e-05,
+        6.5e-05,
+        7.400000000000001e-05
+      ],
+      "valid": true
+    },
+    {
+      "name": "head",
+      "mass_kg": 0.12,
+      "com_local_m": [
+        0.002,
+        0.0,
+        0.004
+      ],
+      "inertia_kg_m2": [
+        [
+          0.00010768999999999998,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.25e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00011969
+        ]
+      ],
+      "principal_moments": [
+        7.25e-05,
+        0.00010768999999999998,
+        0.00011969
+      ],
+      "valid": true
+    },
+    {
+      "name": "l_hip_roll_link",
+      "mass_kg": 0.035,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_kg_m2": [
+        [
+          2.1583333333333336e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.426666666666667e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.0916666666666666e-06
+        ]
+      ],
+      "principal_moments": [
+        2.1583333333333336e-06,
+        2.426666666666667e-06,
+        3.0916666666666666e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "l_hip_pitch_link",
+      "mass_kg": 0.035,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_kg_m2": [
+        [
+          2.7095833333333336e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.452916666666667e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.8291666666666665e-06
+        ]
+      ],
+      "principal_moments": [
+        2.452916666666667e-06,
+        2.7095833333333336e-06,
+        2.8291666666666665e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "l_thigh",
+      "mass_kg": 0.02,
+      "com_local_m": [
+        0.0,
+        0.0,
+        -0.020359273071502332
+      ],
+      "inertia_kg_m2": [
+        [
+          3.4300000000000006e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.4300000000000006e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.3333333333333336e-06
+        ]
+      ],
+      "principal_moments": [
+        1.3333333333333336e-06,
+        3.4300000000000006e-06,
+        3.4300000000000006e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "l_knee_link",
+      "mass_kg": 0.025,
+      "com_local_m": [
+        0.0,
+        0.0,
+        -0.02437724348649781
+      ],
+      "inertia_kg_m2": [
+        [
+          5.960416666666667e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.627083333333333e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.6833333333333332e-06
+        ]
+      ],
+      "principal_moments": [
+        1.6833333333333332e-06,
+        5.627083333333333e-06,
+        5.960416666666667e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "l_shin",
+      "mass_kg": 0.005,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_kg_m2": [
+        [
+          2.4833333333333337e-07,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.4833333333333337e-07,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.6333333333333337e-07
+        ]
+      ],
+      "principal_moments": [
+        1.6333333333333337e-07,
+        2.4833333333333337e-07,
+        2.4833333333333337e-07
+      ],
+      "valid": true
+    },
+    {
+      "name": "l_foot",
+      "mass_kg": 0.01,
+      "com_local_m": [
+        0.0,
+        0.0,
+        -0.015
+      ],
+      "inertia_kg_m2": [
+        [
+          1.0833333333333335e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.373333333333333e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.2166666666666662e-06
+        ]
+      ],
+      "principal_moments": [
+        1.0833333333333335e-06,
+        2.373333333333333e-06,
+        3.2166666666666662e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "r_hip_roll_link",
+      "mass_kg": 0.035,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_kg_m2": [
+        [
+          2.1583333333333336e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.426666666666667e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.0916666666666666e-06
+        ]
+      ],
+      "principal_moments": [
+        2.1583333333333336e-06,
+        2.426666666666667e-06,
+        3.0916666666666666e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "r_hip_pitch_link",
+      "mass_kg": 0.035,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_kg_m2": [
+        [
+          2.7095833333333336e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.452916666666667e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.8291666666666665e-06
+        ]
+      ],
+      "principal_moments": [
+        2.452916666666667e-06,
+        2.7095833333333336e-06,
+        2.8291666666666665e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "r_thigh",
+      "mass_kg": 0.02,
+      "com_local_m": [
+        0.0,
+        0.0,
+        -0.020359273071502332
+      ],
+      "inertia_kg_m2": [
+        [
+          3.4300000000000006e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.4300000000000006e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.3333333333333336e-06
+        ]
+      ],
+      "principal_moments": [
+        1.3333333333333336e-06,
+        3.4300000000000006e-06,
+        3.4300000000000006e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "r_knee_link",
+      "mass_kg": 0.025,
+      "com_local_m": [
+        0.0,
+        0.0,
+        -0.02437724348649781
+      ],
+      "inertia_kg_m2": [
+        [
+          5.960416666666667e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.627083333333333e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.6833333333333332e-06
+        ]
+      ],
+      "principal_moments": [
+        1.6833333333333332e-06,
+        5.627083333333333e-06,
+        5.960416666666667e-06
+      ],
+      "valid": true
+    },
+    {
+      "name": "r_shin",
+      "mass_kg": 0.005,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_kg_m2": [
+        [
+          2.4833333333333337e-07,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.4833333333333337e-07,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.6333333333333337e-07
+        ]
+      ],
+      "principal_moments": [
+        1.6333333333333337e-07,
+        2.4833333333333337e-07,
+        2.4833333333333337e-07
+      ],
+      "valid": true
+    },
+    {
+      "name": "r_foot",
+      "mass_kg": 0.01,
+      "com_local_m": [
+        0.0,
+        0.0,
+        -0.015
+      ],
+      "inertia_kg_m2": [
+        [
+          1.0833333333333335e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.373333333333333e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.2166666666666662e-06
+        ]
+      ],
+      "principal_moments": [
+        1.0833333333333335e-06,
+        2.373333333333333e-06,
+        3.2166666666666662e-06
+      ],
+      "valid": true
+    }
+  ],
+  "joints": [
+    {
+      "name": "head_joint",
+      "type": "fixed",
+      "parent": "torso",
+      "child": "head",
+      "origin": {
+        "pos": "0 0 0.074",
+        "euler": "0 0 0"
+      },
+      "axis": null,
+      "limits": null
+    },
+    {
+      "name": "l_hip_roll",
+      "type": "revolute",
+      "parent": "torso",
+      "child": "l_hip_roll_link",
+      "origin": {
+        "pos": "0.001 0.034 -0.014",
+        "euler": "0 0 0"
+      },
+      "axis": {
+        "xyz": "1 0 0"
+      },
+      "limits": {
+        "lower": "-0.52",
+        "upper": "0.52",
+        "effort": "1.2",
+        "velocity": "6"
+      }
+    },
+    {
+      "name": "l_hip_pitch",
+      "type": "revolute",
+      "parent": "l_hip_roll_link",
+      "child": "l_hip_pitch_link",
+      "origin": {
+        "pos": "0 0 0",
+        "euler": "0 0 0"
+      },
+      "axis": {
+        "xyz": "0 1 0"
+      },
+      "limits": {
+        "lower": "-1.05",
+        "upper": "1.05",
+        "effort": "1.2",
+        "velocity": "6"
+      }
+    },
+    {
+      "name": "l_thigh_joint",
+      "type": "fixed",
+      "parent": "l_hip_pitch_link",
+      "child": "l_thigh",
+      "origin": {
+        "pos": "0 0 0",
+        "euler": "0 0 0"
+      },
+      "axis": null,
+      "limits": null
+    },
+    {
+      "name": "l_knee",
+      "type": "revolute",
+      "parent": "l_thigh",
+      "child": "l_knee_link",
+      "origin": {
+        "pos": "0 0 -0.040718546143004665",
+        "euler": "0 0 0"
+      },
+      "axis": {
+        "xyz": "0 1 0"
+      },
+      "limits": {
+        "lower": "-1.57",
+        "upper": "0",
+        "effort": "0.8",
+        "velocity": "6"
+      }
+    },
+    {
+      "name": "l_shin_joint",
+      "type": "fixed",
+      "parent": "l_knee_link",
+      "child": "l_shin",
+      "origin": {
+        "pos": "0 0 0",
+        "euler": "0 0 0"
+      },
+      "axis": null,
+      "limits": null
+    },
+    {
+      "name": "l_foot_joint",
+      "type": "fixed",
+      "parent": "l_shin",
+      "child": "l_foot",
+      "origin": {
+        "pos": "0 0 -0.04875448697299562",
+        "euler": "0 0.4453010438876859 0"
+      },
+      "axis": null,
+      "limits": null
+    },
+    {
+      "name": "r_hip_roll",
+      "type": "revolute",
+      "parent": "torso",
+      "child": "r_hip_roll_link",
+      "origin": {
+        "pos": "0.001 -0.034 -0.014",
+        "euler": "0 0 0"
+      },
+      "axis": {
+        "xyz": "1 0 0"
+      },
+      "limits": {
+        "lower": "-0.52",
+        "upper": "0.52",
+        "effort": "1.2",
+        "velocity": "6"
+      }
+    },
+    {
+      "name": "r_hip_pitch",
+      "type": "revolute",
+      "parent": "r_hip_roll_link",
+      "child": "r_hip_pitch_link",
+      "origin": {
+        "pos": "0 0 0",
+        "euler": "0 0 0"
+      },
+      "axis": {
+        "xyz": "0 1 0"
+      },
+      "limits": {
+        "lower": "-1.05",
+        "upper": "1.05",
+        "effort": "1.2",
+        "velocity": "6"
+      }
+    },
+    {
+      "name": "r_thigh_joint",
+      "type": "fixed",
+      "parent": "r_hip_pitch_link",
+      "child": "r_thigh",
+      "origin": {
+        "pos": "0 0 0",
+        "euler": "0 0 0"
+      },
+      "axis": null,
+      "limits": null
+    },
+    {
+      "name": "r_knee",
+      "type": "revolute",
+      "parent": "r_thigh",
+      "child": "r_knee_link",
+      "origin": {
+        "pos": "0 0 -0.040718546143004665",
+        "euler": "0 0 0"
+      },
+      "axis": {
+        "xyz": "0 1 0"
+      },
+      "limits": {
+        "lower": "-1.57",
+        "upper": "0",
+        "effort": "0.8",
+        "velocity": "6"
+      }
+    },
+    {
+      "name": "r_shin_joint",
+      "type": "fixed",
+      "parent": "r_knee_link",
+      "child": "r_shin",
+      "origin": {
+        "pos": "0 0 0",
+        "euler": "0 0 0"
+      },
+      "axis": null,
+      "limits": null
+    },
+    {
+      "name": "r_foot_joint",
+      "type": "fixed",
+      "parent": "r_shin",
+      "child": "r_foot",
+      "origin": {
+        "pos": "0 0 -0.04875448697299562",
+        "euler": "0 0.4453010438876859 0"
+      },
+      "axis": null,
+      "limits": null
+    }
+  ],
+  "mass_kg": 0.5,
+  "actuation_order": [
+    "l_hip_roll",
+    "l_hip_pitch",
+    "l_knee",
+    "r_hip_roll",
+    "r_hip_pitch",
+    "r_knee"
+  ],
+  "self_collision": false,
+  "urdf_sha": "5567431d7d53ef49b3b0744bd9128bbc587e22c61bde58e46ef85e4b9dd86ad0",
+  "robot_spec_sha": "eb6a67ec25f5cb2fd1ab2d433877d03eb2d603b9d4ff2051d2a5f422663dd503",
+  "nq": 13,
+  "nv": 12,
+  "nu": 6,
+  "com_world_m": [
+    -0.0005100000000000003,
+    0.0,
+    0.11598
+  ],
+  "initial_contacts": [],
+  "root_free": true,
+  "height_m": 0.221,
+  "foot_contact_sites": [
+    "l_foot_contact",
+    "r_foot_contact"
+  ],
+  "nominal_support_xy_m": [
+    [
+      -0.019,
+      -0.051
+    ],
+    [
+      0.019,
+      -0.051
+    ],
+    [
+      0.019,
+      0.051
+    ],
+    [
+      -0.019,
+      0.051
+    ]
+  ],
+  "joint_command_checks": [
+    {
+      "joint": "l_hip_roll",
+      "negative_acceleration": -71.61362283251367,
+      "positive_acceleration": 71.61362283251363,
+      "passed": true
+    },
+    {
+      "joint": "l_hip_pitch",
+      "negative_acceleration": -84.87971950459654,
+      "positive_acceleration": 84.87971950459657,
+      "passed": true
+    },
+    {
+      "joint": "l_knee",
+      "negative_acceleration": -135.26568907530745,
+      "positive_acceleration": 135.26568907530745,
+      "passed": true
+    },
+    {
+      "joint": "r_hip_roll",
+      "negative_acceleration": -71.61362283251363,
+      "positive_acceleration": 71.61362283251367,
+      "passed": true
+    },
+    {
+      "joint": "r_hip_pitch",
+      "negative_acceleration": -84.87971950459658,
+      "positive_acceleration": 84.87971950459658,
+      "passed": true
+    },
+    {
+      "joint": "r_knee",
+      "negative_acceleration": -135.26568907530745,
+      "positive_acceleration": 135.26568907530745,
+      "passed": true
+    }
+  ],
+  "standing_trace": [
+    [
+      0.0,
+      0.11646076000000001,
+      1.0,
+      3.314256253875279e-20,
+      0.0,
+      0.0
+    ],
+    [
+      0.2,
+      0.11552681177470471,
+      0.999917195988762,
+      1.969515451029127e-17,
+      0.012868611656699629,
+      -5.997933152763587e-17
+    ],
+    [
+      0.4,
+      0.11553620936075885,
+      0.9999218032529147,
+      3.3995287180368246e-18,
+      0.012505493970234514,
+      -2.0665656518138073e-16
+    ],
+    [
+      0.6,
+      0.11553767017968795,
+      0.9999225572307752,
+      6.945885872888225e-18,
+      0.012445060910521744,
+      -6.24002447641605e-17
+    ],
+    [
+      0.8,
+      0.11553790015584132,
+      0.9999226876791661,
+      7.702327658012251e-18,
+      0.012434575363535925,
+      1.6092531619193748e-17
+    ],
+    [
+      1.0,
+      0.1155379364532456,
+      0.9999227107797787,
+      3.86264516915055e-18,
+      0.012432717595881493,
+      1.6317381559540495e-16
+    ],
+    [
+      1.2,
+      0.11553794220309499,
+      0.9999227149647536,
+      -9.786027476428485e-17,
+      0.012432381007589262,
+      4.441014478185915e-16
+    ],
+    [
+      1.4000000000000001,
+      0.11553794311965916,
+      0.9999227157407921,
+      -4.025169549539078e-16,
+      0.01243231859142626,
+      6.776348718750791e-15
+    ],
+    [
+      1.6,
+      0.11553794326579442,
+      0.9999227158871007,
+      -1.0874094399190703e-15,
+      0.012432306823940913,
+      2.083264379766959e-14
+    ],
+    [
+      1.8,
+      0.11553794328956316,
+      0.9999227159154122,
+      -5.239699872001429e-15,
+      0.012432304546865879,
+      6.983158702669667e-14
+    ],
+    [
+      2.0,
+      0.11553794329348085,
+      0.9999227159209673,
+      -1.4082853249508985e-14,
+      0.012432304100035818,
+      1.961304047945064e-13
+    ],
+    [
+      2.2,
+      0.11553794329394115,
+      0.9999227159219537,
+      -3.3558870499281136e-14,
+      0.01243230402070638,
+      4.903227143864579e-13
+    ],
+    [
+      2.4,
+      0.11553794329383016,
+      0.9999227159220689,
+      -7.84149468446907e-14,
+      0.012432304011431018,
+      1.1744185217395195e-12
+    ],
+    [
+      2.6,
+      0.11553794329400895,
+      0.9999227159222079,
+      -1.996388450751827e-13,
+      0.012432304000233643,
+      2.8900190559671813e-12
+    ],
+    [
+      2.8000000000000003,
+      0.11553794329383968,
+      0.9999227159221029,
+      -4.5398862330510494e-13,
+      0.012432304008708341,
+      6.780946984645845e-12
+    ],
+    [
+      3.0,
+      0.1155379432940355,
+      0.9999227159222416,
+      -1.15427034287908e-12,
+      0.012432303997578829,
+      1.6442002901322477e-11
+    ],
+    [
+      3.2,
+      0.11553794329390853,
+      0.9999227159221289,
+      -2.5644447113515456e-12,
+      0.01243230400667327,
+      3.8734956222062454e-11
+    ],
+    [
+      3.4,
+      0.1155379432941469,
+      0.999922715922279,
+      -6.364493990859625e-12,
+      0.012432303994577332,
+      9.403180497322813e-11
+    ],
+    [
+      3.6,
+      0.11553794329389656,
+      0.9999227159221595,
+      -1.5149416784162083e-11,
+      0.012432304004177597,
+      2.2039953431724784e-10
+    ],
+    [
+      3.8000000000000003,
+      0.11553794329380773,
+      0.999922715922077,
+      -3.270336474846132e-11,
+      0.012432304010811423,
+      5.116561873286057e-10
+    ],
+    [
+      4.0,
+      0.11553794329354117,
+      0.9999227159219457,
+      -8.122886308974448e-11,
+      0.012432304021368424,
+      1.185108635365439e-09
+    ],
+    [
+      4.2,
+      0.11553794329253653,
+      0.9999227159213748,
+      -1.6130461856706968e-10,
+      0.012432304067298816,
+      2.480905436671864e-09
+    ],
+    [
+      4.4,
+      0.1155379432909217,
+      0.9999227159204495,
+      -2.56619646704122e-10,
+      0.012432304141732313,
+      4.376183535604706e-09
+    ],
+    [
+      4.6000000000000005,
+      0.11553794328964342,
+      0.9999227159197133,
+      -3.376685012452714e-10,
+      0.012432304200943125,
+      6.634727669283292e-09
+    ],
+    [
+      4.8,
+      0.11553794328889655,
+      0.9999227159192854,
+      -3.829644283186379e-10,
+      0.012432304235358639,
+      8.90444387726071e-09
+    ]
+  ],
+  "standing": {
+    "seconds": 5.0,
+    "min_height_m": 0.11552393172867624,
+    "final_height_m": 0.11553794328854532,
+    "finite": true,
+    "saturation_fraction": 0.0,
+    "passed": true
+  },
+  "standing_contacts": [
+    {
+      "geom1": "floor",
+      "geom2": "l_foot_collision_0",
+      "distance_m": -6.406737001343407e-05
+    },
+    {
+      "geom1": "floor",
+      "geom2": "l_foot_collision_0",
+      "distance_m": -4.63984087116856e-05
+    },
+    {
+      "geom1": "floor",
+      "geom2": "l_foot_collision_0",
+      "distance_m": -6.406736969689214e-05
+    },
+    {
+      "geom1": "floor",
+      "geom2": "l_foot_collision_0",
+      "distance_m": -4.639840839514367e-05
+    },
+    {
+      "geom1": "floor",
+      "geom2": "r_foot_collision_0",
+      "distance_m": -6.406740426175526e-05
+    },
+    {
+      "geom1": "floor",
+      "geom2": "r_foot_collision_0",
+      "distance_m": -4.639834941932118e-05
+    },
+    {
+      "geom1": "floor",
+      "geom2": "r_foot_collision_0",
+      "distance_m": -6.406740394521507e-05
+    },
+    {
+      "geom1": "floor",
+      "geom2": "r_foot_collision_0",
+      "distance_m": -4.6398349102780984e-05
+    }
+  ],
+  "gravity_drop": {
+    "start_height_m": 0.3,
+    "min_height_m": 0.05683218998372307,
+    "final_height_m": 0.05683218998372307,
+    "finite": true
+  },
+  "gates_passed": true
+}

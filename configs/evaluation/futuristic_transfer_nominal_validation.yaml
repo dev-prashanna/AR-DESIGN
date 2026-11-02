@@ -1,0 +1,36 @@
+split: validation
+seeds:
+- 3201
+- 3202
+- 3203
+commands:
+- - 0
+  - 0
+  - 0
+- - 0.05
+  - 0
+  - 0
+- - -0.05
+  - 0
+  - 0
+- - 0
+  - 0
+  - 0.25
+- - 0
+  - 0
+  - -0.25
+- - 0.05
+  - 0
+  - 0.25
+- - 0.05
+  - 0
+  - -0.25
+episode_seconds: 15
+friction:
+- 0.8
+success_survival_fraction: 0.95
+success_velocity_rmse: 0.025
+success_yaw_rmse: 0.1
+selection_metric: minimum_command_success_rate
+randomization: false
+environment_seed: 3201

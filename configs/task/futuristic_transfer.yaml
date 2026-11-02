@@ -1,0 +1,142 @@
+reset_joint_offset_rad: 0.005
+reset_base_tilt_rad: 0.01
+reset_spawn_lift_m: 0.0005
+command_resampling_seconds: 3.0
+standing_fraction: 0.2
+final_forward_range:
+- -0.06
+- 0.06
+final_yaw_range:
+- -0.3
+- 0.3
+tracking_bandwidth_m_s: 0.03
+yaw_bandwidth_rad_s: 0.15
+upright_bandwidth: 0.35
+height_bandwidth_m: 0.025
+reward_scaling: rate_times_policy_dt
+rewards:
+  tracking:
+    weight: 3.0
+    equation: exp(-sum((v_xy-command_xy)^2)/sigma_v^2)
+    units: dimensionless
+  yaw:
+    weight: 5.0
+    equation: exp(-(yaw_rate-command_yaw_rate)^2/sigma_yaw^2)
+    units: dimensionless
+  upright:
+    weight: 0.6
+    equation: exp(-sum(projected_gravity_xy^2)/sigma_g^2)
+    units: dimensionless
+  height:
+    weight: 0.1
+    equation: exp(-((height-nominal_height)/sigma_h)^2)
+    units: dimensionless
+  vertical:
+    weight: -8.0
+    equation: v_z^2
+    units: m^2/s^2
+  roll_pitch:
+    weight: -0.05
+    equation: sum(omega_xy^2)
+    units: rad^2/s^2
+  torque:
+    weight: -0.01
+    equation: sum(tau^2)
+    units: (Nm)^2
+  speed:
+    weight: -0.0002
+    equation: sum(q_dot^2)
+    units: rad^2/s^2
+  action_rate:
+    weight: -0.05
+    equation: sum((tanh(u_t)-tanh(u_previous))^2)
+    units: dimensionless_per_policy_step
+  limits:
+    weight: -5.0
+    equation: sum(max(lower-q,0)+max(q-upper,0))
+    units: rad
+  saturation:
+    weight: -0.1
+    equation: mean(abs(tau)>0.95*tau_limit)
+    units: fraction
+  slip:
+    weight: -40.0
+    equation: sum(is_contact*foot_planar_speed^2)
+    units: m^2/s^2
+  body_contact:
+    weight: -2.0
+    equation: sum(nonfoot_body_has_ground_contact)
+    units: count
+  termination:
+    weight: -150.0
+    equation: true_fall
+    units: indicator; -2 reward per fall at dt=.02
+  clearance:
+    weight: 2.0
+    equation: mean(exp(-((foot_z-phase_target)/.004)^2))
+    units: dimensionless
+  contact_phase:
+    weight: 0.75
+    equation: fraction of feet matching desired phase contacts
+    units: dimensionless
+  linear_progress:
+    weight: 1.0
+    equation: clip(dot(v_xy,cmd_xy)/.05^2,-2,2)
+    units: dimensionless
+  yaw_progress:
+    weight: 0.0
+    equation: clip(yaw_rate*cmd_yaw/.25^2,-2,2)
+    units: dimensionless
+  yaw_error:
+    weight: -0.5
+    equation: ((yaw_rate-command_yaw)/.25)^2
+    units: dimensionless
+  target_rate:
+    weight: -0.03
+    equation: mean((applied_target_velocity/target_speed_limit)^2)
+    units: dimensionless
+  target_acceleration:
+    weight: -0.02
+    equation: mean((target_acceleration/(target_speed_limit/.1))^2)
+    units: dimensionless
+  overspeed:
+    weight: -0.2
+    equation: mean(max(abs(q_dot)/rated_speed-1,0)^2)
+    units: dimensionless
+gait_frequency_hz: 1.5
+foot_clearance_m: 0.008
+reference_gait: true
+left_swing_phase_sign: -1
+motor_target_filter: true
+keyboard_command_mixture: true
+command_resampling_range:
+- 1.0
+- 4.0
+command_acceleration:
+- 0.12
+- 0.12
+- 0.6
+target_filter_seconds: 0.04
+target_speed_limits:
+- 2.5
+- 3.0
+- 3.0
+- 2.5
+- 3.0
+- 3.0
+reference_sway_m: 0.008
+density_alpha_range:
+- -0.08
+- 0.08
+friction_range:
+- 0.55
+- 1.05
+gain_range:
+- 0.85
+- 1.15
+effort_scale_range:
+- 0.75
+- 1.05
+delay_max_lag: 10
+gyro_bias_range: 0.01
+encoder_bias_range: 0.01

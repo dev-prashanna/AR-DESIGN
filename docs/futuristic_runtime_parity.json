@@ -1,0 +1,8 @@
+{
+  "checkpoint": "runs/20261102T024846Z_finetune_a520ad50/final.pt",
+  "checkpoint_sha": "16a90036c45c85e0254a6d84570224eadabbbc72d6e10085e013be7d9fe95cd1",
+  "steps": 100,
+  "maximum_target_error_rad": 0.0,
+  "passed": true,
+  "hardware_io_performed": false
+}

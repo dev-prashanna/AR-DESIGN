@@ -1,0 +1,33 @@
+split: validation
+seeds:
+- 1101
+- 1102
+- 1103
+commands:
+- - 0
+  - 0
+  - 0
+- - 0.05
+  - 0
+  - 0
+- - -0.05
+  - 0
+  - 0
+- - 0
+  - 0
+  - 0.25
+- - 0
+  - 0
+  - -0.25
+- - 0.05
+  - 0
+  - 0.25
+- - 0.05
+  - 0
+  - -0.25
+episode_seconds: 10
+friction:
+- 0.8
+success_survival_fraction: 0.95
+success_velocity_rmse: 0.025
+success_yaw_rmse: 0.1

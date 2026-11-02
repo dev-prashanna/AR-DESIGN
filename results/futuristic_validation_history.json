@@ -1,0 +1,232 @@
+[
+  {
+    "update": 500,
+    "evaluation": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261102T032138Z_finetune_9784f901/evaluation_validation_1793590145246257602",
+    "summary": {
+      "minimum_command_success_rate": 0.0,
+      "maximum_command_yaw_rmse": 0.3742177764044084,
+      "evaluator_sha": "df25024f461796d89cb98f15d184c87287cfe67e4ce4ab5800b53a1860b12e37",
+      "wrapper_sha": "18ad2e7152e25d24d3b19ff49888a38a934d16e4c80706e65d104d279bf0482e",
+      "episodes": 252,
+      "success_rate": 0.1349206349206349,
+      "walking_success_rate": 0.1349206349206349,
+      "fall_rate": 0.29365079365079366,
+      "mean_duration_s": 11.500743354833315,
+      "mean_velocity_rmse": 0.06710797127989679,
+      "independent_training_seeds": 1,
+      "training_seed": 42,
+      "training_updates": 500,
+      "training_transitions": 12288000,
+      "checkpoint_sha": "5454f406249ab2f2cfec7d39152d9bb0ba67b1d20576d2fd47924501fd799260",
+      "suite_sha": "4ab4c609e4b0396e0d169e7e7bea1e43f8d60f4850d236916151848638af6baf",
+      "split": "validation",
+      "config": {
+        "init_std": 0.08,
+        "ppo_schedule": "adaptive",
+        "mirror_loss_coeff": 0.1,
+        "learning_rate": 0.0001,
+        "robot_path": "configs/robot/futuristic_residual.yaml",
+        "task_path": "configs/task/futuristic_transfer_randomized.yaml",
+        "profile": "futuristic_transfer_robust",
+        "num_envs": 1024,
+        "horizon": 24,
+        "iterations": 20000,
+        "max_wall_time": 21600.0,
+        "max_transitions": 491520000,
+        "checkpoint_interval": 250,
+        "episode_seconds": 10,
+        "curriculum": false,
+        "randomization": true,
+        "seed": 42
+      },
+      "evaluation_parallel_worlds": 252
+    },
+    "commands": [
+      {
+        "command": [
+          -0.05,
+          0,
+          0
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.08822111937815232,
+        "yaw_rmse": 0.12785090441031316
+      },
+      {
+        "command": [
+          0,
+          0,
+          -0.25
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.03899844637146656,
+        "yaw_rmse": 0.28289026343637663
+      },
+      {
+        "command": [
+          0,
+          0,
+          0
+        ],
+        "success_rate": 0.9444444444444444,
+        "velocity_rmse": 0.020386232116449347,
+        "yaw_rmse": 0.04078629464178487
+      },
+      {
+        "command": [
+          0,
+          0,
+          0.25
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.08529736430077096,
+        "yaw_rmse": 0.3742177764044084
+      },
+      {
+        "command": [
+          0.05,
+          0,
+          -0.25
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.07682926235622842,
+        "yaw_rmse": 0.34823499676918074
+      },
+      {
+        "command": [
+          0.05,
+          0,
+          0
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.0663792915003898,
+        "yaw_rmse": 0.08190448046002367
+      },
+      {
+        "command": [
+          0.05,
+          0,
+          0.25
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.09364408293582012,
+        "yaw_rmse": 0.3637879065540137
+      }
+    ]
+  },
+  {
+    "update": 1000,
+    "evaluation": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261102T032138Z_finetune_9784f901/evaluation_validation_1793590600689222477",
+    "summary": {
+      "minimum_command_success_rate": 0.0,
+      "maximum_command_yaw_rmse": 0.348625670273934,
+      "evaluator_sha": "df25024f461796d89cb98f15d184c87287cfe67e4ce4ab5800b53a1860b12e37",
+      "wrapper_sha": "18ad2e7152e25d24d3b19ff49888a38a934d16e4c80706e65d104d279bf0482e",
+      "episodes": 252,
+      "success_rate": 0.1349206349206349,
+      "walking_success_rate": 0.1349206349206349,
+      "fall_rate": 0.10714285714285714,
+      "mean_duration_s": 13.496010059993418,
+      "mean_velocity_rmse": 0.06323014293889988,
+      "independent_training_seeds": 1,
+      "training_seed": 42,
+      "training_updates": 1000,
+      "training_transitions": 24576000,
+      "checkpoint_sha": "7d28ba0468737c875e3b20c082561ac3b8cebbd506fa5ececb1f38a633a36673",
+      "suite_sha": "4ab4c609e4b0396e0d169e7e7bea1e43f8d60f4850d236916151848638af6baf",
+      "split": "validation",
+      "config": {
+        "init_std": 0.08,
+        "ppo_schedule": "adaptive",
+        "mirror_loss_coeff": 0.1,
+        "learning_rate": 0.0001,
+        "robot_path": "configs/robot/futuristic_residual.yaml",
+        "task_path": "configs/task/futuristic_transfer_randomized.yaml",
+        "profile": "futuristic_transfer_robust",
+        "num_envs": 1024,
+        "horizon": 24,
+        "iterations": 20000,
+        "max_wall_time": 21600.0,
+        "max_transitions": 491520000,
+        "checkpoint_interval": 250,
+        "episode_seconds": 10,
+        "curriculum": false,
+        "randomization": true,
+        "seed": 42
+      },
+      "evaluation_parallel_worlds": 252
+    },
+    "commands": [
+      {
+        "command": [
+          -0.05,
+          0,
+          0
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.09087816600008308,
+        "yaw_rmse": 0.10433348455655136
+      },
+      {
+        "command": [
+          0,
+          0,
+          -0.25
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.038224193308171936,
+        "yaw_rmse": 0.2762138215836766
+      },
+      {
+        "command": [
+          0,
+          0,
+          0
+        ],
+        "success_rate": 0.9444444444444444,
+        "velocity_rmse": 0.019015250611232895,
+        "yaw_rmse": 0.03753303889303916
+      },
+      {
+        "command": [
+          0,
+          0,
+          0.25
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.038802870227753396,
+        "yaw_rmse": 0.2781601959857707
+      },
+      {
+        "command": [
+          0.05,
+          0,
+          -0.25
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.0910356235257639,
+        "yaw_rmse": 0.32575744670602286
+      },
+      {
+        "command": [
+          0.05,
+          0,
+          0
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.07062344083981757,
+        "yaw_rmse": 0.09420160675633105
+      },
+      {
+        "command": [
+          0.05,
+          0,
+          0.25
+        ],
+        "success_rate": 0.0,
+        "velocity_rmse": 0.09403145605947638,
+        "yaw_rmse": 0.34862567027393404
+      }
+    ]
+  }
+]

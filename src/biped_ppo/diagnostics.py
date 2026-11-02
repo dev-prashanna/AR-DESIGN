@@ -81,12 +81,17 @@ def physics_checks(model, cfg):
         bounds.append((d.geom_xpos[index] - extent, d.geom_xpos[index] + extent))
     report["height_m"] = float(max(b[1][2] for b in bounds) - min(b[0][2] for b in bounds))
     report["foot_contact_sites"] = ["l_foot_contact", "r_foot_contact"]
-    report["nominal_support_xy_m"] = [
-        [-0.019, -0.051],
-        [0.019, -0.051],
-        [0.019, 0.051],
-        [-0.019, 0.051],
-    ]
+    feet = [i for i in collision_ids if model.geom(i).name.startswith(("l_foot_", "r_foot_"))]
+    corners = []
+    for i in feet:
+        rotation = d.geom_xmat[i].reshape(3, 3)
+        for x in (-1, 1):
+            for y in (-1, 1):
+                corners.append((d.geom_xpos[i] + rotation @ (model.geom_size[i] * [x, y, -1]))[:2])
+    from scipy.spatial import ConvexHull
+
+    corners = np.asarray(corners)
+    report["nominal_support_xy_m"] = corners[ConvexHull(corners).vertices].tolist()
     report["joint_command_checks"] = []
     # Floating robot in the air avoids floor friction masking sign checks.
     for n, qi, vi, ai in zip(cfg["joint_names"], qids, vids, aid):

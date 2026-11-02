@@ -1,0 +1,324 @@
+<mujoco model="microduck_futuristic_residual_v1">
+  <compiler angle="radian" eulerseq="xyz" fusestatic="false" />
+  <option timestep="0.002" gravity="0 0 -9.81" integrator="implicitfast" iterations="30" />
+  <default>
+    <geom friction="0.8 0.005 0.0001" condim="3" solref="0.008 1" />
+  </default>
+  <asset>
+    <mesh name="torso_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Torso_lower_chassis.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_1" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Torso_graphite_shell.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_2" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Torso_top_inset.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_3" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Torso_front_trim.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_4" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Torso_status_bar.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_5" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_lower_servo.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_6" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_upper_servo.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_7" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_linkage.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_8" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_horn.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_9" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_fastener.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_10" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_horn001.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_11" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_fastener001.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_12" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_linkage001.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_13" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_horn002.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_14" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_fastener002.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_15" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_horn003.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_16" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_fastener003.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_17" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_wiring.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_18" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_wiring001.stl" scale="1 1 1" />
+    <mesh name="torso_mesh_19" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Neck_wiring002.stl" scale="1 1 1" />
+    <mesh name="head_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_arched_housing.stl" scale="1 1 1" />
+    <mesh name="head_mesh_1" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Recessed_sensor_visor.stl" scale="1 1 1" />
+    <mesh name="head_mesh_2" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Visor_faceplate.stl" scale="1 1 1" />
+    <mesh name="head_mesh_3" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Lower_head_gasket.stl" scale="1 1 1" />
+    <mesh name="head_mesh_4" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Yellow_beak_upper.stl" scale="1 1 1" />
+    <mesh name="head_mesh_5" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Beak_mouth_recess.stl" scale="1 1 1" />
+    <mesh name="head_mesh_6" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Lower_beak_violet_insert.stl" scale="1 1 1" />
+    <mesh name="head_mesh_7" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Camera_machined_bezel.stl" scale="1 1 1" />
+    <mesh name="head_mesh_8" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Camera_yellow_ring.stl" scale="1 1 1" />
+    <mesh name="head_mesh_9" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Camera_black_barrel.stl" scale="1 1 1" />
+    <mesh name="head_mesh_10" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Camera_optical_glass.stl" scale="1 1 1" />
+    <mesh name="head_mesh_11" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Camera_inner_aperture.stl" scale="1 1 1" />
+    <mesh name="head_mesh_12" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Lens_reflection.stl" scale="1 1 1" />
+    <mesh name="head_mesh_13" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Status_light.stl" scale="1 1 1" />
+    <mesh name="head_mesh_14" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Status_light001.stl" scale="1 1 1" />
+    <mesh name="head_mesh_15" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_side_yoke.stl" scale="1 1 1" />
+    <mesh name="head_mesh_16" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_pivot.stl" scale="1 1 1" />
+    <mesh name="head_mesh_17" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_pivot_screw.stl" scale="1 1 1" />
+    <mesh name="head_mesh_18" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_side_yoke001.stl" scale="1 1 1" />
+    <mesh name="head_mesh_19" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_pivot001.stl" scale="1 1 1" />
+    <mesh name="head_mesh_20" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_pivot_screw001.stl" scale="1 1 1" />
+    <mesh name="head_mesh_21" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_rear_cooling_slot.stl" scale="1 1 1" />
+    <mesh name="head_mesh_22" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_rear_cooling_slot001.stl" scale="1 1 1" />
+    <mesh name="head_mesh_23" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_rear_cooling_slot002.stl" scale="1 1 1" />
+    <mesh name="head_mesh_24" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_rear_cooling_slot003.stl" scale="1 1 1" />
+    <mesh name="head_mesh_25" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Head_rear_cooling_slot004.stl" scale="1 1 1" />
+    <mesh name="l_hip_roll_link_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_hip_roll_servo.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_hip_pitch_servo.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_1" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_thigh_motor.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_2" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_thigh_inner_rail.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_3" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_thigh_armor.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_4" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_housing.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_5" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_alloy_ring.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_6" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_hub.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_7" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_axle_bolt.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_8" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_armor_screw.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_9" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_armor_screw001.stl" scale="1 1 1" />
+    <mesh name="l_thigh_mesh_10" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_servo_cable.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_shin_link.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_1" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_shin_link001.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_2" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_housing001.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_3" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_alloy_ring001.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_4" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_hub001.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_5" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_axle_bolt001.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_6" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_link_hole.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_7" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_link_hole001.stl" scale="1 1 1" />
+    <mesh name="l_knee_link_mesh_8" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_link_hole002.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_shin_motor.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_1" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_housing002.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_2" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_alloy_ring002.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_3" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_joint_hub002.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_4" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_axle_bolt002.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_5" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_rubber_sole.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_6" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_sole_gasket.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_7" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_yellow_foot_deck.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_8" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_ankle_bracket.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_9" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_ankle_bracket001.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_10" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_toe_grip.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_11" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_toe_grip001.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_12" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_toe_grip002.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_13" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_deck_fastener.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_14" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_deck_fastener001.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_15" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_deck_fastener002.stl" scale="1 1 1" />
+    <mesh name="l_foot_mesh_16" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Left_deck_fastener003.stl" scale="1 1 1" />
+    <mesh name="r_hip_roll_link_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_hip_roll_servo.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_hip_pitch_servo.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_1" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_thigh_motor.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_2" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_thigh_inner_rail.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_3" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_thigh_armor.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_4" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_housing.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_5" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_alloy_ring.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_6" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_hub.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_7" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_axle_bolt.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_8" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_armor_screw.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_9" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_armor_screw001.stl" scale="1 1 1" />
+    <mesh name="r_thigh_mesh_10" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_servo_cable.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_shin_link.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_1" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_shin_link001.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_2" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_housing001.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_3" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_alloy_ring001.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_4" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_hub001.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_5" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_axle_bolt001.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_6" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_link_hole.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_7" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_link_hole001.stl" scale="1 1 1" />
+    <mesh name="r_knee_link_mesh_8" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_link_hole002.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_0" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_shin_motor.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_1" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_housing002.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_2" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_alloy_ring002.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_3" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_joint_hub002.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_4" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_axle_bolt002.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_5" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_rubber_sole.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_6" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_sole_gasket.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_7" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_yellow_foot_deck.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_8" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_ankle_bracket.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_9" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_ankle_bracket001.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_10" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_toe_grip.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_11" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_toe_grip001.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_12" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_toe_grip002.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_13" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_deck_fastener.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_14" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_deck_fastener001.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_15" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_deck_fastener002.stl" scale="1 1 1" />
+    <mesh name="r_foot_mesh_16" file="/home/prashanna/Documents/AR_DESIGN/biped-ppo/assets/robot/meshes/futuristic/Right_deck_fastener003.stl" scale="1 1 1" />
+  </asset>
+  <worldbody>
+    <geom name="floor" type="plane" size="2 2 .1" contype="2" conaffinity="1" rgba=".85 .87 .89 1" />
+    <light pos="0 -1 2" dir="0 0 -1" />
+    <body name="torso" pos="0 0 0.1165">
+      <freejoint name="floating_base" />
+      <inertial pos="0 0 0" mass="0.12" fullinertia="6.5e-05 4.1e-05 7.4e-05 0 0 0" />
+      <geom name="torso_visual_0" type="mesh" mesh="torso_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      <geom name="torso_visual_1" type="mesh" mesh="torso_mesh_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.2196078431372549 0.25098039215686274 0.2784313725490196 1" />
+      <geom name="torso_visual_2" type="mesh" mesh="torso_mesh_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      <geom name="torso_visual_3" type="mesh" mesh="torso_mesh_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+      <geom name="torso_visual_4" type="mesh" mesh="torso_mesh_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.12941176470588237 0.8117647058823529 0.9019607843137255 1" />
+      <geom name="torso_visual_5" type="mesh" mesh="torso_mesh_5" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      <geom name="torso_visual_6" type="mesh" mesh="torso_mesh_6" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+      <geom name="torso_visual_7" type="mesh" mesh="torso_mesh_7" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_8" type="mesh" mesh="torso_mesh_8" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_9" type="mesh" mesh="torso_mesh_9" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_10" type="mesh" mesh="torso_mesh_10" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_11" type="mesh" mesh="torso_mesh_11" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_12" type="mesh" mesh="torso_mesh_12" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_13" type="mesh" mesh="torso_mesh_13" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_14" type="mesh" mesh="torso_mesh_14" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_15" type="mesh" mesh="torso_mesh_15" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_16" type="mesh" mesh="torso_mesh_16" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+      <geom name="torso_visual_17" type="mesh" mesh="torso_mesh_17" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      <geom name="torso_visual_18" type="mesh" mesh="torso_mesh_18" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      <geom name="torso_visual_19" type="mesh" mesh="torso_mesh_19" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+      <geom name="torso_collision_0" type="box" size="0.025 0.035 0.015" pos="0 0 0" euler="0 0 0" priority="1" contype="1" conaffinity="2" group="3" rgba=".7 .1 .1 0" />
+      <body name="head" pos="0 0 0.074" euler="0 0 0">
+        <inertial pos="0.002 0 0.004" mass="0.12" fullinertia="0.00010769 7.25e-05 0.00011969 0 0 0" />
+        <geom name="head_visual_0" type="mesh" mesh="head_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.2196078431372549 0.25098039215686274 0.2784313725490196 1" />
+        <geom name="head_visual_1" type="mesh" mesh="head_mesh_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_2" type="mesh" mesh="head_mesh_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+        <geom name="head_visual_3" type="mesh" mesh="head_mesh_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_4" type="mesh" mesh="head_mesh_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+        <geom name="head_visual_5" type="mesh" mesh="head_mesh_5" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_6" type="mesh" mesh="head_mesh_6" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.3607843137254902 0.25882352941176473 0.47843137254901963 1" />
+        <geom name="head_visual_7" type="mesh" mesh="head_mesh_7" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+        <geom name="head_visual_8" type="mesh" mesh="head_mesh_8" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+        <geom name="head_visual_9" type="mesh" mesh="head_mesh_9" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_10" type="mesh" mesh="head_mesh_10" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.16862745098039217 0.23137254901960785 1" />
+        <geom name="head_visual_11" type="mesh" mesh="head_mesh_11" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_12" type="mesh" mesh="head_mesh_12" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6509803921568628 0.8784313725490196 0.9411764705882353 1" />
+        <geom name="head_visual_13" type="mesh" mesh="head_mesh_13" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.12941176470588237 0.8117647058823529 0.9019607843137255 1" />
+        <geom name="head_visual_14" type="mesh" mesh="head_mesh_14" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.12941176470588237 0.8117647058823529 0.9019607843137255 1" />
+        <geom name="head_visual_15" type="mesh" mesh="head_mesh_15" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+        <geom name="head_visual_16" type="mesh" mesh="head_mesh_16" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+        <geom name="head_visual_17" type="mesh" mesh="head_mesh_17" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+        <geom name="head_visual_18" type="mesh" mesh="head_mesh_18" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+        <geom name="head_visual_19" type="mesh" mesh="head_mesh_19" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+        <geom name="head_visual_20" type="mesh" mesh="head_mesh_20" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+        <geom name="head_visual_21" type="mesh" mesh="head_mesh_21" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_22" type="mesh" mesh="head_mesh_22" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_23" type="mesh" mesh="head_mesh_23" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_24" type="mesh" mesh="head_mesh_24" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_visual_25" type="mesh" mesh="head_mesh_25" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+        <geom name="head_collision_0" type="box" size="0.03 0.043 0.026" pos="0.004 0 0.005" euler="0 0 0" priority="1" contype="1" conaffinity="2" group="3" rgba=".7 .1 .1 0" />
+      </body>
+      <body name="l_hip_roll_link" pos="0.001 0.034 -0.014" euler="0 0 0">
+        <joint name="l_hip_roll" type="hinge" armature="0.0001" axis="1 0 0" range="-0.52 0.52" damping="0.015" frictionloss="0.002" />
+        <inertial pos="0 0 0" mass="0.035" fullinertia="2.15833333333e-06 2.42666666667e-06 3.09166666667e-06 0 0 0" />
+        <geom name="l_hip_roll_link_visual_0" type="mesh" mesh="l_hip_roll_link_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+        <body name="l_hip_pitch_link" pos="0 0 0" euler="0 0 0">
+          <joint name="l_hip_pitch" type="hinge" armature="0.0001" axis="0 1 0" range="-1.05 1.05" damping="0.015" frictionloss="0.002" />
+          <inertial pos="0 0 0" mass="0.035" fullinertia="2.70958333333e-06 2.45291666667e-06 2.82916666667e-06 0 0 0" />
+          <body name="l_thigh" pos="0 0 0" euler="0 0 0">
+            <inertial pos="0 0 -0.020359273071502332" mass="0.02" fullinertia="3.43e-06 3.43e-06 1.33333333333e-06 0 0 0" />
+            <geom name="l_thigh_visual_0" type="mesh" mesh="l_thigh_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+            <geom name="l_thigh_visual_1" type="mesh" mesh="l_thigh_mesh_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+            <geom name="l_thigh_visual_2" type="mesh" mesh="l_thigh_mesh_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="l_thigh_visual_3" type="mesh" mesh="l_thigh_mesh_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.2196078431372549 0.25098039215686274 0.2784313725490196 1" />
+            <geom name="l_thigh_visual_4" type="mesh" mesh="l_thigh_mesh_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+            <geom name="l_thigh_visual_5" type="mesh" mesh="l_thigh_mesh_5" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="l_thigh_visual_6" type="mesh" mesh="l_thigh_mesh_6" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+            <geom name="l_thigh_visual_7" type="mesh" mesh="l_thigh_mesh_7" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="l_thigh_visual_8" type="mesh" mesh="l_thigh_mesh_8" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="l_thigh_visual_9" type="mesh" mesh="l_thigh_mesh_9" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="l_thigh_visual_10" type="mesh" mesh="l_thigh_mesh_10" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+            <geom name="l_thigh_collision_0" type="box" size="0.01 0.011 0.0203592730715" pos="0 0 -0.020359273071502332" euler="0 0 0" priority="1" contype="1" conaffinity="2" group="3" rgba=".7 .1 .1 0" />
+            <body name="l_knee_link" pos="0 0 -0.040718546143004665" euler="0 0 0">
+              <joint name="l_knee" type="hinge" armature="0.0001" axis="0 1 0" range="-1.57 0" damping="0.015" frictionloss="0.002" />
+              <inertial pos="0 0 -0.02437724348649781" mass="0.025" fullinertia="5.96041666667e-06 5.62708333333e-06 1.68333333333e-06 0 0 0" />
+              <geom name="l_knee_link_visual_0" type="mesh" mesh="l_knee_link_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+              <geom name="l_knee_link_visual_1" type="mesh" mesh="l_knee_link_mesh_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+              <geom name="l_knee_link_visual_2" type="mesh" mesh="l_knee_link_mesh_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+              <geom name="l_knee_link_visual_3" type="mesh" mesh="l_knee_link_mesh_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+              <geom name="l_knee_link_visual_4" type="mesh" mesh="l_knee_link_mesh_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+              <geom name="l_knee_link_visual_5" type="mesh" mesh="l_knee_link_mesh_5" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+              <geom name="l_knee_link_visual_6" type="mesh" mesh="l_knee_link_mesh_6" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+              <geom name="l_knee_link_visual_7" type="mesh" mesh="l_knee_link_mesh_7" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+              <geom name="l_knee_link_visual_8" type="mesh" mesh="l_knee_link_mesh_8" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+              <geom name="l_knee_link_collision_0" type="box" size="0.007 0.011 0.0243772434865" pos="0 0 -0.02437724348649781" euler="0 0 0" priority="1" contype="1" conaffinity="2" group="3" rgba=".7 .1 .1 0" />
+              <body name="l_shin" pos="0 0 0" euler="0 0 0">
+                <inertial pos="0 0 0" mass="0.005" fullinertia="2.48333333333e-07 2.48333333333e-07 1.63333333333e-07 0 0 0" />
+                <body name="l_foot" pos="0 0 -0.04875448697299562" euler="0 0.4453010438876859 0">
+                  <inertial pos="0 0 -0.015" mass="0.01" fullinertia="1.08333333333e-06 2.37333333333e-06 3.21666666667e-06 0 0 0" />
+                  <geom name="l_foot_visual_0" type="mesh" mesh="l_foot_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+                  <geom name="l_foot_visual_1" type="mesh" mesh="l_foot_mesh_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+                  <geom name="l_foot_visual_2" type="mesh" mesh="l_foot_mesh_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="l_foot_visual_3" type="mesh" mesh="l_foot_mesh_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+                  <geom name="l_foot_visual_4" type="mesh" mesh="l_foot_mesh_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="l_foot_visual_5" type="mesh" mesh="l_foot_mesh_5" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.3607843137254902 0.25882352941176473 0.47843137254901963 1" />
+                  <geom name="l_foot_visual_6" type="mesh" mesh="l_foot_mesh_6" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+                  <geom name="l_foot_visual_7" type="mesh" mesh="l_foot_mesh_7" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+                  <geom name="l_foot_visual_8" type="mesh" mesh="l_foot_mesh_8" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+                  <geom name="l_foot_visual_9" type="mesh" mesh="l_foot_mesh_9" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+                  <geom name="l_foot_visual_10" type="mesh" mesh="l_foot_mesh_10" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+                  <geom name="l_foot_visual_11" type="mesh" mesh="l_foot_mesh_11" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+                  <geom name="l_foot_visual_12" type="mesh" mesh="l_foot_mesh_12" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+                  <geom name="l_foot_visual_13" type="mesh" mesh="l_foot_mesh_13" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="l_foot_visual_14" type="mesh" mesh="l_foot_mesh_14" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="l_foot_visual_15" type="mesh" mesh="l_foot_mesh_15" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="l_foot_visual_16" type="mesh" mesh="l_foot_mesh_16" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="l_foot_collision_0" type="box" size="0.026 0.017 0.006" pos="0 0 -0.015" euler="0 0 0" priority="1" contype="1" conaffinity="2" group="3" rgba=".7 .1 .1 0" />
+                  <site name="l_foot_contact" pos="0 0 -.021" size=".002" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="r_hip_roll_link" pos="0.001 -0.034 -0.014" euler="0 0 0">
+        <joint name="r_hip_roll" type="hinge" armature="0.0001" axis="1 0 0" range="-0.52 0.52" damping="0.015" frictionloss="0.002" />
+        <inertial pos="0 0 0" mass="0.035" fullinertia="2.15833333333e-06 2.42666666667e-06 3.09166666667e-06 0 0 0" />
+        <geom name="r_hip_roll_link_visual_0" type="mesh" mesh="r_hip_roll_link_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+        <body name="r_hip_pitch_link" pos="0 0 0" euler="0 0 0">
+          <joint name="r_hip_pitch" type="hinge" armature="0.0001" axis="0 1 0" range="-1.05 1.05" damping="0.015" frictionloss="0.002" />
+          <inertial pos="0 0 0" mass="0.035" fullinertia="2.70958333333e-06 2.45291666667e-06 2.82916666667e-06 0 0 0" />
+          <body name="r_thigh" pos="0 0 0" euler="0 0 0">
+            <inertial pos="0 0 -0.020359273071502332" mass="0.02" fullinertia="3.43e-06 3.43e-06 1.33333333333e-06 0 0 0" />
+            <geom name="r_thigh_visual_0" type="mesh" mesh="r_thigh_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+            <geom name="r_thigh_visual_1" type="mesh" mesh="r_thigh_mesh_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+            <geom name="r_thigh_visual_2" type="mesh" mesh="r_thigh_mesh_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="r_thigh_visual_3" type="mesh" mesh="r_thigh_mesh_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.2196078431372549 0.25098039215686274 0.2784313725490196 1" />
+            <geom name="r_thigh_visual_4" type="mesh" mesh="r_thigh_mesh_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+            <geom name="r_thigh_visual_5" type="mesh" mesh="r_thigh_mesh_5" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="r_thigh_visual_6" type="mesh" mesh="r_thigh_mesh_6" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+            <geom name="r_thigh_visual_7" type="mesh" mesh="r_thigh_mesh_7" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="r_thigh_visual_8" type="mesh" mesh="r_thigh_mesh_8" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="r_thigh_visual_9" type="mesh" mesh="r_thigh_mesh_9" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+            <geom name="r_thigh_visual_10" type="mesh" mesh="r_thigh_mesh_10" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+            <geom name="r_thigh_collision_0" type="box" size="0.01 0.011 0.0203592730715" pos="0 0 -0.020359273071502332" euler="0 0 0" priority="1" contype="1" conaffinity="2" group="3" rgba=".7 .1 .1 0" />
+            <body name="r_knee_link" pos="0 0 -0.040718546143004665" euler="0 0 0">
+              <joint name="r_knee" type="hinge" armature="0.0001" axis="0 1 0" range="-1.57 0" damping="0.015" frictionloss="0.002" />
+              <inertial pos="0 0 -0.02437724348649781" mass="0.025" fullinertia="5.96041666667e-06 5.62708333333e-06 1.68333333333e-06 0 0 0" />
+              <geom name="r_knee_link_visual_0" type="mesh" mesh="r_knee_link_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+              <geom name="r_knee_link_visual_1" type="mesh" mesh="r_knee_link_mesh_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+              <geom name="r_knee_link_visual_2" type="mesh" mesh="r_knee_link_mesh_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+              <geom name="r_knee_link_visual_3" type="mesh" mesh="r_knee_link_mesh_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+              <geom name="r_knee_link_visual_4" type="mesh" mesh="r_knee_link_mesh_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+              <geom name="r_knee_link_visual_5" type="mesh" mesh="r_knee_link_mesh_5" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+              <geom name="r_knee_link_visual_6" type="mesh" mesh="r_knee_link_mesh_6" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+              <geom name="r_knee_link_visual_7" type="mesh" mesh="r_knee_link_mesh_7" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+              <geom name="r_knee_link_visual_8" type="mesh" mesh="r_knee_link_mesh_8" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+              <geom name="r_knee_link_collision_0" type="box" size="0.007 0.011 0.0243772434865" pos="0 0 -0.02437724348649781" euler="0 0 0" priority="1" contype="1" conaffinity="2" group="3" rgba=".7 .1 .1 0" />
+              <body name="r_shin" pos="0 0 0" euler="0 0 0">
+                <inertial pos="0 0 0" mass="0.005" fullinertia="2.48333333333e-07 2.48333333333e-07 1.63333333333e-07 0 0 0" />
+                <body name="r_foot" pos="0 0 -0.04875448697299562" euler="0 0.4453010438876859 0">
+                  <inertial pos="0 0 -0.015" mass="0.01" fullinertia="1.08333333333e-06 2.37333333333e-06 3.21666666667e-06 0 0 0" />
+                  <geom name="r_foot_visual_0" type="mesh" mesh="r_foot_mesh_0" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+                  <geom name="r_foot_visual_1" type="mesh" mesh="r_foot_mesh_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+                  <geom name="r_foot_visual_2" type="mesh" mesh="r_foot_mesh_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="r_foot_visual_3" type="mesh" mesh="r_foot_mesh_3" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+                  <geom name="r_foot_visual_4" type="mesh" mesh="r_foot_mesh_4" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="r_foot_visual_5" type="mesh" mesh="r_foot_mesh_5" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.3607843137254902 0.25882352941176473 0.47843137254901963 1" />
+                  <geom name="r_foot_visual_6" type="mesh" mesh="r_foot_mesh_6" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.023529411764705882 0.03529411764705882 0.043137254901960784 1" />
+                  <geom name="r_foot_visual_7" type="mesh" mesh="r_foot_mesh_7" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+                  <geom name="r_foot_visual_8" type="mesh" mesh="r_foot_mesh_8" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+                  <geom name="r_foot_visual_9" type="mesh" mesh="r_foot_mesh_9" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="1.0 0.7215686274509804 0.054901960784313725 1" />
+                  <geom name="r_foot_visual_10" type="mesh" mesh="r_foot_mesh_10" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+                  <geom name="r_foot_visual_11" type="mesh" mesh="r_foot_mesh_11" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+                  <geom name="r_foot_visual_12" type="mesh" mesh="r_foot_mesh_12" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.054901960784313725 0.06666666666666667 0.0784313725490196 1" />
+                  <geom name="r_foot_visual_13" type="mesh" mesh="r_foot_mesh_13" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="r_foot_visual_14" type="mesh" mesh="r_foot_mesh_14" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="r_foot_visual_15" type="mesh" mesh="r_foot_mesh_15" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="r_foot_visual_16" type="mesh" mesh="r_foot_mesh_16" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" mass="0" rgba="0.6196078431372549 0.6588235294117647 0.6784313725490196 1" />
+                  <geom name="r_foot_collision_0" type="box" size="0.026 0.017 0.006" pos="0 0 -0.015" euler="0 0 0" priority="1" contype="1" conaffinity="2" group="3" rgba=".7 .1 .1 0" />
+                  <site name="r_foot_contact" pos="0 0 -.021" size=".002" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="l_hip_roll_motor" joint="l_hip_roll" gear="1" ctrllimited="true" ctrlrange="-1.2 1.2" />
+    <motor name="l_hip_pitch_motor" joint="l_hip_pitch" gear="1" ctrllimited="true" ctrlrange="-1.2 1.2" />
+    <motor name="l_knee_motor" joint="l_knee" gear="1" ctrllimited="true" ctrlrange="-0.8 0.8" />
+    <motor name="r_hip_roll_motor" joint="r_hip_roll" gear="1" ctrllimited="true" ctrlrange="-1.2 1.2" />
+    <motor name="r_hip_pitch_motor" joint="r_hip_pitch" gear="1" ctrllimited="true" ctrlrange="-1.2 1.2" />
+    <motor name="r_knee_motor" joint="r_knee" gear="1" ctrllimited="true" ctrlrange="-0.8 0.8" />
+  </actuator>
+</mujoco>

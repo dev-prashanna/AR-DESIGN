@@ -12,7 +12,7 @@ from tensordict import TensorDict
 from mjlab.rl import RslRlVecEnvWrapper, RslRlOnPolicyRunnerCfg, RslRlModelCfg, RslRlPpoAlgorithmCfg
 from mjlab.rl.runner import MjlabOnPolicyRunner
 from torch.utils.tensorboard import SummaryWriter
-from .config import ROOT, read
+from .config import ROOT, RunConfig, read
 from .tracking import new_run, append_json, write_json, seed_all, rng_state, restore_rng, sha
 from .task import make_env
 from .resources import ResourceMonitor
@@ -92,7 +92,10 @@ class TerminalAwareWrapper(RslRlVecEnvWrapper):
         extras.pop("time_outs", None)
         extras["terminal_observation"] = obs[ids].clone()
         extras["terminal_env_ids"] = ids.clone()
+        foot_sites, _ = self.env.scene["robot"].find_sites(("l_foot_contact", "r_foot_contact"))
         extras["terminal_physics"] = {
+            "foot_height": d.site_pos_w[ids][:, foot_sites, 2].clone(),
+            "foot_contact": self.env.scene["feet"].data.found[ids].clone(),
             "root_pose": d.root_link_pose_w[ids].clone(),
             "joint_position": d.joint_pos[ids].clone(),
             "linear_velocity": d.root_link_lin_vel_b[ids].clone(),
@@ -109,7 +112,7 @@ class TerminalAwareWrapper(RslRlVecEnvWrapper):
 
 
 def runner_config(cfg):
-    return asdict(
+    result = asdict(
         RslRlOnPolicyRunnerCfg(
             seed=cfg.seed,
             num_steps_per_env=cfg.horizon,
@@ -123,7 +126,7 @@ def runner_config(cfg):
                 obs_normalization=True,
                 distribution_cfg={
                     "class_name": "GaussianDistribution",
-                    "init_std": 0.5,
+                    "init_std": cfg.init_std,
                     "std_type": "scalar",
                 },
             ),
@@ -131,8 +134,8 @@ def runner_config(cfg):
                 hidden_dims=(256, 256, 128), activation="elu", obs_normalization=True
             ),
             algorithm=RslRlPpoAlgorithmCfg(
-                learning_rate=3e-4,
-                schedule="fixed",
+                learning_rate=cfg.learning_rate,
+                schedule=cfg.ppo_schedule,
                 entropy_coef=0.01,
                 gamma=0.99,
                 lam=0.95,
@@ -144,6 +147,15 @@ def runner_config(cfg):
             ),
         )
     )
+
+    if cfg.mirror_loss_coeff > 0:
+        result["algorithm"]["symmetry_cfg"] = dict(
+            use_data_augmentation=False,
+            use_mirror_loss=True,
+            mirror_loss_coeff=cfg.mirror_loss_coeff,
+            data_augmentation_func="biped_ppo.symmetry:mirror_batch",
+        )
+    return result
 
 
 def construct(cfg):
@@ -168,9 +180,9 @@ def save_checkpoint(path, runner, cfg, updates, transitions, level):
             transitions=transitions,
             curriculum_level=level,
             rng=rng_state(),
-            robot_hash=sha(ROOT / "configs/robot/custom.yaml"),
-            urdf_hash=sha(ROOT / read("configs/robot/custom.yaml")["urdf"]),
-            task_hash=sha(ROOT / "configs/task/flat.yaml"),
+            robot_hash=sha(ROOT / cfg.robot_path),
+            urdf_hash=sha(ROOT / read(cfg.robot_path)["urdf"]),
+            task_hash=sha(ROOT / cfg.task_path),
             lock_hash=sha(ROOT / "uv.lock"),
             simulator_state_restored=False,
         ),
@@ -182,13 +194,14 @@ def save_checkpoint(path, runner, cfg, updates, transitions, level):
 
 def load_checkpoint(path, runner, training=False):
     state = torch.load(path, map_location="cuda:0", weights_only=False)
-    if state["project"]["robot_hash"] != sha(ROOT / "configs/robot/custom.yaml"):
+    cfg = RunConfig(**state["project"]["config"])
+    if state["project"]["robot_hash"] != sha(ROOT / cfg.robot_path):
         raise ValueError("Robot specification changed since checkpoint")
-    if state["project"]["urdf_hash"] != sha(ROOT / read("configs/robot/custom.yaml")["urdf"]):
+    if state["project"]["urdf_hash"] != sha(ROOT / read(cfg.robot_path)["urdf"]):
         raise ValueError("Robot URDF changed since checkpoint")
     if training and state["project"]["lock_hash"] != sha(ROOT / "uv.lock"):
         raise ValueError("Dependency lock changed since checkpoint")
-    if state["project"]["task_hash"] != sha(ROOT / "configs/task/flat.yaml"):
+    if state["project"]["task_hash"] != sha(ROOT / cfg.task_path):
         raise ValueError("Task definition changed since checkpoint")
     runner.alg.load(state, None, True)
     if training:
@@ -203,18 +216,24 @@ def set_level(env, level):
     term.cfg.ranges.ang_vel_z = [(0.0, 0.0), (0.0, 0.0), (-0.15, 0.15)][level]
 
 
-def train(cfg, resume=None):
-    audit = ROOT / "docs/model_audit.json"
+def train(cfg, resume=None, warm_start=None):
+    if resume and warm_start:
+        raise ValueError("Choose resume or warm-start")
+    audit = ROOT / read(cfg.robot_path).get("audit_path", "docs/model_audit.json")
     if not audit.exists() or not json.loads(audit.read_text())["gates_passed"]:
         raise RuntimeError("Run validate-model and pass physics gates before training")
     model_report = json.loads(audit.read_text())
-    if model_report["urdf_sha"] != sha(
-        ROOT / read("configs/robot/custom.yaml")["urdf"]
-    ) or model_report["robot_spec_sha"] != sha(ROOT / "configs/robot/custom.yaml"):
+    if model_report["urdf_sha"] != sha(ROOT / read(cfg.robot_path)["urdf"]) or model_report[
+        "robot_spec_sha"
+    ] != sha(ROOT / cfg.robot_path):
         raise RuntimeError("Model changed after validation; rerun validate-model")
     seed_all(cfg.seed)
     torch.set_num_threads(4)
-    path = new_run(cfg, parent=str(resume) if resume else None)
+    path = new_run(
+        cfg,
+        kind="finetune" if warm_start else "train",
+        parent=str(Path(resume or warm_start).resolve()) if (resume or warm_start) else None,
+    )
     monitor = ResourceMonitor().start()
     start = time.monotonic()
     interrupted = False
@@ -234,6 +253,8 @@ def train(cfg, resume=None):
             state = load_checkpoint(resume, runner, training=True)
             old = state["config"]
             for key in (
+                "robot_path",
+                "task_path",
                 "num_envs",
                 "horizon",
                 "curriculum",
@@ -247,6 +268,31 @@ def train(cfg, resume=None):
                 state["updates"],
                 state["transitions"],
                 state["curriculum_level"],
+            )
+        if warm_start:
+            previous_state = torch.load(warm_start, map_location="cpu", weights_only=False)[
+                "project"
+            ]
+            if previous_state["robot_hash"] != sha(ROOT / cfg.robot_path):
+                raise ValueError("Warm-start requires identical robot specification")
+            if read(cfg.task_path).get("motor_target_filter"):
+                transfer_policy_weights(
+                    torch.load(warm_start, map_location="cpu", weights_only=False), runner
+                )
+            else:
+                load_checkpoint(warm_start, runner, training=False)
+            env.env.common_step_counter = 0
+            write_json(
+                path / "warm_start.json",
+                dict(
+                    checkpoint=str(Path(warm_start).resolve()),
+                    checkpoint_sha=sha(warm_start),
+                    previous_transitions=previous_state["transitions"],
+                    previous_config=previous_state["config"],
+                    mode="weights/normalization transferred; fresh optimizer, exploration and rollout"
+                    if read(cfg.task_path).get("motor_target_filter")
+                    else "new reward experiment; model/optimizer/normalization transferred; fresh rollout and transition count",
+                ),
             )
         if cfg.curriculum:
             set_level(env, level)
@@ -420,3 +466,34 @@ def train(cfg, resume=None):
         for sig, handler in previous.items():
             signal.signal(sig, handler)
     return path
+
+
+def transfer_policy_weights(state, runner):
+    """Preserve the old policy mapping while appending explicit controller state.
+
+    New observation channels start with zero input weights; normalizer defaults
+    are retained for those channels. Optimizer moments are intentionally fresh.
+    """
+    for name in ("actor", "critic"):
+        module = getattr(runner.alg, name)
+        target = module.state_dict()
+        for key, source in state[name + "_state_dict"].items():
+            if key.startswith("distribution."):
+                continue
+            destination = target[key]
+            if source.shape == destination.shape:
+                target[key] = source.to(destination.device)
+            elif key == "mlp.0.weight" and source.shape[1] <= destination.shape[1]:
+                padded = torch.zeros_like(destination)
+                padded[:, : source.shape[1]] = source.to(destination.device)
+                target[key] = padded
+            elif (
+                key in ("obs_normalizer._mean", "obs_normalizer._var", "obs_normalizer._std")
+                and source.shape[-1] <= destination.shape[-1]
+            ):
+                padded = destination.clone()
+                padded[:, : source.shape[-1]] = source.to(destination.device)
+                target[key] = padded
+            else:
+                raise ValueError(f"Unsupported observation migration: {name}.{key}")
+        module.load_state_dict(target)

@@ -1,0 +1,10 @@
+{
+  "selection_metric": "walking_success_rate",
+  "selection_score": 0.2857142857142857,
+  "checkpoint_sha": "b31e54b5fb2ef024b74fe4abe518030ad250cf13266f5678b6fb5f1dd565d580",
+  "checkpoint": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261102T013911Z_train_97d85768/update_001000.pt",
+  "success_rate": 0.2857142857142857,
+  "velocity_rmse": 0.008417883810955876,
+  "suite_sha": "7fb1f9b07e02116281c89eefa8e31ae1e1de8858e52411d03dc4d03802a50a5b",
+  "evaluation": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261102T013911Z_train_97d85768/evaluation_validation_1793583659767633985"
+}

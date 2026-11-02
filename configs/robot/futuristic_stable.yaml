@@ -1,0 +1,63 @@
+name: microduck_futuristic_stable_v1
+urdf: assets/robot/source/microduck_futuristic.urdf
+provenance:
+  geometry: Actual futuristic FCStd surfaces; explicit CAD hip/knee/ankle landmarks;
+    simplified collision proxies
+  mass_inertia: Estimated 0.500 kg assembly; box inertias, not material-derived CAD
+    masses
+  torque_speed: supplied URDF limits; manufacturer and gearing unknown
+  gains: provisional simulation tuning, not calibrated servo gains
+  nominal_pose: CAD bent-leg stance, feet level; six assumed actuated axes; fixed
+    ankles and head
+  dimensions_units: metres; radians; kilograms; seconds; newton-metres
+  armature: 1e-4 kg m^2 assumed reflected rotor inertia per joint; stabilizes explicit
+    500 Hz PD; uncalibrated
+joint_names:
+- l_hip_roll
+- l_hip_pitch
+- l_knee
+- r_hip_roll
+- r_hip_pitch
+- r_knee
+nominal:
+- 0
+- 0.430692511386508
+- -0.8759935552741939
+- 0
+- 0.430692511386508
+- -0.8759935552741939
+action_scale:
+- 0.3
+- 0.65
+- 0.65
+- 0.3
+- 0.65
+- 0.65
+kp:
+- 2
+- 2
+- 1.5
+- 2
+- 2
+- 1.5
+kd:
+- 0.06
+- 0.06
+- 0.04
+- 0.06
+- 0.06
+- 0.04
+base_height: 0.1165
+physics_dt: 0.002
+policy_dt: 0.02
+friction: 0.8
+fall_height: 0.065
+fall_angle: 0.9
+standing_gate_seconds: 5.0
+standing_gate_min_height: 0.095
+self_collision: false
+foot_site_pos: 0 0 -.021
+model_path: assets/robot/models/futuristic_stable.xml
+audit_path: docs/futuristic_stable_model_audit.json
+figure_path: results/figures/futuristic_robot.png
+armature: 0.0001

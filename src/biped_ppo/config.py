@@ -14,6 +14,12 @@ def read(path):
 
 @dataclass
 class RunConfig:
+    init_std: float = 0.5
+    ppo_schedule: str = "fixed"
+    mirror_loss_coeff: float = 0.0
+    learning_rate: float = 3e-4
+    robot_path: str = "configs/robot/custom.yaml"
+    task_path: str = "configs/task/flat.yaml"
     profile: str = "smoke"
     num_envs: int = 32
     horizon: int = 24
@@ -38,3 +44,12 @@ class RunConfig:
         if min(result.max_wall_time, result.max_transitions, result.iterations) <= 0:
             raise ValueError("Budgets must be positive")
         return result
+
+
+def observation_dimension(task_path):
+    task = read(task_path)
+    return (
+        27
+        + (2 if "gait_frequency_hz" in task else 0)
+        + (12 if task.get("motor_target_filter") else 0)
+    )

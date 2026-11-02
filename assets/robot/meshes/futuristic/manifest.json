@@ -1,0 +1,1595 @@
+{
+  "source": "assets/robot/source/cad/MicroDuck_Futuristic.FCStd",
+  "source_sha256": "ab33d3fcbc613e9943ca5eb45dd75b3a3807955b0ecfad606c83bb229f469b6c",
+  "units": "metres",
+  "cad_to_sim": "rotate 180 degrees about z; scale mm to m",
+  "articulation": "explicit provisional rigid mapping; cables do not deform",
+  "parts": [
+    {
+      "name": "Head_arched_housing",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_arched_housing.stl",
+      "rgba": [
+        0.2196078431372549,
+        0.25098039215686274,
+        0.2784313725490196,
+        1
+      ],
+      "triangles": 2296,
+      "sha256": "9957dcd868854a64b99eae39d6fe36afa43d95b71a0c1a3e17cbb4d14b435026"
+    },
+    {
+      "name": "Recessed_sensor_visor",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Recessed_sensor_visor.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 72,
+      "sha256": "8061dbc99fcd0036d86bc7336abb38df8bef67a93af60f262557fe81d4fdc8ea"
+    },
+    {
+      "name": "Visor_faceplate",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Visor_faceplate.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 72,
+      "sha256": "a96f17d324aaec78246e382337ca7c45614ca6a2c68ee73a6ad21cdf0acad168"
+    },
+    {
+      "name": "Lower_head_gasket",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Lower_head_gasket.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "ecda524a488e18e407158197b7a8e64406fb857f83505b4a643d0c238b6a6871"
+    },
+    {
+      "name": "Yellow_beak_upper",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Yellow_beak_upper.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "b6820c24c3546c26203985595e15a6c6a4e9cfe0926272ae4d3b41e8e19667a1"
+    },
+    {
+      "name": "Beak_mouth_recess",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Beak_mouth_recess.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "8d02e6e106521253795cdfd2c7fca57cf241a5859e15b1a5453d47ff19b3d831"
+    },
+    {
+      "name": "Lower_beak_violet_insert",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Lower_beak_violet_insert.stl",
+      "rgba": [
+        0.3607843137254902,
+        0.25882352941176473,
+        0.47843137254901963,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "c769cfb6a30d99f3bfe335ca2cb9e810914f8e568bbb59c8b62f03472117ab9b"
+    },
+    {
+      "name": "Camera_machined_bezel",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Camera_machined_bezel.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "9bb5b26d0d70185dbbbf117563b1dc46005a61ef0adfaddb1e6839df0e582ebd"
+    },
+    {
+      "name": "Camera_yellow_ring",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Camera_yellow_ring.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "bafc01fd51950651f4bf49a45b8aade416cb4be42ed4d50f8cd95010f39b85af"
+    },
+    {
+      "name": "Camera_black_barrel",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Camera_black_barrel.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "61353f30d7ba300361331ee56e658c420c03a00934689cc6878e4624f93acb76"
+    },
+    {
+      "name": "Camera_optical_glass",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Camera_optical_glass.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.16862745098039217,
+        0.23137254901960785,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "6c925ee395a2853ac45afacf8fd65b7ce8fe94a616f32404b77eb3727521273c"
+    },
+    {
+      "name": "Camera_inner_aperture",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Camera_inner_aperture.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "02aed84e1be8845f37160ab12ed5e3b54984e8a29a7fd4ce462a4e6958413832"
+    },
+    {
+      "name": "Lens_reflection",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Lens_reflection.stl",
+      "rgba": [
+        0.6509803921568628,
+        0.8784313725490196,
+        0.9411764705882353,
+        1
+      ],
+      "triangles": 1258,
+      "sha256": "6c30ca2ede4ae52432e1759eca953567ce923495bb6c42421e4c0b7e5ea9d7a8"
+    },
+    {
+      "name": "Status_light",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Status_light.stl",
+      "rgba": [
+        0.12941176470588237,
+        0.8117647058823529,
+        0.9019607843137255,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "920f2eea231f5ad1b328ae625863fe22329a2849a69924f210156be485c033c7"
+    },
+    {
+      "name": "Status_light001",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Status_light001.stl",
+      "rgba": [
+        0.12941176470588237,
+        0.8117647058823529,
+        0.9019607843137255,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "0e9b079b57af4a14dd5c0248e5f66041296cb13752a1e5c32b2331880061616a"
+    },
+    {
+      "name": "Head_side_yoke",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_side_yoke.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "0ae889a328cf7acc42eb7a8ee94735f421e49524aa4ef8181c5235d3ffa086a9"
+    },
+    {
+      "name": "Head_pivot",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_pivot.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "bb4471110b2a631ab2bb3e426a2db3372fe4ac1fc36e2b7b2ce67edfbf0b8a5f"
+    },
+    {
+      "name": "Head_pivot_screw",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_pivot_screw.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "ff30a60ed4b5a0eebcebbd9f09335ceeed07abc3326fbe20b1736d3ac6d6bddf"
+    },
+    {
+      "name": "Head_side_yoke001",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_side_yoke001.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "c4628e38afffa0212181b427b89b55501474368e4e4e7ae44b44723dbe7b48f8"
+    },
+    {
+      "name": "Head_pivot001",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_pivot001.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "1cc07fe8d7d63356dd585c65bb5cb952f1ae5aa167160bb44aa99e41bce7e2a2"
+    },
+    {
+      "name": "Head_pivot_screw001",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_pivot_screw001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "c6fcfcd2d23998d67dfa24eecfc5aa7d2a365c085faf5ca08408499165d6a15f"
+    },
+    {
+      "name": "Head_rear_cooling_slot",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_rear_cooling_slot.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "917b45ad57ad2ffb1ba4a87d9dc072ab9580c226c72b8f130a565c6ece989d77"
+    },
+    {
+      "name": "Head_rear_cooling_slot001",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_rear_cooling_slot001.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "c91fa76d5677259256d5d9d44d8c861e93adaa5e15b749bd74f03a6f91f8d013"
+    },
+    {
+      "name": "Head_rear_cooling_slot002",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_rear_cooling_slot002.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "5766474f591a93edca7045c1ab9783104c772dbf03fc16decd42cdceb24eefc2"
+    },
+    {
+      "name": "Head_rear_cooling_slot003",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_rear_cooling_slot003.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "ec8dc12fd63c814e8207b07723798adef1f01a5bc006b075c53d6a7c2c280989"
+    },
+    {
+      "name": "Head_rear_cooling_slot004",
+      "link": "head",
+      "file": "assets/robot/meshes/futuristic/Head_rear_cooling_slot004.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "89fb12a608add334b6ac27826e967a651af1e1943886be04bd377bdb7d2ca95b"
+    },
+    {
+      "name": "Torso_lower_chassis",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Torso_lower_chassis.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "0bcc90d8c7de3f2e6c249262312050931479a8caa4e4e1fe9ba376d3361f3b58"
+    },
+    {
+      "name": "Torso_graphite_shell",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Torso_graphite_shell.stl",
+      "rgba": [
+        0.2196078431372549,
+        0.25098039215686274,
+        0.2784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "6a7491c287ab0648ed4d78202522e8eb32c5f31a3e747eff1fc7b7729dd499f2"
+    },
+    {
+      "name": "Torso_top_inset",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Torso_top_inset.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "254d328dec880c9432e8b4aba58b8e2f3ac69ba5c3021d84ce735ffa09f83358"
+    },
+    {
+      "name": "Torso_front_trim",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Torso_front_trim.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "007ed3e4d318474db580f72628b552432b3c67a52ad88958b88e80cb0537f520"
+    },
+    {
+      "name": "Torso_status_bar",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Torso_status_bar.stl",
+      "rgba": [
+        0.12941176470588237,
+        0.8117647058823529,
+        0.9019607843137255,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "18332b9d3bb60638a872d5c50ede7940173d03d36e1001dad905c9b063afe346"
+    },
+    {
+      "name": "Neck_lower_servo",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_lower_servo.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "92174b07b8355ab1cc83b6653150666083dd99cea8a0d564be9399cedea91ca3"
+    },
+    {
+      "name": "Neck_upper_servo",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_upper_servo.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "5df16c2a282d0fe100381ce328f31f5eed658da833058cd24d995424cb089e3f"
+    },
+    {
+      "name": "Neck_linkage",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_linkage.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "9f42095188e65258dddfb4f2add55c0d4a79bc235754b10a2c58fea6866e40ee"
+    },
+    {
+      "name": "Neck_horn",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_horn.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "581d96561f056bfe3c48fef89e2edfac08f64ad2663abd73696368dad5557b15"
+    },
+    {
+      "name": "Neck_fastener",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_fastener.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "54f022ac0ff5a64c7cb71e13fe7908358bdee2ed14d5bdc491492c9c7423a45e"
+    },
+    {
+      "name": "Neck_horn001",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_horn001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "d7dd718526db2ba87b2f3b6b8dc5b335c058c736859121b78d5af6cd705637bb"
+    },
+    {
+      "name": "Neck_fastener001",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_fastener001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "e1a71a5c0e355db5581c7f4570918d928fcae2b107e7e79ccb452caf69676782"
+    },
+    {
+      "name": "Neck_linkage001",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_linkage001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "1df9caf4790e7789f773eb877c983df8d2a738e3c3125afd219898adb1001254"
+    },
+    {
+      "name": "Neck_horn002",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_horn002.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "1fcc6c378ef18e6451a3102feea56fe707b17a1d4ac512e136422e66dd867e96"
+    },
+    {
+      "name": "Neck_fastener002",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_fastener002.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "88a04c52c1c851414dd5178b1fa148454f22bea5eaef33fe59f0b89c3e097527"
+    },
+    {
+      "name": "Neck_horn003",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_horn003.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "6dfe95572f2454b015fc4d0756de448117c5f52c1b7b9aeeaef247ff30a00144"
+    },
+    {
+      "name": "Neck_fastener003",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_fastener003.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "c570672dc16207f3d1f3ad7c1b7afa4168f6dab36f50613b0e63f3b002f26252"
+    },
+    {
+      "name": "Neck_wiring",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_wiring.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 7180,
+      "sha256": "b781b8f51db4556c8016660c953b85a6d6bddbf75593a60b4d5b3179e4ef8b07"
+    },
+    {
+      "name": "Neck_wiring001",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_wiring001.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 7190,
+      "sha256": "254c5e37c34bad10da7de5c6b2b8f3f07e59cd914630901430af3cd43bc2f5c0"
+    },
+    {
+      "name": "Neck_wiring002",
+      "link": "torso",
+      "file": "assets/robot/meshes/futuristic/Neck_wiring002.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 7194,
+      "sha256": "f6831affde514b9e3d49f4a794ae2847bd42e1dee110f915fedab17198197937"
+    },
+    {
+      "name": "Left_hip_roll_servo",
+      "link": "l_hip_roll_link",
+      "file": "assets/robot/meshes/futuristic/Left_hip_roll_servo.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "7327ca3ccb4f3ff412fe28e6d01ebaa65bd7a60a7494178078fa8050b343f9ad"
+    },
+    {
+      "name": "Left_hip_pitch_servo",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_hip_pitch_servo.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "25d3da17eeeea56db279417346e5a6bb9e5601c9f0efdfc78d9d0485c6551fd2"
+    },
+    {
+      "name": "Left_thigh_motor",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_thigh_motor.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "75dec8b08efcdab9d3a6c359641f9f575e9cb406b3bde5558881184d73f5c7aa"
+    },
+    {
+      "name": "Left_thigh_inner_rail",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_thigh_inner_rail.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "48b5f8972c0eba5723d9e3f95862497111845248317e71329152f748f97f49d1"
+    },
+    {
+      "name": "Left_shin_motor",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_shin_motor.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "e5d7d1a2a8f79d427a293c8834144450d53c27435fbef0e32efca03a8acc0cba"
+    },
+    {
+      "name": "Left_shin_link",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_shin_link.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "de92ff983b262dec27fff7989d72b00d6c5f5dcce77577fc4fad7833986eb014"
+    },
+    {
+      "name": "Left_shin_link001",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_shin_link001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "d9de6e2c726d704cb80263ec7d6027e11eb3f462cea56e9d268f6f975f61000a"
+    },
+    {
+      "name": "Left_thigh_armor",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_thigh_armor.stl",
+      "rgba": [
+        0.2196078431372549,
+        0.25098039215686274,
+        0.2784313725490196,
+        1
+      ],
+      "triangles": 1652,
+      "sha256": "70b7745bbbb102706cad61dad5f072565c0df60bfbc35cded3ef79e38bc5cc6a"
+    },
+    {
+      "name": "Left_joint_housing",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_joint_housing.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "c0fabcaeee15e2e2d83b67a1b9679b58c52aa5db5ad0babd359e540800ed80e1"
+    },
+    {
+      "name": "Left_joint_alloy_ring",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_joint_alloy_ring.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "8b1d4d581f969bf712c499c31e8993215c41ef3b1a9a5029d32e581c3196596f"
+    },
+    {
+      "name": "Left_joint_hub",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_joint_hub.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "634cbee0c15431cc358c42648cdc31e91c08bd0004b42457e56d6ea48dd325be"
+    },
+    {
+      "name": "Left_axle_bolt",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_axle_bolt.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "5416f0f361aab58f5a7839e4a4e5eae9c92b3d544f9a3048b5ce96736da46c40"
+    },
+    {
+      "name": "Left_joint_housing001",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_joint_housing001.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "308b89d5556ce742f79c5d6bc69601ed5112d30b38be7655222907884fc80dfc"
+    },
+    {
+      "name": "Left_joint_alloy_ring001",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_joint_alloy_ring001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "7a581c8e999f6c8b7de9a08eda3f0a47450800f0ea5685dc5248afa8dd2034b0"
+    },
+    {
+      "name": "Left_joint_hub001",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_joint_hub001.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "9d785ddac901b1f329b47a36b9f9d379b2659037b6923f2f8574c8c7019b508e"
+    },
+    {
+      "name": "Left_axle_bolt001",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_axle_bolt001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "4858f998cbd14ccbb6e3bb30b6d96608e2389437227de497afe93fa0d75d8815"
+    },
+    {
+      "name": "Left_joint_housing002",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_joint_housing002.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "23f5d7e7677432fa9b78c0de3d80976ad885ea6afa1b2de6cbbb2e28c164fe4c"
+    },
+    {
+      "name": "Left_joint_alloy_ring002",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_joint_alloy_ring002.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "93de00a8c24a8db0ad2f90ccd7b1e4c6a58692d7a1dc0897418f7d57a26cddae"
+    },
+    {
+      "name": "Left_joint_hub002",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_joint_hub002.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "ebc9e810471335c2f7623ac0c314c1dc3355fd06080840b03bf0964ff3fea7a8"
+    },
+    {
+      "name": "Left_axle_bolt002",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_axle_bolt002.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "767e1681e0d020853b511ca1760deee237cbdf59ed8a7315e9feea52685e2638"
+    },
+    {
+      "name": "Left_armor_screw",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_armor_screw.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "e8593bafc9381ebc979f6ffa4b4f9350f4f32bf96c10612af917a5a2e5ea05d3"
+    },
+    {
+      "name": "Left_armor_screw001",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_armor_screw001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "d385be501ca6f5bfba18c99d6f4177163a1a5a320ec3696bc642d26cbc8588cc"
+    },
+    {
+      "name": "Left_link_hole",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_link_hole.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "4f8896c913b4482a8332cfbb1950ecb44b156a70fa822327e5ab5d11012eac1e"
+    },
+    {
+      "name": "Left_link_hole001",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_link_hole001.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "25fc88f1dbc95620f957d23c9a2fe3a95a947abcc349aeca53fbcd809fafe0e9"
+    },
+    {
+      "name": "Left_link_hole002",
+      "link": "l_knee_link",
+      "file": "assets/robot/meshes/futuristic/Left_link_hole002.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "4fe95d86ba3e34da4aeafe845dcdf7363ed13ab4fdcf07c29a9df0e5dcd7bfbb"
+    },
+    {
+      "name": "Left_servo_cable",
+      "link": "l_thigh",
+      "file": "assets/robot/meshes/futuristic/Left_servo_cable.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 9424,
+      "sha256": "992a4be31db79a43ad044c597821806c73f7b295079c244395a2e91afcf123f9"
+    },
+    {
+      "name": "Left_rubber_sole",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_rubber_sole.stl",
+      "rgba": [
+        0.3607843137254902,
+        0.25882352941176473,
+        0.47843137254901963,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "b50f1543be006d117a488575f99698696a1f5e9637f9d08b1ff1669d236a1b03"
+    },
+    {
+      "name": "Left_sole_gasket",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_sole_gasket.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "501f5f97afd9884617c3594c6d001d39218f416f743cec200b47fd90323bdfba"
+    },
+    {
+      "name": "Left_yellow_foot_deck",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_yellow_foot_deck.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "d3f905bde8609dfe10658fc98ef94fe36110ebf087c221e9a16fe863b21d6f2e"
+    },
+    {
+      "name": "Left_ankle_bracket",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_ankle_bracket.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 8,
+      "sha256": "1532cdb09d662e1ba985b0ed3c796a1ae9e2cd35de285b4f55a04b717899040d"
+    },
+    {
+      "name": "Left_ankle_bracket001",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_ankle_bracket001.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 8,
+      "sha256": "ed1d57552df420db823492d54c7b03feeb294d1fc3040c7789de503b2c8cd0b9"
+    },
+    {
+      "name": "Left_toe_grip",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_toe_grip.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "f1c7aa93159df2fbbd6d227a3f00ad3ee6c9d87d14b397d02ac9e3478e19302f"
+    },
+    {
+      "name": "Left_toe_grip001",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_toe_grip001.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "a0f74b6ed8bfcecb1eed0235778da6df1bcd2ddd3252343a00ba601a0452aa54"
+    },
+    {
+      "name": "Left_toe_grip002",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_toe_grip002.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "c416c2bcce44fb1dca92b7f9461fe83df870ef567faa259317235cbfb53c2b97"
+    },
+    {
+      "name": "Left_deck_fastener",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_deck_fastener.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "2b49535680db735abdbb06077ce76aeccfab5b378f7679bbc66a49a4acc55317"
+    },
+    {
+      "name": "Left_deck_fastener001",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_deck_fastener001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "9d18f141f97d331ea1454535f415e9745648c63328f360f019d9af6f1408c0be"
+    },
+    {
+      "name": "Left_deck_fastener002",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_deck_fastener002.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "a109cbbdf716c8b46a051a2e82358bc3eb6de5fc9c7a509a31b13544cca8a280"
+    },
+    {
+      "name": "Left_deck_fastener003",
+      "link": "l_foot",
+      "file": "assets/robot/meshes/futuristic/Left_deck_fastener003.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "00d1225f9bebd42d5b283b15469b29bb3d7b7f5495e630e690aeda52fc2ad1d6"
+    },
+    {
+      "name": "Right_hip_roll_servo",
+      "link": "r_hip_roll_link",
+      "file": "assets/robot/meshes/futuristic/Right_hip_roll_servo.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "68cdd7656bfd1fd10ad85f291e6e524786e6a10d260dca3ca2bec7446704eb7a"
+    },
+    {
+      "name": "Right_hip_pitch_servo",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_hip_pitch_servo.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "07bf461c95441ab520ee98c5fc709597538e122d61b85660ee5e0fab89de630c"
+    },
+    {
+      "name": "Right_thigh_motor",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_thigh_motor.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "b8a5d5304efed45ee737f9077ebdd432bcbddc7143354ad85456c45d02c0de02"
+    },
+    {
+      "name": "Right_thigh_inner_rail",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_thigh_inner_rail.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "cffd867693aa877e253f396944a11184f5c9514fab3b66c902eb0ad2b41514b6"
+    },
+    {
+      "name": "Right_shin_motor",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_shin_motor.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "005c7f1eda9dea408989442f958a902531e46252bbbe18e69d373fd9f1295012"
+    },
+    {
+      "name": "Right_shin_link",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_shin_link.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "16747ad91bf25d4203827c62336f2133b37e1202af817560becbdf7edaa26c24"
+    },
+    {
+      "name": "Right_shin_link001",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_shin_link001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "70541db7a5263710ebd7290b0b6a135ddaa9a73836169848232f716df6a23ae3"
+    },
+    {
+      "name": "Right_thigh_armor",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_thigh_armor.stl",
+      "rgba": [
+        0.2196078431372549,
+        0.25098039215686274,
+        0.2784313725490196,
+        1
+      ],
+      "triangles": 1652,
+      "sha256": "d8d1514b4b1efc3c9e6a5790f96c072e641e6a94cbeaa573013ba89117400c64"
+    },
+    {
+      "name": "Right_joint_housing",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_joint_housing.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "010c920720e41699bf60d743fc22255c6808b8813ba0fe788564a1249ad2f1b6"
+    },
+    {
+      "name": "Right_joint_alloy_ring",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_joint_alloy_ring.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "67b319c8ee91a6a898c9e847e40b29de2c9805fd3c5cc62da87152824a82cb92"
+    },
+    {
+      "name": "Right_joint_hub",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_joint_hub.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "0b642ea4ee5d6a72be5970e2f91c8ee3f7273fbc0a0fbc54e85a20419147e995"
+    },
+    {
+      "name": "Right_axle_bolt",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_axle_bolt.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "bb86374262d3d17ddef93cc685056f89008ab9efcd5df95446b135f2054bc7d7"
+    },
+    {
+      "name": "Right_joint_housing001",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_joint_housing001.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "6f3a1172125ed328cfd290cc54c3873740f0b11fa4a93dc21394bce63f4bac9f"
+    },
+    {
+      "name": "Right_joint_alloy_ring001",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_joint_alloy_ring001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "74fb6bc47afc9c63a1239743b656cdc0dc81d7b41255833a6f71d27f141ea4ea"
+    },
+    {
+      "name": "Right_joint_hub001",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_joint_hub001.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "7ae29a1858e9ae5b06e771052a09426fe71dd3d1b1e5b8cab6a1a4f18c571f68"
+    },
+    {
+      "name": "Right_axle_bolt001",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_axle_bolt001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "44c6982822ab87ca1bd84edca9be1b0d668e21db23111050933f046c02a07115"
+    },
+    {
+      "name": "Right_joint_housing002",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_joint_housing002.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "a107c9672e9bb3c8191f35221e72aafe5dbfea183a3fef3e40d175082485a396"
+    },
+    {
+      "name": "Right_joint_alloy_ring002",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_joint_alloy_ring002.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "786f7dd86ad9ec58c6309db1cfda8e880a4cf42fa43a373bebd498d57b43b1c3"
+    },
+    {
+      "name": "Right_joint_hub002",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_joint_hub002.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "1c219d246cb6f1c74f80c1727b7491c81a44da63c7cdf012d100c8ac0b36cf79"
+    },
+    {
+      "name": "Right_axle_bolt002",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_axle_bolt002.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "2294ab67cc83033dc6912ef30f4e397999bbbb953c5d05e7f0c9c2f9d15b14ce"
+    },
+    {
+      "name": "Right_armor_screw",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_armor_screw.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "ff91a413bcb81df2120a5d46de6b222b3acad5ced2ba85799de76eac094c1283"
+    },
+    {
+      "name": "Right_armor_screw001",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_armor_screw001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "12aaf2a55a2a4f75c880c5dfd22f248cd23d92b3ad6cb42957fa8377f517726f"
+    },
+    {
+      "name": "Right_link_hole",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_link_hole.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "31554ef6b2be92555aeb6d8f92460a1319332f0356c07174d8ec03b1938c55aa"
+    },
+    {
+      "name": "Right_link_hole001",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_link_hole001.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "4da524e63c4604287e3e1f47200992b790e72136597c7ef532508c1053592997"
+    },
+    {
+      "name": "Right_link_hole002",
+      "link": "r_knee_link",
+      "file": "assets/robot/meshes/futuristic/Right_link_hole002.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 200,
+      "sha256": "5e95383ad6df08d45e92bec2b1dc26bf95e53d8d394b3b523562cca59fcd98e0"
+    },
+    {
+      "name": "Right_servo_cable",
+      "link": "r_thigh",
+      "file": "assets/robot/meshes/futuristic/Right_servo_cable.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 9412,
+      "sha256": "2ed6757ef6610386d0aeedf654ab063119e9841bbb7d6dc95898c05f9f660388"
+    },
+    {
+      "name": "Right_rubber_sole",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_rubber_sole.stl",
+      "rgba": [
+        0.3607843137254902,
+        0.25882352941176473,
+        0.47843137254901963,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "7a27e75a3ab5b9cdb114e431bd2f140e8fa075e4a9666ec3ed0bf9034da05ae5"
+    },
+    {
+      "name": "Right_sole_gasket",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_sole_gasket.stl",
+      "rgba": [
+        0.023529411764705882,
+        0.03529411764705882,
+        0.043137254901960784,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "079b1b497e54fa27920d50625489fbfc67fc37933be3d438797f508277758d17"
+    },
+    {
+      "name": "Right_yellow_foot_deck",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_yellow_foot_deck.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "d63e235a34606f4a723a82010f7ccf10ef6b7ce707c275a7660267b695752a7d"
+    },
+    {
+      "name": "Right_ankle_bracket",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_ankle_bracket.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 8,
+      "sha256": "1532cdb09d662e1ba985b0ed3c796a1ae9e2cd35de285b4f55a04b717899040d"
+    },
+    {
+      "name": "Right_ankle_bracket001",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_ankle_bracket001.stl",
+      "rgba": [
+        1.0,
+        0.7215686274509804,
+        0.054901960784313725,
+        1
+      ],
+      "triangles": 8,
+      "sha256": "ed1d57552df420db823492d54c7b03feeb294d1fc3040c7789de503b2c8cd0b9"
+    },
+    {
+      "name": "Right_toe_grip",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_toe_grip.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "4e7d4316401f428d6d0133609f12408fc6d25b5bbfec0ac9cc30cd093a1624db"
+    },
+    {
+      "name": "Right_toe_grip001",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_toe_grip001.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "a0f74b6ed8bfcecb1eed0235778da6df1bcd2ddd3252343a00ba601a0452aa54"
+    },
+    {
+      "name": "Right_toe_grip002",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_toe_grip002.stl",
+      "rgba": [
+        0.054901960784313725,
+        0.06666666666666667,
+        0.0784313725490196,
+        1
+      ],
+      "triangles": 1708,
+      "sha256": "cd6ad25ccaad1f0d6150356f4775203f1a5a0adfe87ec12941180735203198a4"
+    },
+    {
+      "name": "Right_deck_fastener",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_deck_fastener.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "8e2466106b48ead5036ae38f1d2ac2c6d09872885a621d0ed0cde32d909bbd68"
+    },
+    {
+      "name": "Right_deck_fastener001",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_deck_fastener001.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "23b71f2a72e874aedf49f3098dddbb2e90460a3bd6857a663e5107e3688694f6"
+    },
+    {
+      "name": "Right_deck_fastener002",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_deck_fastener002.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "674adaa3228436da757cfe395e5b911b7427ae63f9236e54d273aa86ec4766d2"
+    },
+    {
+      "name": "Right_deck_fastener003",
+      "link": "r_foot",
+      "file": "assets/robot/meshes/futuristic/Right_deck_fastener003.stl",
+      "rgba": [
+        0.6196078431372549,
+        0.6588235294117647,
+        0.6784313725490196,
+        1
+      ],
+      "triangles": 216,
+      "sha256": "d73f89d904b84248c093e9e7708ec816cc5094144adb8230b139ac65c2a52908"
+    }
+  ]
+}

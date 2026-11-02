@@ -1,0 +1,18 @@
+{
+  "test": "Airborne 0.5 s, 0.02/0.03 rad target perturbations, fixed explicit PD at 500 Hz",
+  "results": [
+    {
+      "armature_kg_m2": 0,
+      "max_joint_speed_rad_s": 38.998095287927995,
+      "saturated_joint_steps": 972,
+      "final_max_error_rad": 0.37125061585146224
+    },
+    {
+      "armature_kg_m2": 0.0001,
+      "max_joint_speed_rad_s": 0.7740986178983682,
+      "saturated_joint_steps": 0,
+      "final_max_error_rad": 4.1657988122389966e-05
+    }
+  ],
+  "assumption": "Reflected rotor inertia is not hardware-calibrated"
+}

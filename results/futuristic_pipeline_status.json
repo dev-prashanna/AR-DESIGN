@@ -1,0 +1,16 @@
+{
+  "stage": "training_in_progress",
+  "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261102T032138Z_finetune_9784f901",
+  "utc": "2026-11-02T03:49:19Z",
+  "gpu": {
+    "utc": "2026-11-02T03:49:19Z",
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "utilization_percent": 29.0,
+    "memory_MiB": 835.0,
+    "power_W": 35.24,
+    "temperature_C": 72.0
+  },
+  "update": 1704,
+  "transitions": 41877504,
+  "target_updates": 20000
+}

@@ -1,0 +1,25 @@
+{
+  "profile": "futuristic_transfer_robust",
+  "run": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261102T032138Z_finetune_9784f901",
+  "source_checkpoint": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/20261102T025233Z_finetune_857cee04/best_validation.pt",
+  "target_updates": 20000,
+  "target_transitions": 491520000,
+  "validation_updates": [
+    500,
+    1000,
+    2500,
+    5000,
+    10000,
+    15000,
+    20000
+  ],
+  "validation_suite": "configs/evaluation/futuristic_transfer_validation.yaml",
+  "test_suite": "configs/evaluation/futuristic_transfer_test.yaml",
+  "artifact_dir": "artifacts/futuristic_transfer_candidate",
+  "logs": "/home/prashanna/Documents/AR_DESIGN/biped-ppo/runs/long_jobs_20261102T032132Z",
+  "training_pid": 173595,
+  "validation_pid": 173759,
+  "finalization_pid": 173760,
+  "launched_utc": "2026-11-02T03:21:42Z",
+  "detached_sessions": true
+}

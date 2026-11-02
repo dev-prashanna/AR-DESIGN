@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "calibration_complete": false,
+  "status": "awaiting_actual_hardware_specifications",
+  "sensor_packet": {
+    "joint_position": [
+      6,
+      "radians, measured URDF joint coordinates"
+    ],
+    "joint_velocity": [
+      6,
+      "rad/s"
+    ],
+    "body_gyro": [
+      3,
+      "rad/s, x forward y left z up"
+    ],
+    "projected_gravity": [
+      3,
+      "body-frame unit vector"
+    ]
+  },
+  "command": [
+    3,
+    "body vx m/s, vy m/s, yaw rad/s"
+  ],
+  "policy_frequency_hz": 50,
+  "outputs": [
+    6,
+    "joint position targets in radians; no hardware I/O performed"
+  ],
+  "runtime": "biped_ppo.runtime.PositionPolicyRuntime",
+  "controller": "biped_ppo.control.MotorTargetController",
+  "observation_dimensions": 41,
+  "hardware_tested": false,
+  "required_calibration": [
+    "servo identity and torque/speed/response",
+    "joint zero offsets, signs and travel",
+    "measured mass/COM and geometry",
+    "IMU mounting/bias and joint-state feedback",
+    "communication/control rate and measured latency"
+  ]
+}

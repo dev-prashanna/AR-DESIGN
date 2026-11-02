@@ -10,6 +10,44 @@ are included under `assets/robot/source/cad/`. The training
 robot uses the supplied URDF, not an invented mechanism extracted from CAD.
 All physical parameters remain estimates until hardware specifications arrive.
 
+## Futuristic CAD and WASD control
+
+The futuristic FreeCAD design now has an articulated MuJoCo model with its actual
+122 CAD surfaces, CAD-based leg proportions and a bent neutral stance. GPU PPO
+training and a native WASD viewer are provided. Model parameters remain
+provisional; the original study below is preserved separately.
+
+```sh
+scripts/run biped validate-model --robot configs/robot/futuristic_residual.yaml
+scripts/run biped train --config configs/experiments/futuristic_long.yaml
+scripts/run biped play --checkpoint artifacts/futuristic_policy/policy.pt
+```
+
+`biped play` opens an interactive CPU MuJoCo window: hold **W/S** to request
+±0.05 m/s, **A/D** to turn at ±0.25 rad/s, **Space** to stop, **R** to reset after
+a fall and **Esc** to close. Add `--headless --seconds 30` for a repeatable
+transition diagnostic that needs no display. The viewer runs the real policy and
+PD control, so a fall is shown rather than hidden by automatic resets.
+
+New modules added for this work:
+
+| Module | Purpose |
+| --- | --- |
+| `src/biped_ppo/play.py` | WASD viewer and headless scripted playback |
+| `src/biped_ppo/gait.py` | 2 Hz phase reference targets for the gait task |
+| `src/biped_ppo/control.py` | `MotorTargetController` motor-target filtering |
+| `src/biped_ppo/runtime.py` | Policy observation assembly used at inference |
+| `src/biped_ppo/symmetry.py` | Left/right symmetry helpers for the biped |
+| `src/biped_ppo/commands.py` | Command schedules for evaluation suites |
+
+Configs live under `configs/{robot,task,experiments,evaluation}/futuristic*.yaml`;
+CAD export, model rebuild, rendering, reporting and finalization are in
+`scripts/`. The exported policy is `artifacts/futuristic_policy/policy.pt`.
+
+See [the full futuristic setup, task and acceptance criteria](docs/FUTURISTIC.md),
+the physical-parameter caveats in [docs/PHYSICAL_TRANSFER.md](docs/PHYSICAL_TRANSFER.md),
+and `results/futuristic_results.json` for measured command performance.
+
 ## First successful run
 
 Ubuntu 24.04, Python 3.12, recent NVIDIA driver. The project creates its own
@@ -103,3 +141,9 @@ manifests preserve original absolute paths; if extracting elsewhere, point the
 study index paths at the extracted run folders before analyzing existing runs.
 
 Download the measured-study archive and PDF from the [v0.1.0 release](https://github.com/dev-prashanna/AR-DESIGN/releases/tag/v0.1.0).
+
+## License
+
+MIT — see [LICENSE](LICENSE). Copyright (c) 2026 **Prashanna Tiwari**.
+Supplied robot/CAD assets and third-party dependencies are excluded from this
+license; see [THIRD_PARTY.md](THIRD_PARTY.md).
